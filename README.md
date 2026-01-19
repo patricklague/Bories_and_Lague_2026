@@ -20,6 +20,9 @@ This directory contains all the necessary files to reproduce and understand the 
 - **`input_systems/`**  
   Provides the initial system setup for each analog simulation, including PDB and PSF files.
 
+- **`output_systems/`**  
+  Provides the final system state for each analog simulation and trajectory.
+
 ### `figures/`
 
 This directory contains all scripts, data, and output files used to generate the figures presented in the main article and supplementary material.
