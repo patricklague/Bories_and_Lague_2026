@@ -1,0 +1,13 @@
+
+# Résultats pour AA = SCW (10 Å ≤ z ≤ 20 Å)
+angle_type\tz_center\ttheta_center\tcount
+theta1	12.009	88.227	27321
+theta2	12.009	37.798	17286
+# Résultats pour AA = SCF (10 Å ≤ z ≤ 20 Å)
+angle_type\tz_center\ttheta_center\tcount
+theta1	11.834	95.355	14508
+theta2	11.834	30.636	7900
+# Résultats pour AA = SCY (10 Å ≤ z ≤ 20 Å)
+angle_type\tz_center\ttheta_center\tcount
+theta1	11.398	99.037	35064
+theta2	11.398	23.382	34352

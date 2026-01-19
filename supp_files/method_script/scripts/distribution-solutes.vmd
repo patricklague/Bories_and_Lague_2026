@@ -1,0 +1,35 @@
+# vmd -dispdev none -e script.vmd
+
+mol load psf ./bilayer.psf dcd ./trajectory.dcd
+set n_frames [molinfo top get numframes]
+
+# number of solutes
+set sel [atomselect 0 "resname AAA and name CB"]
+set nsca [llength [$sel get residue]]
+set sel [atomselect 0 "resname BBB and name CB"]
+set nscb [llength [$sel get residue]]
+
+# extract side chain A COM timeseries
+set outDataFile [open "AAA.dat" w]
+for {set frame 0} {${frame} < ${n_frames}} {incr frame} {
+   for {set id 1} {${id} <= ${nsca}} {incr id} {
+     set ref [atomselect 0 "resname AAA and resid ${id}" frame ${frame}]
+     set com_ref [measure center ${ref} weight mass]
+     puts $outDataFile  "${frame} ${id} ${com_ref}"
+   }
+}
+close $outDataFile
+
+# extract side chain B COM timeseries
+set outDataFile [open "BBB.dat" w]
+for {set frame 0} {${frame} < ${n_frames}} {incr frame} {
+   for {set id 1} {${id} <= ${nscb}} {incr id} {
+     set ref [atomselect 0 "resname BBB and resid ${id}" frame ${frame}]
+     set com_ref [measure center ${ref} weight mass]
+     puts $outDataFile  "${frame} ${id} ${com_ref}"
+   }
+}
+close $outDataFile
+
+
+exit

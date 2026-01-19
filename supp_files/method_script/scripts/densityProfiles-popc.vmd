@@ -1,0 +1,153 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+# source /home/plague/Téléchargements/vmd_density_profile-1.3/density_profile.tcl
+# multiply mass values by 1,660538921  (g/mol/A^3 = amu ; 1u = 1,660 538 921 × 10−27 kg; then conversion to g/cm^3)
+
+#package require density_profile
+source density_profile.tcl
+
+mol load psf PSFFILE dcd ./trajectory.dcd
+
+# nb frames -1
+set nf [molinfo top get numframes]
+set last [expr $nf - 1]
+
+##########################
+# total density profile
+##########################
+
+#set tdens [density_profile -rho mass -selection "all and not ( resname CLA or resname SOD )" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+#set outfile [open profile-total.dat w]
+#foreach i1 [lindex $tdens 1] i2 [lindex $tdens 0] { 
+#  set val [expr $i2*1.660538921 ]
+#  set z [expr $i1+0.5]
+#  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+#}
+#close $outfile
+
+##########################
+# water density profile
+##########################
+
+#set wdens [density_profile -rho mass -selection water -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+#set outfile [open profile-water.dat w]
+#foreach i1 [lindex $wdens 1] i2 [lindex $wdens 0] { 
+#  set val [expr $i2*1.660538921 ]
+#  set z [expr $i1+0.5]
+#  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+#}
+#close $outfile
+
+##########################
+# POPC density profile
+##########################
+
+set ddens [density_profile -rho mass -selection "resname POPC" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-popc.dat w]
+foreach i1 [lindex $ddens 1] i2 [lindex $ddens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+##########################
+# Choline density profile
+##########################
+
+set chdens [density_profile -rho mass -selection "resname POPC and (name N or name C12 or name H12A or name H12B or name C13 or name H13A or name H13B or name H13C or name C14 or name H14A or name H14B or name H14C or name C15 or name H15A or name H15B or name H15C or name C11 or name H11A or name H11B)" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-choline.dat w]
+foreach i1 [lindex $chdens 1] i2 [lindex $chdens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+##########################
+# Phosphate density profile
+##########################
+
+set phdens [density_profile -rho mass -selection "resname POPC and (name P or name O11 or name O12 or name O13 or name O14)" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-phosphate.dat w]
+foreach i1 [lindex $phdens 1] i2 [lindex $phdens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+##########################
+# carbonyl density profile
+##########################
+
+set cadens [density_profile -rho mass -selection "resname POPC and (name C21 or name O22 or name C31 or name O32)" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-carbonyl.dat w]
+foreach i1 [lindex $cadens 1] i2 [lindex $cadens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+
+##########################
+# acyl chains density profile
+##########################
+
+# do sum of C2 and C3 densities...
+set acyl2dens [density_profile -rho mass -selection "resname POPC and (name C22 or name C23 or name C24 or name C25 or name C26 or name C27 or name C28 or name C29 or name C210 or name C211 or name C212 or name C213 or name C214 or name C215 or name C216 or name C217 or name C218 or name H2R or name H3R or name H4R or name H5R or name H6R or name H7R or name H8R or name H9R or name H10R or name H11R or name H12R or name H13R or name H14R or name H15R or name H16R or name H17R or name H18R or name H2S or name H3S or name H4S or name H5S or name H6S or name H7S or name H8S or name H11S or name H12S or name H13S or name H14S or name H15S or name H16S or name H17S or name H18S or name H18T)" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+set acyl3dens [density_profile -rho mass -selection "resname POPC and (name C32 or name C33 or name C34 or name C35 or name C36 or name C37 or name C38 or name C39 or name C310 or name C311 or name C312 or name C313 or name C314 or name C315 or name C316 or name C317 or name C318 or name H2X or name H3X or name H4X or name H5X or name H6X or name H7X or name H8X or name H9X or name H10X or name H11X or name H12X or name H13X or name H14X or name H15X or name H16X or name H17X or name H18X or name H2Y or name H3Y or name H4Y or name H5Y or name H6Y or name H7Y or name H8Y or name H11Y or name H12Y or name H13Y or name H14Y or name H15Y or name H16Y or name H17Y or name H18Y or name H18Z)" -frame_from 0 -frame_to  $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-chains.dat w]
+foreach i1 [lindex $acyl2dens 1] i2 [lindex $acyl2dens 0] i3 [lindex $acyl3dens 0] { 
+  set val2c [expr $i2*1.660538921 ]
+  set val3c [expr $i3*1.660538921 ]
+  set sum [expr $val2c+$val3c]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val2c]\t[format %6.2f $val3c]\t[format %6.2f $sum]" 
+}
+close $outfile
+
+exit
+
+
+
+# - In $wdens we now have
+# index 0: list of densities [g/mol/A^3]: from 0 (center) to ~0.6 (bulk)
+# index 1: list of bin breaks [A]: -35, -34, ... 34
+
+# - Show output as a table
+#puts "**************************************************"
+#puts "| Bin breaks coordinates: (z, Angstroms)"
+#puts "\t| Density of water in each bin: (g/mol/A^3)"
+#pptable [lindex $wdens 1] [lindex $wdens 0]
+
+
+# - Compute the electron density of full system (small membrane, only
+#   one frame: lower resolution); show graphically.
+#set edens [density_profile -rho electrons -selection all -resolution 2]
+#multiplot -x [lindex $edens 1] -y [lindex $edens 0] -marker point -plot \
+#	-title "Electron density (1/A^3); dots: value for bulk water" \
+#	-xlabel "Distance from membrane center z (A)" \
+#	-hline {0.33 -dash .}
+
+#exit
+
+#   variable dp_args_defaults {
+#	rho             number
+#	selection       all
+#	axis            z
+#	resolution      1
+#	Zsource         mass
+#	partial_charges 1
+#	frame_from      now
+#	frame_to        now
+#	frame_step      1
+#	average		0
+#    }

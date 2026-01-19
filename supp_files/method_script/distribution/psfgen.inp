@@ -1,0 +1,99 @@
+package require psfgen
+
+topology ../solutes/toppar/top_all36_prot.rtf
+topology ../solutes/toppar/top_all36_sidechains.str
+topology ../solutes/toppar/toppar_all36_prot_arg0.str
+topology ../solutes/toppar/toppar_water_ions.str
+topology ../solutes/toppar/toppar_all36_lipid_prot.str
+#topology ../solutes/toppar/top_all36_lipid.rtf
+#topology ../solutes/toppar/par_all36_lipid.prm
+
+#For PMm
+#topology ../../Lipid_Bilayer/PMm/charmm-gui/toppar.str
+topology ../../Lipid_Bilayer/PMm/charmm-gui/charmm-gui-2132003383/toppar.str
+topology ../../Lipid_Bilayer/PMm/charmm-gui/charmm-gui-2132003383/toppar/toppar_all36_lipid_sphingo.str
+topology ../../Lipid_Bilayer/PMm/charmm-gui/charmm-gui-2132003383/toppar/top_all36_cgenff.rtf
+
+# get protein psf/pdb from charmm-gui directory
+# need to recenter the protein using "coor orient" in step2 input file
+readpsf charmm-gui/namd/step5_input.psf
+coordpdb charmm-gui/namd/step5_input.pdb
+mol load psf charmm-gui/namd/step5_input.psf pdb charmm-gui/namd/step5_input.pdb
+
+# delete CLA and SOD
+set badfrag [atomselect top "(resname CLA or resname POT or resname SOD)" ]
+
+# Delete the residues corresponding to the atoms we selected.
+foreach segid [$badfrag get segid] resid [$badfrag get resid] {
+delatom $segid $resid
+}
+
+writepsf temp1.psf
+writepdb temp1.pdb
+
+resetpsf
+
+readpsf temp1.psf
+coordpdb temp1.pdb
+mol load psf temp1.psf pdb temp1.pdb
+
+# segment pour le fragment #1
+segment sol1 {
+ pdb ./solute1.pdb
+}
+coordpdb ./solute1.pdb sol1
+
+regenerate angles dihedrals
+
+# segment pour le fragment #2
+#s2 segment sol2 {
+#s2  pdb ./solute2.pdb
+#s2 }
+#s2 coordpdb ./solute2.pdb sol2
+
+# segment pour le fragment CLA
+segment CLA {
+ pdb ./cla.pdb
+}
+coordpdb ./cla.pdb CLA
+
+# segment pour le fragment SOD
+segment SOD {
+ pdb ./sod.pdb
+}
+coordpdb ./sod.pdb SOD
+
+regenerate angles dihedrals
+
+writepsf temp.psf
+writepdb temp.pdb
+
+resetpsf
+
+readpsf temp.psf
+coordpdb temp.pdb
+mol load psf temp.psf pdb temp.pdb
+
+# Select fragments that are more than 2.4 Angstroms from the protein.
+set badfrag2 [atomselect top "( resname TIP3 ) and within 2.4 of (resname sol1 or resname SOD or resname CLA)" ]
+
+# Delete the residues corresponding to the atoms we selected.
+foreach segid [$badfrag2 get segid] resid [$badfrag2 get resid] {
+delatom $segid $resid
+}
+
+# Select fragments that are more than 2.4 Angstroms from the protein.
+#s2 set badfrag3 [atomselect top "( resname TIP3 ) and within 2.4 of (resname sol2 )" ]
+
+# Delete the residues corresponding to the atoms we selected.
+#s2 foreach segid [$badfrag3 get segid] resid [$badfrag3 get resid] {
+#s2 delatom $segid $resid
+#s2 }
+
+
+# Écriture des fichiers psf and pdb
+writepsf bilayer-solutes.psf
+writepdb bilayer-solutes.pdb
+
+exit 
+

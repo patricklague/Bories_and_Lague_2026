@@ -1,0 +1,78 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+# source /home/plague/Téléchargements/vmd_density_profile-1.3/density_profile.tcl
+# multiply mass values by 1,660538921  (g/mol/A^3 = amu ; 1u = 1,660 538 921 × 10−27 kg; then conversion to g/cm^3)
+
+#package require density_profile
+source density_profile.tcl
+
+mol load psf PSFFILE dcd ./trajectory.dcd
+
+# nb frames -1
+set nf [molinfo top get numframes]
+set last [expr $nf - 1]
+
+##########################
+# total density profile
+##########################
+
+set tdens [density_profile -rho mass -selection "all and not ( resname CLA or resname SOD )" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-total.dat w]
+foreach i1 [lindex $tdens 1] i2 [lindex $tdens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+##########################
+# water density profile
+##########################
+
+set wdens [density_profile -rho mass -selection water -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-water.dat w]
+foreach i1 [lindex $wdens 1] i2 [lindex $wdens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.2f $val]" 
+}
+close $outfile
+
+exit
+
+
+
+# - In $wdens we now have
+# index 0: list of densities [g/mol/A^3]: from 0 (center) to ~0.6 (bulk)
+# index 1: list of bin breaks [A]: -35, -34, ... 34
+
+# - Show output as a table
+#puts "**************************************************"
+#puts "| Bin breaks coordinates: (z, Angstroms)"
+#puts "\t| Density of water in each bin: (g/mol/A^3)"
+#pptable [lindex $wdens 1] [lindex $wdens 0]
+
+
+# - Compute the electron density of full system (small membrane, only
+#   one frame: lower resolution); show graphically.
+#set edens [density_profile -rho electrons -selection all -resolution 2]
+#multiplot -x [lindex $edens 1] -y [lindex $edens 0] -marker point -plot \
+#	-title "Electron density (1/A^3); dots: value for bulk water" \
+#	-xlabel "Distance from membrane center z (A)" \
+#	-hline {0.33 -dash .}
+
+#exit
+
+#   variable dp_args_defaults {
+#	rho             number
+#	selection       all
+#	axis            z
+#	resolution      1
+#	Zsource         mass
+#	partial_charges 1
+#	frame_from      now
+#	frame_to        now
+#	frame_step      1
+#	average		0
+#    }

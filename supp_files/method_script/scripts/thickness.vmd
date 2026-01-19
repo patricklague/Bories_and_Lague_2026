@@ -1,0 +1,10 @@
+# vmd -dispdev text -e script.vmd
+package require membplugin
+
+# membrane thickness
+# membranethickness -structure ../../psfgen/silcs.psf -trajectory centered.dcd -from 0 -to 100 -step 10 -sel {name P} -o bilayer-centered.thickness -wrapcmd {}
+# membranethickness -structure ../build/silcs.psf -trajectory centered.dcd -from 1000 -to last -step 10 -sel {name P} -o bilayer-thickness.dat -wrapcmd {pbc wrap -center bb -centersel membplugin_lipid -compound res}
+membranethickness -structure ./bilayer.psf -trajectory ./centered.dcd -from 0 -to last -step 1 -sel {name P} -o bilayer-thickness.dat 
+
+exit
+

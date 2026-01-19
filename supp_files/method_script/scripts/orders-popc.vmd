@@ -1,0 +1,29 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+
+package require membplugin
+
+mol load psf PSFFILE dcd ./trajectory.dcd
+
+# lipid acyl chain order parameters
+membranescd -structure PSFFILE -trajectory ./trajectory.dcd \
+  -lipid {POPC} -leaf {0 1} -chain {2} -from 0 -to last -step 10 \
+  -sel {not water } -o orderparameters-chain2.dat -wrapcmd {pbc wrap \
+  -center bb -centersel membplugin_lipid -compound res}
+
+membranescd -structure PSFFILE -trajectory ./trajectory.dcd \
+  -lipid {POPC} -leaf {0 1} -chain {3} -from 0 -to last -step 10 \
+  -sel {not water } -o orderparameters-chain3.dat -wrapcmd {pbc wrap \
+  -center bb -centersel membplugin_lipid -compound res}
+  
+#membranescd -structure ../charmm-gui/namd/step5_charmm2namd.psf -trajectory trajectory.dcd -lipid
+#{CHL1 SM18 DLPA DLPC DLPE DLPG DLPS DMPA DMPC DMPE DMPG
+#    DMPS DPPA DPPC DPPE DPPG DPPS DSPA DSPC DSPE DSPG DSPS POPA POPC
+#    POPE POPG POPS SOPA SOPC SOPE SOPS SOPG DOPA DOPC DOPE DOPG DOPS
+#    SAPA SAPC SAPE SAPG SAPS SDPA SDPC SDPE SDPG SDPS DAPA DAPC DAPE
+#    DAPG DAPS DXPC DXPE DXPS PLPC PLPE PLPS SLPC SLPE SLPS DGPC DGPE
+#    DGPS DEPC DEPE DEPS DNPC DNPE DNPS PMPE PMPG QMPE OSPE PSPG IPPC
+#    APPC PHPC} -leaf {0 1} -chain {2 3} -from 0 -to last -step 1 -sel
+#  {not resname CHL1} -o ./order/memb.orderparSCD -wrapcmd {pbc wrap
+#  -center bb -centersel membplugin_lipid -compound res}
+
+exit

@@ -1,0 +1,34 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+package require pbctools 
+
+mol load psf ./analog-SCV.psf dcd trajectory.dcd
+
+#
+# 1st, 2-step centering on membrane, first step around lipid #1, second step around whole membrane
+#
+pbc join connected -now
+pbc wrap -centersel "segname MEMB and resid 1" -center com -compound residue -all 
+pbc wrap -centersel "segname MEMB" -center com -compound residue -all 
+
+#
+# 2nd step: center lipids at (0,0,0)
+#
+set total [atomselect top all]
+set ref [atomselect top "(segname MEMB)"]
+set nf [molinfo top get numframes]
+puts [format "%i frames\n" $nf]
+# Center the reference system around (0, 0, 0)
+for {set f 0} {$f < $nf} {incr f} {
+  $ref frame $f
+  $total frame $f
+  $total moveby [vecinvert [measure center $ref weight mass]]
+  set cell [pbc get -now]
+  puts "Frame:$f $cell"
+}
+
+
+animate write dcd centered.dcd
+
+exit
+
+
