@@ -5,14 +5,15 @@ set orthoscopic, on
 orient
 run add_O_plane_10.py
 #rotate z, 4
-run orient_mol.py     
+run pymol_orient_molecule.py
 
 #theta1=angle_ring et theta2=angle_atoms
-orient2('scy', atom1='name CG', atom2='name CZ', angle_atoms=23.382, ring_sel='name CG or name CD1 or name CD2 or name CE1 or name CE2 or name CZ', angle_ring=99.021)
+orient2('scy', atom1='name CG', atom2='name CZ', angle_atoms=23.382, ring_sel='name CG or name CD1 or name CD2 or name CE1 or name CE2 or name CZ', angle_ring=99.037)
 
 rotate z, 4
 rotate x, -90
 set sphere_transparency, 0.1
+rotate y, 180
 
 ray 1000
 png ../../../plot/SUPP_aromatics_orientation/plan_scy_v1.png
@@ -21,7 +22,7 @@ ray 1000
 png ../../../plot/SUPP_aromatics_orientation/plan_scy_v1_wo.png
 
 show spheres, O_plane or O_plane2
-rotate y, 90
+rotate y, -90
 ray 1000
 png ../../../plot/SUPP_aromatics_orientation/plan_scy_v2.png
 hide everything, O_plane or O_plane2
