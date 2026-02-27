@@ -112,6 +112,136 @@ def set_angles(theta1, theta2, atom_pair='CG CD2'):
         d2 = theta2 - curr2
         axis2 /= np.linalg.norm(axis2)
         cmd.rotate(axis2.tolist(), d2, 'mol_sel', origin=C.tolist())
+ 
+# --- DEBUT FONCTIONS ORIENT---      
+def orient(obj='scy',
+           mode='atoms',
+           atom1=None,
+           atom2=None,
+           ring_sel=None,
+           angle=0.0,
+           target_axis=(0,0,1)):
+    """
+    Oriente l'objet pour que l'angle entre un vecteur défini
+    (atoms ou ring) et target_axis soit égal à 'angle',
+    en tournant AUTOUR DU CENTRE du vecteur.
+
+    obj         : nom de l'objet dans PyMOL
+    mode        : 'atoms' ou 'ring'
+    atom1,atom2 : sélections PyMOL pour mode 'atoms'
+    ring_sel    : sélection PyMOL des atomes de l'anneau pour mode 'ring'
+    angle       : angle désiré (°)
+    target_axis : vecteur cible (tuple de 3 floats)
+    """
+    # 1) recentrer + origin sur 0
+    cmd.center(obj)
+    cmd.origin(obj)
+
+    # 2) calcul du vecteur v ET du pivot
+    if mode == 'atoms':
+        if not atom1 or not atom2:
+            raise ValueError("Pour mode='atoms', atom1 et atom2 sont requis.")
+        p1 = np.array(cmd.get_atom_coords(atom1))
+        p2 = np.array(cmd.get_atom_coords(atom2))
+        v = p2 - p1
+        pivot = (p1 + p2) / 2.0      # centre du vecteur
+    elif mode == 'ring':
+        if not ring_sel:
+            raise ValueError("Pour mode='ring', ring_sel est requis.")
+        model = cmd.get_model(ring_sel)
+        coords = np.array([a.coord for a in model.atom])
+        centroid = coords.mean(axis=0)
+        coords_centered = coords - centroid
+        _, _, vh = np.linalg.svd(coords_centered)
+        v = vh[2]                    # vecteur normal
+        pivot = centroid            # centroïde de l'anneau
+    else:
+        raise ValueError("mode doit être 'atoms' ou 'ring'.")
+
+    # 3) normalisation et angle courant
+    v = v / np.linalg.norm(v)
+    a = np.array(target_axis, dtype=float)
+    a /= np.linalg.norm(a)
+    cos_theta = np.clip(np.dot(v, a), -1.0, 1.0)
+    theta_curr = np.degrees(np.arccos(cos_theta))
+
+    # 4) axe de rotation
+    rot_axis = np.cross(v, a)
+    norm_ra = np.linalg.norm(rot_axis)
+    if norm_ra < 1e-6:
+    # vecteur parallèle à l’axe cible
+    # si on veut tout de même un angle ≠ 0 ou 180, on prend X comme axe de rotation
+    	if abs(theta_curr - angle) > 1e-3:
+        	rot_axis = np.array([1.0, 0.0, 0.0])
+        	delta    = theta_curr - angle
+        	cmd.rotate(list(rot_axis), delta, obj, origin=list(pivot))
+        	print(f"Rotation « dégénérée » de {delta:.2f}° autour de X pour créer l’angle voulu.")
+    	else:
+        	print("Angle déjà correct (0° ou 180°).")
+    return
+    rot_axis /= norm_ra
+
+    # 5) delta pour atteindre l'angle désiré
+    delta = theta_curr - angle
+
+    # 6) rotation autour de 'pivot'
+    cmd.rotate(list(rot_axis),
+               delta,
+               obj,
+               origin=list(pivot))
+    print(f"[orient] {obj} tourné de {delta:.2f}° autour de {pivot.tolist()}")
+    
+def orient2(obj='scy',
+            atom1=None, atom2=None, angle_atoms=0.0,
+            ring_sel=None,           angle_ring=0.0):
+    """
+    obj         : nom de l'objet PyMOL
+    atom1,atom2: sélections pour le vecteur atomique
+    angle_atoms: angle (°) voulu entre atom2–atom1 et l'axe Z
+    ring_sel    : sélection des atomes de l'anneau aromatique
+    angle_ring  : angle (°) voulu entre normale d'anneau et Z
+
+    Rotation 1 (anneau) : autour de X (plan YZ)
+    Rotation 2 (atoms): autour de Y (plan XZ)
+    """
+    # 1) centre + origine
+    cmd.center(obj)
+    cmd.origin(obj)
+
+    # 2) normale et centroïde de l'anneau
+    model = cmd.get_model(ring_sel)
+    coords = np.array([a.coord for a in model.atom])
+    cen_ring = coords.mean(axis=0)
+    coords_c = coords - cen_ring
+    _,_,vh = np.linalg.svd(coords_c)
+    n_ring = vh[2] / np.linalg.norm(vh[2])
+
+    # angle courant anneau
+    cos_r = np.clip(np.dot(n_ring, [0,0,1]), -1.0, 1.0)
+    th_ring = np.degrees(np.arccos(cos_r))
+    delta_r = th_ring - angle_ring
+
+    # rotation autour de l'axe X
+    cmd.rotate([1,0,0], delta_r, obj, origin=list(cen_ring))
+    print(f"[anneau] Δ={delta_r:.2f}° autour de X en {cen_ring}")
+
+    # 3) vecteur atom1→atom2 et son milieu
+    p1 = np.array(cmd.get_atom_coords(atom1))
+    p2 = np.array(cmd.get_atom_coords(atom2))
+    mid = (p1 + p2) / 2.0
+    v_at = (p2 - p1)
+    v_at /= np.linalg.norm(v_at)
+
+    # angle courant atoms
+    cos_a = np.clip(np.dot(v_at, [0,0,1]), -1.0, 1.0)
+    th_at = np.degrees(np.arccos(cos_a))
+    delta_a = th_at - angle_atoms
+
+    # rotation autour de l'axe Y
+    cmd.rotate([0,1,0], delta_a, obj, origin=list(mid))
+    print(f"[atoms]  Δ={delta_a:.2f}° autour de Y en {mid}")
+
+# --- FIN FONCTIONS ORIENT---
 
 # register commands
 cmd.extend('select_mol', select_mol)

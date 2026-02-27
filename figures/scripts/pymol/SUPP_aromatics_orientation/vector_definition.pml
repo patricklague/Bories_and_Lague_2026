@@ -24,7 +24,6 @@ set bg_rgb, white
 select theta2_0, scf and (name CG or name CZ)
 select theta2_1, scy and (name CG or name CZ)
 select theta2_2, scw and (name CZ3 or name CE2)
-select theta2_3, sche and (name CG or name CE1)
 orient
 zoom all, 0.5
 
@@ -36,11 +35,9 @@ set label_bg_color, back
 cmd.label("theta2_0", "name")
 cmd.label("theta2_1", "name")
 cmd.label("theta2_2", "name")
-cmd.label("theta2_3", "name")
 
 #align scy and (name CG or name CB or name HB*), scf and (name CG or name CB or name HB*)
 #align scw and (name CG or name CB or name HB*), scf and (name CG or name CB or name HB*)
-#align sche and (name CG or name CB or name HB*), scf and (name CG or name CB or name HB*)
 
 rotate z, 90
 rotate y, 180
@@ -65,20 +62,6 @@ ray
 png ../../../plot/SUPP_aromatics_orientation/illustration_scw_v2.png
 
 hide everything, scw
-show spheres, sche
-show sticks, sche
-cmd.label("all", "")
-cmd.label("theta2_3", "name")
-ray
-png ../../../plot/SUPP_aromatics_orientation/illustration_sche_v2.png
-
-#cmd.label("all", "")
-
-rotate y, 90
-ray
-png ../../../plot/SUPP_aromatics_orientation/illustration_sche_v1.png
-
-hide everything, sche
 show spheres, scy
 show sticks, scy
 cmd.label("all", "")
