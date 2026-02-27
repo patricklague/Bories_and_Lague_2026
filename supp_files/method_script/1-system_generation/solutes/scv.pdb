@@ -1,0 +1,15 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCV     1       0.000  -0.621  -0.000  1.00  0.00      SCV 
+ATOM      2  HA  SCV     1       0.000  -1.281  -0.898  1.00  0.00      SCV 
+ATOM      3  HB  SCV     1      -0.000  -1.281   0.898  1.00  0.00      SCV 
+ATOM      4  CG1 SCV     1       1.269   0.234  -0.000  1.00  0.00      SCV 
+ATOM      5 HG11 SCV     1       1.299   0.884   0.901  1.00  0.00      SCV 
+ATOM      6 HG12 SCV     1       2.175  -0.410   0.000  1.00  0.00      SCV 
+ATOM      7 HG13 SCV     1       1.299   0.884  -0.901  1.00  0.00      SCV 
+ATOM      8  CG2 SCV     1      -1.269   0.234   0.000  1.00  0.00      SCV 
+ATOM      9 HG21 SCV     1      -1.299   0.884   0.901  1.00  0.00      SCV 
+ATOM     10 HG22 SCV     1      -1.299   0.884  -0.901  1.00  0.00      SCV 
+ATOM     11 HG23 SCV     1      -2.175  -0.410   0.000  1.00  0.00      SCV 
+TER      12      SCV      1
+END

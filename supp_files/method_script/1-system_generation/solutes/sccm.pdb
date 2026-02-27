@@ -1,0 +1,9 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCCM    1      -0.123   0.000  -0.000  1.00  0.00      SCCM
+ATOM      2  HB1 SCCM    1      -0.530  -0.527   0.888  1.00  0.00      SCCM
+ATOM      3  HB2 SCCM    1      -0.530  -0.506  -0.900  1.00  0.00      SCCM
+ATOM      4  HA  SCCM    1      -0.530   1.033   0.012  1.00  0.00      SCCM
+ATOM      5  SG  SCCM    1       1.713   0.000   0.000  1.00  0.00      SCCM
+TER       6      SCCM     1
+END

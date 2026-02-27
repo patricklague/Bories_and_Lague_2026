@@ -1,0 +1,5 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CLA CLA     1       0.000   0.000   0.000  1.00  0.00      CLA 
+TER       2      CLA      1
+END

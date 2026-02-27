@@ -1,0 +1,9 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCA     1      -0.000   0.000  -0.000  1.00  0.00      SCA 
+ATOM      2  HA  SCA     1      -0.293   0.351  -1.012  1.00  0.00      SCA 
+ATOM      3  HB1 SCA     1      -0.435   0.676   0.766  1.00  0.00      SCA 
+ATOM      4  HB2 SCA     1      -0.379  -1.032   0.158  1.00  0.00      SCA 
+ATOM      5  HB3 SCA     1       1.107   0.005   0.087  1.00  0.00      SCA 
+TER       6      SCA      1
+END

@@ -1,0 +1,35 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+# source /home/plague/Téléchargements/vmd_density_profile-1.3/density_profile.tcl
+# multiply mass values by 1,660538921  (g/mol/A^3 = amu ; 1u = 1,660 538 921 × 10−27 kg; then conversion to g/cm^3)
+
+#package require density_profile
+source density_profile.tcl
+
+mol load psf PSFFILE dcd DCDFILE
+
+# nb frames -1
+set nf [molinfo top get numframes]
+set last [expr $nf - 1]
+
+##########################
+# aa density profile
+##########################
+
+set all [atomselect top "resname AAA"]
+set allResidues [lsort -unique [$all get residue]]
+
+#Ancienne version
+set tdens [density_profile -rho mass -selection "resname AAA" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+set outfile [open profile-aa.dat w]
+foreach i1 [lindex $tdens 1] i2 [lindex $tdens 0] { 
+  set val [expr $i2*1.660538921 ]
+  set z [expr $i1+0.5]
+  puts $outfile " [format %6.2f $z]\t[format %6.5f $val]" 
+}
+close $outfile
+
+
+
+exit
+

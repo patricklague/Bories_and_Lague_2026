@@ -1,0 +1,16 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCM     1      -1.983   0.168  -0.000  1.00  0.00      SCM 
+ATOM      2  HA  SCM     1      -2.644  -0.725  -0.000  1.00  0.00      SCM 
+ATOM      3  HB1 SCM     1      -2.214   0.776  -0.901  1.00  0.00      SCM 
+ATOM      4  HB2 SCM     1      -2.214   0.775   0.901  1.00  0.00      SCM 
+ATOM      5  CG  SCM     1      -0.508  -0.255   0.000  1.00  0.00      SCM 
+ATOM      6  HG1 SCM     1      -0.318  -0.889   0.895  1.00  0.00      SCM 
+ATOM      7  HG2 SCM     1      -0.318  -0.889  -0.895  1.00  0.00      SCM 
+ATOM      8  SD  SCM     1       0.639   1.155   0.000  1.00  0.00      SCM 
+ATOM      9  CE  SCM     1       2.142   0.137  -0.000  1.00  0.00      SCM 
+ATOM     10  HE1 SCM     1       3.052   0.776   0.000  1.00  0.00      SCM 
+ATOM     11  HE2 SCM     1       2.183  -0.515   0.899  1.00  0.00      SCM 
+ATOM     12  HE3 SCM     1       2.183  -0.514  -0.900  1.00  0.00      SCM 
+TER      13      SCM      1
+END

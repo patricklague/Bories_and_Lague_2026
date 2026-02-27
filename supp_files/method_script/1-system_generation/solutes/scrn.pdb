@@ -1,0 +1,22 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCRN    1      -2.729   0.106   0.312  1.00  0.00      SCRN
+ATOM      2  HA  SCRN    1      -3.448  -0.727   0.463  1.00  0.00      SCRN
+ATOM      3  HB1 SCRN    1      -3.125   0.773  -0.483  1.00  0.00      SCRN
+ATOM      4  HB2 SCRN    1      -2.663   0.689   1.257  1.00  0.00      SCRN
+ATOM      5  CG  SCRN    1      -1.348  -0.438  -0.078  1.00  0.00      SCRN
+ATOM      6  HG1 SCRN    1      -1.003  -1.113   0.742  1.00  0.00      SCRN
+ATOM      7  HG2 SCRN    1      -1.471  -1.059  -0.996  1.00  0.00      SCRN
+ATOM      8  CD  SCRN    1      -0.316   0.679  -0.322  1.00  0.00      SCRN
+ATOM      9  HD1 SCRN    1      -0.670   1.307  -1.173  1.00  0.00      SCRN
+ATOM     10  HD2 SCRN    1      -0.247   1.340   0.571  1.00  0.00      SCRN
+ATOM     11  NE  SCRN    1       1.000   0.077  -0.661  1.00  0.00      SCRN
+ATOM     12  HE  SCRN    1       0.998  -0.668  -1.340  1.00  0.00      SCRN
+ATOM     13  CZ  SCRN    1       1.870  -0.244   0.415  1.00  0.00      SCRN
+ATOM     14  NH1 SCRN    1       2.321  -1.440   0.403  1.00  0.00      SCRN
+ATOM     15 HH11 SCRN    1       1.657  -2.067   0.006  1.00  0.00      SCRN
+ATOM     16  NH2 SCRN    1       2.778   0.813   0.524  1.00  0.00      SCRN
+ATOM     17 HH21 SCRN    1       3.719   0.453   0.550  1.00  0.00      SCRN
+ATOM     18 HH22 SCRN    1       2.677   1.518  -0.191  1.00  0.00      SCRN
+TER      19      SCRN     1
+END

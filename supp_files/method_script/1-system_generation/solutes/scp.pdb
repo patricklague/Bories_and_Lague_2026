@@ -1,0 +1,18 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  N   SCP     1      -0.008  -1.139  -0.429  1.00  0.00      SCP 
+ATOM      2  H   SCP     1      -0.063  -2.131  -0.321  1.00  0.00      SCP 
+ATOM      3  CD  SCP     1      -1.246  -0.469  -0.055  1.00  0.00      SCP 
+ATOM      4  HD1 SCP     1      -1.673  -0.867   0.892  1.00  0.00      SCP 
+ATOM      5  HD2 SCP     1      -2.006  -0.511  -0.866  1.00  0.00      SCP 
+ATOM      6  CA  SCP     1       1.188  -0.560   0.168  1.00  0.00      SCP 
+ATOM      7  HA1 SCP     1       2.130  -0.896  -0.314  1.00  0.00      SCP 
+ATOM      8  HA2 SCP     1       1.229  -0.704   1.270  1.00  0.00      SCP 
+ATOM      9  CB  SCP     1       0.802   0.853  -0.214  1.00  0.00      SCP 
+ATOM     10  HB1 SCP     1       0.924   0.976  -1.314  1.00  0.00      SCP 
+ATOM     11  HB2 SCP     1       1.407   1.619   0.310  1.00  0.00      SCP 
+ATOM     12  CG  SCP     1      -0.683   0.931   0.146  1.00  0.00      SCP 
+ATOM     13  HG1 SCP     1      -1.209   1.677  -0.485  1.00  0.00      SCP 
+ATOM     14  HG2 SCP     1      -0.793   1.219   1.214  1.00  0.00      SCP 
+TER      15      SCP      1
+END

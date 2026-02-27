@@ -1,0 +1,103 @@
+# vmd -dispdev text -e pbc-recenter.tcl
+# source /home/plague/Téléchargements/vmd_density_profile-1.3/density_profile.tcl
+# multiply mass values by 1,660538921  (g/mol/A^3 = amu ; 1u = 1,660 538 921 × 10−27 kg; then conversion to g/cm^3)
+
+#package require density_profile
+source density_profile.tcl
+
+mol load psf PSFFILE dcd DCDFILE
+
+# nb frames -1
+set nf [molinfo top get numframes]
+set last [expr $nf - 1]
+
+##########################
+# aa density profile
+##########################
+
+set all [atomselect top "resname AAA and not hydrogen"]
+set allResidues [lsort -unique [$all get residue]]
+
+#Ancienne version
+#set tdens [density_profile -rho mass -selection "resname AAA" -frame_from 0 -frame_to $last -frame_step 1 -average 1 ]
+
+#set outfile [open profile-aa.dat w]
+#foreach i1 [lindex $tdens 1] i2 [lindex $tdens 0] { 
+#  set val [expr $i2*1.660538921 ]
+#  set z [expr $i1+0.5]
+#  puts $outfile " [format %6.2f $z]\t[format %6.5f $val]" 
+#}
+#close $outfile
+
+##########################
+# aa density profile (monomers vs non-monomers)
+##########################
+
+# --- paramètres ---
+set cutoff 6.0
+set resname "AAA"
+set nf [molinfo top get numframes]
+set last [expr $nf - 1]
+
+for {set f 0} {$f <= $last} {incr f} {
+    animate goto $f
+
+    set sel_all [atomselect top "resname $resname"]
+    set residues [lsort -unique [$sel_all get residue]]
+    set monos {}
+    set nonmonos {}
+
+    foreach res $residues {
+        set this [atomselect top "resname $resname and residue $res"]
+        set close [atomselect top "(resname $resname and not residue $res and not hydrogen) and within $cutoff of (resname $resname and residue $res and not hydrogen)"]
+        if { [$close num] == 0 } {
+            lappend monos $res
+        } else {
+            lappend nonmonos $res
+        }
+        $this delete
+        $close delete
+    }
+
+    # --- calcul densité pour les monomères ---
+    if {[llength $monos] > 0} {
+        set sel_mono [atomselect top "resname $resname and residue $monos"]
+        $sel_mono frame $f
+        $sel_mono update
+
+        set tdens_mono [density_profile -rho mass -selection "resname $resname and residue $monos" -frame_from $f -frame_to $f]
+        set outfile [open [format "dens_mono_frame_%03d.dat" $f] w]
+        foreach i1 [lindex $tdens_mono 1] i2 [lindex $tdens_mono 0] {
+            set val [expr {$i2 * 1.660538921}]  ;# conversion u/Å³ → g/cm³
+            set z [expr {$i1 + 0.5}]
+            puts $outfile "[format %7.2f $z]\t[format %.5f $val]"
+        }
+        close $outfile
+        $sel_mono delete
+    }
+
+    # --- calcul densité pour les non-monomères ---
+    if {[llength $nonmonos] > 0} {
+        set sel_nonmono [atomselect top "resname $resname and resid $nonmonos"]
+        $sel_nonmono frame $f
+        $sel_nonmono update
+
+        set tdens_nonmono [density_profile -rho mass -selection "resname $resname and residue $nonmonos" -frame_from $f -frame_to $f]
+        set outfile [open [format "dens_nonmono_frame_%03d.dat" $f] w]
+        foreach i1 [lindex $tdens_nonmono 1] i2 [lindex $tdens_nonmono 0] {
+            set val [expr {$i2 * 1.660538921}]
+            set z [expr {$i1 + 0.5}]
+            puts $outfile "[format %7.2f $z]\t[format %.5f $val]"
+        }
+        close $outfile
+        $sel_nonmono delete
+    }
+
+    $sel_all delete
+    puts "Frame $f traitée : [llength $monos] monomères, [llength $nonmonos] non-monomères"
+}
+
+puts "Tous les profils par frame ont été sauvegardés."
+
+exit
+

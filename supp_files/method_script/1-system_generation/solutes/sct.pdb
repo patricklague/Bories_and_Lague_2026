@@ -1,0 +1,13 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCT     1       0.480  -0.505  -0.008  1.00  0.00      SCT 
+ATOM      2  HB  SCT     1       0.761  -0.823  -1.037  1.00  0.00      SCT 
+ATOM      3  HA  SCT     1       0.475  -1.405   0.649  1.00  0.00      SCT 
+ATOM      4  OG1 SCT     1       1.430   0.422   0.492  1.00  0.00      SCT 
+ATOM      5  HG1 SCT     1       1.461   1.150  -0.133  1.00  0.00      SCT 
+ATOM      6  CG2 SCT     1      -0.888   0.163   0.005  1.00  0.00      SCT 
+ATOM      7 HG21 SCT     1      -0.900   1.058  -0.654  1.00  0.00      SCT 
+ATOM      8 HG22 SCT     1      -1.668  -0.544  -0.350  1.00  0.00      SCT 
+ATOM      9 HG23 SCT     1      -1.151   0.483   1.037  1.00  0.00      SCT 
+TER      10      SCT      1
+END

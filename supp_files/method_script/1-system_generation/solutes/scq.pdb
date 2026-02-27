@@ -1,0 +1,16 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCQ     1      -1.329   0.434  -0.000  1.00  0.00      SCQ 
+ATOM      2  HB1 SCQ     1      -2.399   0.133  -0.000  1.00  0.00      SCQ 
+ATOM      3  HB2 SCQ     1      -1.150   1.052  -0.906  1.00  0.00      SCQ 
+ATOM      4  HB3 SCQ     1      -1.150   1.052   0.905  1.00  0.00      SCQ 
+ATOM      5  CG  SCQ     1      -0.431  -0.825   0.000  1.00  0.00      SCQ 
+ATOM      6  HG1 SCQ     1      -0.650  -1.443   0.897  1.00  0.00      SCQ 
+ATOM      7  HG2 SCQ     1      -0.650  -1.443  -0.896  1.00  0.00      SCQ 
+ATOM      8  CD  SCQ     1       1.082  -0.555  -0.000  1.00  0.00      SCQ 
+ATOM      9  OE1 SCQ     1       1.888  -1.484  -0.001  1.00  0.00      SCQ 
+ATOM     10  NE2 SCQ     1       1.494   0.732   0.000  1.00  0.00      SCQ 
+ATOM     11 HE21 SCQ     1       2.477   0.886  -0.000  1.00  0.00      SCQ 
+ATOM     12 HE22 SCQ     1       0.818   1.461   0.000  1.00  0.00      SCQ 
+TER      13      SCQ      1
+END

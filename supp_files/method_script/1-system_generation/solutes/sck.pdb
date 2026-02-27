@@ -1,0 +1,21 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCK     1      -2.530   0.293   0.000  1.00  0.00      SCK 
+ATOM      2  HA  SCK     1      -3.430  -0.360   0.000  1.00  0.00      SCK 
+ATOM      3  HB1 SCK     1      -2.575   0.942  -0.901  1.00  0.00      SCK 
+ATOM      4  HB2 SCK     1      -2.575   0.942   0.901  1.00  0.00      SCK 
+ATOM      5  CG  SCK     1      -1.254  -0.552  -0.000  1.00  0.00      SCK 
+ATOM      6  HG1 SCK     1      -1.263  -1.213   0.898  1.00  0.00      SCK 
+ATOM      7  HG2 SCK     1      -1.263  -1.213  -0.898  1.00  0.00      SCK 
+ATOM      8  CD  SCK     1       0.029   0.296   0.000  1.00  0.00      SCK 
+ATOM      9  HD1 SCK     1       0.001   0.952  -0.901  1.00  0.00      SCK 
+ATOM     10  HD2 SCK     1       0.001   0.952   0.901  1.00  0.00      SCK 
+ATOM     11  CE  SCK     1       1.306  -0.551   0.000  1.00  0.00      SCK 
+ATOM     12  HE1 SCK     1       1.343  -1.196   0.905  1.00  0.00      SCK 
+ATOM     13  HE2 SCK     1       1.343  -1.196  -0.905  1.00  0.00      SCK 
+ATOM     14  NZ  SCK     1       2.505   0.319  -0.000  1.00  0.00      SCK 
+ATOM     15  HZ1 SCK     1       3.368  -0.262   0.000  1.00  0.00      SCK 
+ATOM     16  HZ2 SCK     1       2.496   0.923  -0.848  1.00  0.00      SCK 
+ATOM     17  HZ3 SCK     1       2.496   0.923   0.847  1.00  0.00      SCK 
+TER      18      SCK      1
+END

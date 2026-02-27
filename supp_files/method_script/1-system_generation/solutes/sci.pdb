@@ -1,0 +1,18 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCI     1      -0.701  -0.665  -0.315  1.00  0.00      SCI 
+ATOM      2  HB  SCI     1      -0.595  -0.662  -1.424  1.00  0.00      SCI 
+ATOM      3  HA  SCI     1      -1.211  -1.615  -0.033  1.00  0.00      SCI 
+ATOM      4  CG2 SCI     1      -1.586   0.511   0.111  1.00  0.00      SCI 
+ATOM      5 HG21 SCI     1      -1.144   1.476  -0.217  1.00  0.00      SCI 
+ATOM      6 HG22 SCI     1      -2.597   0.421  -0.340  1.00  0.00      SCI 
+ATOM      7 HG23 SCI     1      -1.695   0.533   1.217  1.00  0.00      SCI 
+ATOM      8  CG1 SCI     1       0.701  -0.665   0.315  1.00  0.00      SCI 
+ATOM      9 HG11 SCI     1       0.595  -0.662   1.424  1.00  0.00      SCI 
+ATOM     10 HG12 SCI     1       1.211  -1.615   0.033  1.00  0.00      SCI 
+ATOM     11  CD  SCI     1       1.586   0.511  -0.111  1.00  0.00      SCI 
+ATOM     12  HD1 SCI     1       2.597   0.421   0.340  1.00  0.00      SCI 
+ATOM     13  HD2 SCI     1       1.695   0.533  -1.217  1.00  0.00      SCI 
+ATOM     14  HD3 SCI     1       1.144   1.476   0.217  1.00  0.00      SCI 
+TER      15      SCI      1
+END

@@ -1,0 +1,15 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCEN    1      -1.312   0.408  -0.185  1.00  0.00      SCEN
+ATOM      2  HB1 SCEN    1      -1.282   0.490  -1.294  1.00  0.00      SCEN
+ATOM      3  HB2 SCEN    1      -1.105   1.411   0.249  1.00  0.00      SCEN
+ATOM      4  HA  SCEN    1      -2.340   0.107   0.112  1.00  0.00      SCEN
+ATOM      5  CG  SCEN    1      -0.281  -0.627   0.319  1.00  0.00      SCEN
+ATOM      6  HG1 SCEN    1      -0.293  -0.670   1.430  1.00  0.00      SCEN
+ATOM      7  HG2 SCEN    1      -0.534  -1.635  -0.073  1.00  0.00      SCEN
+ATOM      8  CD  SCEN    1       1.139  -0.305  -0.144  1.00  0.00      SCEN
+ATOM      9  OE1 SCEN    1       1.795  -0.935  -0.951  1.00  0.00      SCEN
+ATOM     10  OE2 SCEN    1       1.667   0.816   0.447  1.00  0.00      SCEN
+ATOM     11  HE2 SCEN    1       2.545   0.940   0.091  1.00  0.00      SCEN
+TER      12      SCEN     1
+END

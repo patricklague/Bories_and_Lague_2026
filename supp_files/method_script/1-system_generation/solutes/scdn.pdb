@@ -1,0 +1,12 @@
+REMARK  GENERATE INDIVIDUAL PDB FILES OF SOLUTES                                      
+REMARK   DATE:    11/ 1/22     15:15:54      CREATED BY USER: plague                  
+ATOM      1  CB  SCDN    1      -0.966  -0.086   0.000  1.00  0.00      SCDN
+ATOM      2  HB1 SCDN    1      -1.604   0.822   0.000  1.00  0.00      SCDN
+ATOM      3  HB2 SCDN    1      -1.185  -0.688  -0.906  1.00  0.00      SCDN
+ATOM      4  HA  SCDN    1      -1.185  -0.689   0.906  1.00  0.00      SCDN
+ATOM      5  CG  SCDN    1       0.480   0.328  -0.000  1.00  0.00      SCDN
+ATOM      6  OD1 SCDN    1       0.910   1.464  -0.000  1.00  0.00      SCDN
+ATOM      7  OD2 SCDN    1       1.329  -0.746  -0.000  1.00  0.00      SCDN
+ATOM      8  HD2 SCDN    1       2.222  -0.404   0.000  1.00  0.00      SCDN
+TER       9      SCDN     1
+END
