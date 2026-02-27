@@ -1,32 +1,30 @@
-# Bories_and_Lague_2025
+# Bories and Lagüe, 2025
 
-This repository contains the supporting data, scripts, and files used for molecular dynamics simulations and figure generation related to the following article :
-[cite sc_article]
+Supporting data and scripts for the article.
 
+---
 
-## Repository Structure
+## figures/
 
-### `supp_files/`
+Data, scripts, and outputs for all figures in the article.
 
-This directory contains all the necessary files to reproduce and understand the molecular dynamics simulations:
+- **data/** — Raw and processed data used for plotting (PMF data, density profiles, membrane parameters, aromatics orientation, hydrophobicity, monomer analysis)
+- **scripts/** — Jupyter notebooks that generate the figures (PMF plots, density profiles, pKa, aromatics orientation, membrane parameters, monomer analysis, hydrophobicity)
+- **plot/** — Output figure files (PNG)
+- **draw/** — Hand-drawn figures (Pages files for article and abstract figures, ring orientation diagrams)
 
-- **`popc/`**  
-  Contains distribution data and PMF (Potential of Mean Force) results for each analog molecule studied.
+---
 
-- **`parameter_files/`**  
-  Includes all parameter files used in the molecular dynamics simulations:
-  - **`sidechain_toppar`**: Contains force field parameters specific to the analog sidechains.
+## supp_files/
 
-- **`input_systems/`**  
-  Provides the initial system setup for each analog simulation, including PDB and PSF files.
+Supplementary files: simulation inputs, outputs, parameters, and method scripts.
 
-- **`output_systems/`**  
-  Provides the final system state for each analog simulation and trajectory.
-
-### `figures/`
-
-This directory contains all scripts, data, and output files used to generate the figures presented in the main article and supplementary material.
-
-## How to Use
-
-For questions or issues, please contact the repository owner or open an issue.
+- **input_systems/** — Input PSF/PDB files for each amino acid analog system (one subdirectory per analog: sca, scc, ..., scym) and the pure POPC bilayer
+- **output_systems/** — Output trajectory frames for each system (one subdirectory per analog), with helper scripts to extract frames (`get_last_frames.sh`, `get_trajs.sh`, `get_frame.tcl`)
+- **parameter_files/** — CHARMM and NAMD topology/parameter files for both standard lipids (`toppar-charmm/`, `toppar-namd/`) and side-chain analogs (`sidechain-toppar-charmm/`, `sidechain-toppar-namd/`)
+- **popc/** — Pure POPC reference data: density distributions and PMFs
+- **method_script/** — All analysis scripts organized in four sequential steps (see [method_script/readme.md](supp_files/method_script/readme.md)):
+  1. `1-system_generation/` — Build bilayer–solute systems
+  2. `2-system_analysis/` — Trajectory analysis (centering, cell dimensions, thickness, density profiles, order parameters)
+  3. `3-distribution_extraction/` — Extract solute density distributions (total and monomer/multimer)
+  4. `4-pmf_calculation/` — Compute potentials of mean force from distributions
