@@ -16,10 +16,12 @@ for filename in file_list:
     df = pd.read_csv(filename, sep='\s+')
 
     # Filtrage des sections entre 400 et 1000
-    df_filtered = df[(df["#section"] >= 400) & (df["#section"] <= 1000)]
-
+    #df_filtered = df[(df["#section"] >= 400) & (df["#section"] <= 1000)]
+    #La commande au dessus a été mis en commentaire car les thickness ne contiennent que les sections 400 à 1000 par défaut.
+    df_filtered=df.copy()
     # Récupérer toutes les colonnes "thickness-*"
     thickness_cols = [col for col in df_filtered.columns if col.startswith("thickness-")]
+
 
     # Calcul de la moyenne et de l'erreur standard (std / sqrt(n))
     all_values = df_filtered[thickness_cols].values.flatten()

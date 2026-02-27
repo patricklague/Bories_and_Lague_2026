@@ -5,9 +5,9 @@
 #(-N): "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE"
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 
-aafile=("NONE" "SCM")
+aafile=("SCYM")
 chain=(2 3)
-traj=(1 2 3)
+traj=(4 5 6)
 
 for i in "${chain[@]}"
 do
@@ -18,6 +18,10 @@ do
       cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/orderParameters/orderparameters-chain${i}600.dat ./trajectory$t.dat
       if [ $t = 4 ]; then
         mv trajectory$t.dat trajectory1.dat
+      elif [ $t = 5 ]; then
+        mv trajectory$t.dat trajectory2.dat
+      elif [ $t = 6 ]; then
+        mv trajectory$t.dat trajectory3.dat
       fi
     done
     python get_scd.py
