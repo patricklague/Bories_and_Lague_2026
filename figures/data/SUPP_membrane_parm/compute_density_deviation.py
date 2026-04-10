@@ -7,19 +7,21 @@ from scipy.interpolate import interp1d
 NAMES = [
     'sca', 'scv', 'scl', 'sci', 'scc', 'scm', 'scs', 'sct', 'scn', 'scq',
     'scf', 'scy', 'scw', 'scp', 'glyd', 'sche', 'schd', 'scdn', 'scen', 'sckn', 'scrn',
-    'schp', 'scd', 'sce', 'sccm', 'scym', 'sck', 'scr'
+    'schp', 'scd', 'sce', 'sccm', 'scym', 'sck', 'scr', 'scrn-1', 'scw-1'
 ]
 LABELS = [
     'ALA', 'VAL', 'LEU', 'ILE', 'CYS', 'MET', 'SER', 'THR', 'ASN', 'GLN',
     'PHE', 'TYR', 'TRP', 'PRO', 'GLYD', 'HSE', 'HSD', 'ASP0', 'GLU0', 'LYS0',
-    'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+'
+    'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+', 'ARG0 (0.1M)', 'TRP (0.1M)'
 ]
 
 PROFILES = ['total', 'water', 'phosphate', 'choline', 'chains']
 
-DENS_POPC = '../densityProfile-popc/dens-{}.dat'       # format with profile name
+DENS_POPC = 'densityProfiles/popc-{}.dat'               # format with profile name
 DENS_ANALOG = 'densityProfiles/{}-{}.dat'               # format with (analog, profile)
 OUTPUT = 'computed_density_deviation.csv'
+
+BLOCK_COLS = [f'dens_traj{t}_bloc{b}' for t in range(1, 4) for b in range(1, 4)]
 
 
 def abc_deviation(x_ref, y_ref, x_test, y_test):
@@ -43,22 +45,19 @@ def main():
         row = {'name': name, 'label': label}
 
         for prof in PROFILES:
+            df_ref = pd.read_csv(DENS_POPC.format(prof), sep='\t')
+            df_t = pd.read_csv(DENS_ANALOG.format(name, prof), sep='\t')
+            xr = df_ref['z'].values
+            xt = df_t['z'].values
+
             devs = []
-            for replica in range(1, 4):
-                # Reference (POPC)
-                df_ref = pd.read_csv(DENS_POPC.format(prof), sep='\t')
-                xr = df_ref['x'].values
-                yr = df_ref[f'y{replica}_raw'].values
-
-                # Analog
-                df_t = pd.read_csv(DENS_ANALOG.format(name, prof), sep='\t')
-                xt = df_t['z'].values
-                yt = df_t[f'dens_{replica}'].values
-
+            for col in BLOCK_COLS:
+                yr = df_ref[col].values
+                yt = df_t[col].values
                 devs.append(abc_deviation(xr, yr, xt, yt))
 
             row[f'{prof}_mean'] = np.mean(devs)
-            row[f'{prof}_se'] = np.std(devs, ddof=1) / np.sqrt(3)
+            row[f'{prof}_se'] = np.std(devs, ddof=1) / np.sqrt(len(devs))
 
         rows.append(row)
 

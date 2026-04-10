@@ -6,18 +6,18 @@ import pandas as pd
 NAMES = [
     'sca', 'scv', 'scl', 'sci', 'scc', 'scm', 'scs', 'sct', 'scn', 'scq',
     'scf', 'scy', 'scw', 'scp', 'glyd', 'sche', 'schd', 'scdn', 'scen', 'sckn', 'scrn',
-    'schp', 'scd', 'sce', 'sccm', 'scym', 'sck', 'scr'
+    'schp', 'scd', 'sce', 'sccm', 'scym', 'sck', 'scr', 'scrn-1', 'scw-1'
 ]
 LABELS = [
     'ALA', 'VAL', 'LEU', 'ILE', 'CYS', 'MET', 'SER', 'THR', 'ASN', 'GLN',
     'PHE', 'TYR', 'TRP', 'PRO', 'GLYD', 'HSE', 'HSD', 'ASP0', 'GLU0', 'LYS0',
-    'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+'
+    'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+', 'ARG0 (0.1M)', 'TRP (0.1M)'
 ]
 
 BOX_POPC = 'area_per_lipid/popc-apl.dat'
 BOX_ANALOG = 'area_per_lipid/{}-apl.dat'
 OUTPUT = 'computed_acm.csv'
-SKIP = 400  # equilibration frames to skip
+BLOCKS = [(401, 600), (601, 800), (801, 1000)]  # frame ranges per replica
 
 
 def acm(x, y, z):
@@ -31,11 +31,13 @@ def acm(x, y, z):
 
 
 def compute_for_file(filepath):
-    """Return (mean_KA, std_error) over 3 replicas."""
-    df = pd.read_csv(filepath, sep='\t', skiprows=range(1, SKIP))
+    """Return (mean_KA, std_error) over 9 blocks (3 replicas × 3 time blocks)."""
+    df = pd.read_csv(filepath, sep='\t')
     vals = []
     for i in range(1, 4):
-        vals.append(acm(df[f'x{i}'], df[f'y{i}'], df[f'z{i}']))
+        for start, end in BLOCKS:
+            block = df[(df['#section'] >= start) & (df['#section'] <= end)]
+            vals.append(acm(block[f'x{i}'], block[f'y{i}'], block[f'z{i}']))
     return np.mean(vals), np.std(vals, ddof=1) / np.sqrt(len(vals))
 
 
