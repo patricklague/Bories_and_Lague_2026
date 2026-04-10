@@ -1,31 +1,15 @@
-# Results for SCF (10 Å ≤ z ≤ 20 Å)
+# Résultats pour AA = SCF (10 Å ≤ z ≤ 20 Å)
 angle_type z_center theta_center count
-theta1	11.834	95.355	15862
-theta2	11.834	30.641	8758
-# Results for SCY (10 Å ≤ z ≤ 20 Å)
+theta1	11.834	91.826	24398
+theta2	11.834	37.851	13525
+# Résultats pour AA = SCY (10 Å ≤ z ≤ 20 Å)
 angle_type z_center theta_center count
-theta1	11.398	99.021	48738
-theta2	11.398	23.382	48170
-# Results for SCYM (10 Å ≤ z ≤ 20 Å)
+theta1	11.398	98.974	74278
+theta2	11.398	23.384	73581
+# Résultats pour AA = SCW (10 Å ≤ z ≤ 20 Å)
 angle_type z_center theta_center count
-theta1	18.556	102.550	196
-theta2	18.556	27.053	217
-# Results for SCW (10 Å ≤ z ≤ 20 Å)
-angle_type z_center theta_center count
-theta1	12.097	88.241	39673
-theta2	12.097	41.368	26817
-# Results for SCHP (10 Å ≤ z ≤ 20 Å)
-angle_type z_center theta_center count
-theta1	18.834	41.417	1374
-theta2	18.834	81.006	1642
-# Results for SCHE (10 Å ≤ z ≤ 20 Å)
-angle_type z_center theta_center count
-theta1	15.583	62.978	1294
-theta2	15.583	52.205	1841
-# Results for SCHD (10 Å ≤ z ≤ 20 Å)
-angle_type z_center theta_center count
-theta1	15.242	55.833	1883
-theta2	15.242	52.209	2800
+theta1	12.009	88.241	58968
+theta2	12.009	41.368	39240
 
 
 # Atoms used to determine vectors:
