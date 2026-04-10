@@ -8,7 +8,7 @@ run add_O_plane_10.py
 run pymol_orient_molecule.py
 
 #theta1=angle_ring et theta2=angle_atoms
-orient2('scy', atom1='name CG', atom2='name CZ', angle_atoms=23.382, ring_sel='name CG or name CD1 or name CD2 or name CE1 or name CE2 or name CZ', angle_ring=99.037)
+orient2('scy', atom1='name CG', atom2='name CZ', angle_atoms=23.384, ring_sel='name CG or name CD1 or name CD2 or name CE1 or name CE2 or name CZ', angle_ring=98.974)
 
 rotate z, 4
 rotate x, -90

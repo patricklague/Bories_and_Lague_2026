@@ -23,14 +23,13 @@ import numpy as np
 import pandas as pd
 from functools import reduce
 
-
 def parse_coor_files(path_pattern):
     coords = {}
     max_frame = -1
     files = sorted(glob.glob(path_pattern))
-    files1 = [fp for fp in files if re.search(r'_coor_mono_1\.dat$', fp)]
-    files2 = [fp for fp in files if re.search(r'_coor_mono_2\.dat$', fp)]
-    files3 = [fp for fp in files if re.search(r'_coor_mono_3\.dat$', fp)]
+    files1 = [fp for fp in files if re.search(r'_coor_3\.dat$', fp)]
+    files2 = [fp for fp in files if re.search(r'_coor_4\.dat$', fp)]
+    files3 = [fp for fp in files if re.search(r'_coor_5\.dat$', fp)]
     # partie 1
     for fp in files1:
         atom = os.path.basename(fp).split('_')[0]
@@ -146,9 +145,9 @@ def main(aa=None):
     df_list = []
     for traj in traj_list:
         if aa:
-            pattern = f"../../data/aromatics_orientation/raw_data/{aa}/traj{traj}/*_coor_mono_*.dat"
+            pattern = f"../../data/aromatics_orientation/raw_data/total/{aa}/traj{traj}/*_coor_?.dat"
         else:
-            pattern = f"../../data/aromatics_orientation/raw_data/*/traj{traj}/*_coor_mono_*.dat"
+            pattern = f"../../data/aromatics_orientation/raw_data/total/*/traj{traj}/*_coor_?.dat"
         coords = parse_coor_files(pattern)
         if not coords:
             print(f"Aucun fichier trouvé pour traj{traj} (pattern: {pattern}), je passe cette trajectoire.")
@@ -170,7 +169,7 @@ def main(aa=None):
     df_merged = df_merged.sort_values(['trajectory', 'frame', 'index']).reset_index(drop=True)
 
     # sauvegarde
-    out = f'orientation_mono_{aa or "all"}.csv'.lower()
+    out = f'orientation_{aa or "all"}.csv'.lower()
     df_merged.to_csv(out, index=False)
     print(f"Fichier de sortie: {out}")
 

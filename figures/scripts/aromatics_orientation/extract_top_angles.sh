@@ -8,7 +8,7 @@
 #   ./extract_top_angles.sh all    # pour 'all'
 
 AA=${1:-all}
-IN="freq_angle_mono_${AA,,}.dat"
+IN="../../data/aromatics_orientation/freq_angle_${AA,,}.dat"
 
 if [[ ! -f "$IN" ]]; then
   echo "Fichier '$IN' introuvable." >&2
