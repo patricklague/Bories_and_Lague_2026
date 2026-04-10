@@ -4,32 +4,38 @@ import numpy as np
 import glob
 from functools import reduce
 
-# Lire les fichiers trajectory*.dat
-file_list = sorted(glob.glob("trajectory*.dat"))
+# Lire les fichiers scd*-t*-*.dat
+file_list = sorted(glob.glob("scd*-t*-*.dat"))
 print("Fichiers trouvés :", file_list)
 
 # Liste pour stocker les DataFrames transformés
 dfs = []
+col_names = []
 
-for i, filename in enumerate(file_list, start=1):
-    # Lecture du fichier (pas d'en‑tête, séparation par espaces)
+for filename in file_list:
+    # Extraire traj et bloc du nom de fichier: scd{chain}-t{traj}-{bloc}.dat
+    parts = filename.replace('.dat', '').split('-')
+    traj = parts[1].replace('t', '')
+    bloc = parts[2]
+
+    col_name = f"SCD_traj{traj}_bloc{bloc}"
+    col_names.append(col_name)
+
+    # Lecture du fichier
     df = pd.read_csv(filename, sep=r'\s+')
-    
-    # Ne garder que la colonne z (colonne 0) et la densité (dernière colonne)
     df_tmp = df[['Carbon', '-SCD']].copy()
-    
-    # Stocker dans la liste
+    df_tmp = df_tmp.rename(columns={'-SCD': col_name})
+
     dfs.append(df_tmp)
 
-# Fusionner tous les DataFrames sur la colonne 'z'
+# Fusionner tous les DataFrames sur la colonne 'Carbon'
 merged = reduce(lambda left, right: pd.merge(left, right, on='Carbon'), dfs)
-merged.rename(columns={'-SCD': '-SCD_3', '-SCD_x': '-SCD_1', '-SCD_y': '-SCD_2'}, inplace=True)
 
-# Calcul de la densité moyenne et de l'erreur-type (SE)
-n = len(dfs)
-scd_cols = [col for col in merged.columns if col.startswith("-SCD")]
-merged['scd_moy'] = merged[scd_cols].mean(axis=1)
-merged['se_moy']   = merged[scd_cols].std(axis=1) / np.sqrt(n)
+# Calcul de la moyenne et de l'erreur-type (SE) sur les 9 blocs
+scd_cols = [col for col in merged.columns if col.startswith("SCD_")]
+n = len(scd_cols)
+merged['scd_mean'] = merged[scd_cols].mean(axis=1)
+merged['se']   = merged[scd_cols].std(axis=1, ddof=1) / np.sqrt(n)
 
 # Sauvegarde du résultat
 output_filename = "trajectory_scd.dat"
