@@ -11,6 +11,8 @@ results = []
 for filename in file_list:
     # Nom du système sans l'extension
     systeme_name = filename.split("-")[0]
+    if filename.split("-")[1]=='1':
+    	systeme_name = systeme_name+'-1'
 
     # Lecture du fichier
     df = pd.read_csv(filename, sep='\s+')
@@ -22,13 +24,19 @@ for filename in file_list:
     # Récupérer toutes les colonnes "thickness-*"
     thickness_cols = [col for col in df_filtered.columns if col.startswith("thickness-")]
 
+    # Calcul de la moyenne par batch de 20000 frames pour chaque trajectoire
+    batches = [(0, 19999), (20000, 39999), (40000, 59999)]
+    batch_means = []
+    for start, end in batches:
+        df_batch = df_filtered[(df_filtered["#frame"] >= start) & (df_filtered["#frame"] <= end)]
+        for col in thickness_cols:
+            vals = df_batch[col].dropna().values
+            if len(vals) > 0:
+                batch_means.append(np.mean(vals))
 
-    # Calcul de la moyenne et de l'erreur standard (std / sqrt(n))
-    all_values = df_filtered[thickness_cols].values.flatten()
-    all_values = all_values[~np.isnan(all_values)]  # retirer les éventuels NaNs
-
-    mean_thickness = np.mean(all_values)
-    std_error = np.std(all_values, ddof=1) / np.sqrt(len(all_values))
+    batch_means = np.array(batch_means)
+    mean_thickness = np.mean(batch_means)
+    std_error = np.std(batch_means, ddof=1) / np.sqrt(len(batch_means))
 
     # Ajouter à la liste
     results.append([systeme_name, mean_thickness, std_error])
