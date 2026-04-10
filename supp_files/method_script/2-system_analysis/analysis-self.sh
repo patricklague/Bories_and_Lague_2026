@@ -38,9 +38,10 @@
 # directory with the analysis scripts
 aa=AMACID
 t=NUMTRAJ
+nb_aa=NUMAA
 DIR=RAWDATA
 traj="charmm-gui/namd/out$t"
-SCRIPTDIR="/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/analyses/scripts2"
+SCRIPTDIR="/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/analyses/scripts"
 DATA="$DIR/analyses/traj$t/data"
 PLOT="$DIR/analyses/traj$t/plot"
 PSFFILE="$DIR/charmm-gui/namd/step5_input.psf"
@@ -52,27 +53,28 @@ plots="1"	# make plots
 help="0"	# print help menu
 
 first=1	# first section
-equil=600	# equilibration section
+equil=400	# equilibration section
 last=1000	# last section
 stride10=10	# with stride=10, we have 10K frame over the 1000ns
-stride1=1	# with stride=1, we have 100K frame over the 1000ns
+stride1=10	# with stride=1, we have 100K frame over the 1000ns
 
 # actions (whole trajectory. timeseries)
-logfile="1"
+logfile="0"
 center="1"	# get a centered bilayer trajectory
-watdel="1"	# delete water from the dcd file
-memdel="0"     # delete membrane from the dcd file (mainly to free memory space)
-cells="1"	# extract cell dimensions along trajectory
-thickness="1"	# compute membrane thickness along trajectory
+blocs="1"	# get trajectory separated in blocs
+watdel="0"	# delete water for the dcd file
+cells="0"	# extract cell dimensions along trajectory
+thickness="0"	# compute membrane thickness along trajectory
 
 # bloc analysis
 densProf="1"	# density profiles
-aadensProf="1"	# amino acid density profiles (="0" for the membrane-only system)
-orders="1"	# lipid chain order parameters
+aadensProf="0"	# amino acid density profiles
+orders="0"	# lipid chain order parameters
+contacts="0"	# contacts of aa with membrane
 solutes="0"     # solute COM probability distribution, and PMFs
 solute1=$aa
 solute2=""
-suppr="0"	# put 1 if you want to suppress big dcd files to free space on disk
+suppr="1"	# put 1 if you want to suppress big dcd files to free space on disk
     		# or 0 if you want to keep them for further analysis
 
 #########################################################
@@ -172,47 +174,141 @@ if [ "$center" != "0" ]; then
   echo "  Last section: $last";
   echo "  Stride: $stride1";
 
+  if [ "$blocs" != "0" ]; then
+    #make 5 blocs.dcd
+    #files=""
+    #for (( i=1; i<=200; i++ ))
+    #do
+    #  files="$files $DIR/$traj/section$i.dcd"
+    #done
+
+    #catdcd -o trajectory.dcd -stride $stride1 $files
+    #vmd -dispdev text -e $SCRIPTDIR/center.vmd
+    #mv centered.dcd bloc1.dcd
+    #catdcd -o trajectory.dcd -stride $stride1 $files
+    #vmd -dispdev text -e $SCRIPTDIR/center.vmd
+    #mv centered.dcd bloc1-.dcd
+
   
-  for i in "${equils[@]}"
-  do
+    #files=""
+    #for (( i=201; i<=400; i++ ))
+    #do
+    #  files="$files $DIR/$traj/section$i.dcd"
+    #done
+
+    #catdcd -o trajectory.dcd -stride $stride1 $files
+    #vmd -dispdev text -e $SCRIPTDIR/center.vmd
+    #mv centered.dcd bloc2.dcd
+    #catdcd -o trajectory.dcd -stride $stride1 $files
+    #vmd -dispdev text -e $SCRIPTDIR/center.vmd
+    #mv centered.dcd bloc2-.dcd
+
+  
     files=""
-    for (( j=($last-$i); j<=$last; j++ ))
+    for (( i=401; i<=600; i++ ))
     do
-      files="$files $DIR/$traj/section$j.dcd"
+      files="$files $DIR/$traj/section$i.dcd"
     done
+
     if [ "$watdel" != "0" ]; then
       cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
-      
       vmd -dispdev text -e temp.vmd  >& /dev/null
-    
       rm temp.vmd
       catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
-      #catdcd -o analog-$aa.dcd -stride 1 -i findexfile.ind $SCRIPTDIR/centered.dcd >& /dev/null
-      #rm centered.dcd
-      #mv analog-$aa.dcd centered.dcd
-      #rm findexfile.ind
       PSFFILE2="./analog-$aa.psf"
-      PDBFILE2="./analog-$aa.pdb"
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      rm trajectory.dcd
-      if [ "$memdel" != "0" ]; then
-        cat $SCRIPTDIR/indexNoMemb.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=PDBFILE=$PDBFILE2= | sed s=AAA=$aa= > temp.vmd
-        vmd -dispdev text -e temp.vmd  >& /dev/null
-        catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind centered.dcd
-        rm centered.dcd
-        mv trajectory.dcd centered.dcd
-      fi
+      mv centered.dcd bloc3.dcd
     else
-      catdcd -o trajectory.dcd -stride $stride10 $files
-      PSFFILE2="./bilayer.psf"
-      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
-    vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      catdcd -o trajectory.dcd -stride $stride1 $files
+      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      mv centered.dcd bloc3.dcd
     fi
-    rm trajectory.dcd temp.vmd
-    mv centered.dcd centered$i.dcd
-  done
-  rm temp.vmd
+      
+  
+    files=""
+    for (( i=601; i<=800; i++ ))
+    do
+      files="$files $DIR/$traj/section$i.dcd"
+    done
+
+    if [ "$watdel" != "0" ]; then
+      cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
+      vmd -dispdev text -e temp.vmd  >& /dev/null
+      rm temp.vmd
+      catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+      PSFFILE2="./analog-$aa.psf"
+      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      mv centered.dcd bloc4.dcd
+    else
+      catdcd -o trajectory.dcd -stride $stride1 $files
+      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      mv centered.dcd bloc4.dcd
+    fi
+ 
+    files=""
+    for (( i=801; i<=1000; i++ ))
+    do
+      files="$files $DIR/$traj/section$i.dcd"
+    done
+
+    if [ "$watdel" != "0" ]; then
+      cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
+      vmd -dispdev text -e temp.vmd  >& /dev/null
+      rm temp.vmd
+      catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+      PSFFILE2="./analog-$aa.psf"
+      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      mv centered.dcd bloc5.dcd
+    else
+      catdcd -o trajectory.dcd -stride $stride1 $files
+      cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      mv centered.dcd bloc5.dcd
+    fi
+    
+  else
+    for i in "${equils[@]}"
+    do
+      files=""
+      for (( j=($last-$i); j<=$last; j++ ))
+      do
+        files="$files $DIR/$traj/section$j.dcd"
+      done
+      if [ "$watdel" != "0" ]; then
+        cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
+        vmd -dispdev text -e temp.vmd  >& /dev/null
+    
+        rm temp.vmd
+        catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+        #catdcd -o analog-$aa.dcd -stride 1 -i findexfile.ind $SCRIPTDIR/centered.dcd >& /dev/null
+        #rm centered.dcd
+        #mv analog-$aa.dcd centered.dcd
+        #rm findexfile.ind
+        PSFFILE2="./analog-$aa.psf"
+        #PDBFILE2="./analog-$aa.pdb"
+        cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+        vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+        #rm trajectory.dcd
+        #cat $SCRIPTDIR/indexNoMemb.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=PDBFILE=$PDBFILE2= | sed s=AAA=$aa= > temp.vmd
+        #vmd -dispdev text -e temp.vmd  >& /dev/null
+        #catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind centered.dcd
+        #rm centered.dcd
+        #mv trajectory.dcd centered.dcd
+      else
+        catdcd -o trajectory.dcd -stride $stride10 $files
+        PSFFILE2="./bilayer.psf"
+        cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
+        vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      fi
+      rm trajectory.dcd temp.vmd
+      mv centered.dcd centered$i.dcd
+    done
+  fi
 fi
 
 if [ "$watdel" != "0" ]; then
@@ -267,7 +363,7 @@ if [ "$thickness" = "1" ]; then
   ln -sf centered$i.dcd trajectory.dcd
   vmd -dispdev none -e temp.vmd
 
-  echo "#section    thickness     bilayer-center" > thickness.dat
+  echo "#frame    thickness     bilayer-center" > thickness.dat
   tail -n +2 bilayer-thickness.dat > temp.dat
   cat temp.dat | awk '{print $1+1, $2, $3}' >> thickness.dat
 
@@ -277,43 +373,66 @@ if [ "$thickness" = "1" ]; then
 
   mv thickness.dat $DATA
   mv thickness.png $PLOT
-  rm bilayer-thickness.dat temp.dat temp.vmd
+  rm bilayer-thickness.dat temp.dat temp.vmd trajectory.dcd
   echo "    done!"
 
 fi
 
 #
-# density profiles
+# density profiles (bloc analysis)
 #
 
 if [ "$densProf" != "0" ]; then
 
   mkdir -p $DATA
   mkdir -p $DATA/densityProfiles
-  
-  for i in "${equils[@]}"
-  do
-    ln -sf centered$i.dcd trajectory.dcd
-    if [ "$watdel" != "0" ]; then
-      cat $SCRIPTDIR/densityProfiles-popc.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
-    else
-      cat $SCRIPTDIR/densityProfiles-water-total.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
-    fi
-    vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-    rm trajectory.dcd
-    if [ "$watdel" != "0" ]; then
-      mv profile-carbonyl.dat  $DATA/densityProfiles/profile-carbonyl$i.dat
-      mv profile-chains.dat  $DATA/densityProfiles/profile-chains$i.dat
-      mv profile-choline.dat  $DATA/densityProfiles/profile-choline$i.dat
-      mv profile-popc.dat  $DATA/densityProfiles/profile-popc$i.dat
-      mv profile-phosphate.dat  $DATA/densityProfiles/profile-phosphate$i.dat
-    else
-      mv profile-total.dat  $DATA/densityProfiles/profile-total$i.dat
-      mv profile-water.dat $DATA/densityProfiles/profile-water$i.dat
-    fi
-  done
-  rm temp.vmd
 
+  if [ "$blocs" != "0" ]; then
+    for i in 3 4 5
+    do
+      ln -sf bloc$i.dcd trajectory.dcd
+      if [ "$watdel" != "0" ]; then
+        cat $SCRIPTDIR/densityProfiles-popc.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
+      else
+        cat $SCRIPTDIR/densityProfiles-water-total.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
+      fi
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      rm trajectory.dcd
+      if [ "$watdel" != "0" ]; then
+        mv profile-carbonyl.dat  $DATA/densityProfiles/profile-carbonyl$i.dat
+        mv profile-chains.dat  $DATA/densityProfiles/profile-chains$i.dat
+        mv profile-choline.dat  $DATA/densityProfiles/profile-choline$i.dat
+        mv profile-popc.dat  $DATA/densityProfiles/profile-popc$i.dat
+        mv profile-phosphate.dat  $DATA/densityProfiles/profile-phosphate$i.dat
+      else
+        mv profile-total.dat  $DATA/densityProfiles/profile-total$i-2.dat
+        mv profile-water.dat $DATA/densityProfiles/profile-water$i-2.dat
+      fi
+    done
+  else
+    for i in "${equils[@]}"
+    do
+      ln -sf centered$i.dcd trajectory.dcd
+      if [ "$watdel" != "0" ]; then
+        cat $SCRIPTDIR/densityProfiles-popc.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
+      else
+        cat $SCRIPTDIR/densityProfiles-water-total.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
+      fi
+      vmd -dispdev text -e $SCRIPTDIR/temp.vmd
+      rm trajectory.dcd
+      if [ "$watdel" != "0" ]; then
+        mv profile-carbonyl.dat  $DATA/densityProfiles/profile-carbonyl$i.dat
+        mv profile-chains.dat  $DATA/densityProfiles/profile-chains$i.dat
+        mv profile-choline.dat  $DATA/densityProfiles/profile-choline$i.dat
+        mv profile-popc.dat  $DATA/densityProfiles/profile-popc$i.dat
+        mv profile-phosphate.dat  $DATA/densityProfiles/profile-phosphate$i.dat
+      else
+        mv profile-total.dat  $DATA/densityProfiles/profile-total$i.dat
+        mv profile-water.dat $DATA/densityProfiles/profile-water$i.dat
+      fi
+    done
+    rm temp.vmd
+  fi
 fi
 
 #
@@ -325,7 +444,7 @@ if [ "$aadensProf" != "0" ]; then
   mkdir -p $DATA
   mkdir -p $DATA/densityProfiles
 
-  cat $SCRIPTDIR/densityProfiles-aa-total.vmd | sed s=AAA=$solute1=  | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > solutes.vmd
+  cat $SCRIPTDIR/densityProfiles-aa.vmd | sed s=AAA=$solute1=  | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > solutes.vmd
   
   for i in "${equils[@]}"
   do
@@ -335,10 +454,62 @@ if [ "$aadensProf" != "0" ]; then
     mv -f profile-aa.dat  $DATA/densityProfiles/profile-aa-$i.dat
   done
 
-  #rm solutes.vmd
+  rm solutes.vmd
 
 fi
 
+#
+# aa contacts with lipids
+#
+
+if [ "$contacts" != "0" ]; then
+  mkdir -p $SCRIPTDIR/networks
+  mkdir -p $DATA/networks
+  echo "Building a trajectory without hydrogen atoms..."
+      
+  cat $SCRIPTDIR/indexNoH.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= > temp.vmd
+  vmd -dispdev text -e temp.vmd  >& /dev/null
+  rm temp.vmd
+  catdcd -o bilayer-NoH.dcd -stride 1 -i findexfile.ind $SCRIPTDIR/centered.dcd >& /dev/null
+  rm findexfile.ind
+      
+  echo "    done!"
+  echo ""
+  echo ""
+      
+  echo "Computing AA neighbors along the trajectory..."
+  mv bilayer-NoH.dcd $SCRIPTDIR/networks/
+  mv bilayer-NoH.pdb $SCRIPTDIR/networks/
+  for j in {1..$nb_aa};  # ajuster selon le nombre d'acides aminés du peptide ou de la protéine
+  do
+    cd $SCRIPTDIR/networks
+    mkdir -p contacts
+    $WORDOM -ia within --TITLE $aa$j --SELE /$aa/$j/*[4.5] --LEVEL RES --VERBOSE 1 -imol bilayer-NoH.pdb -itrj bilayer-NoH.dcd >& /dev/null
+    mv $aa$j.within ./contacts/$aa$j.dat
+  done
+  cd $SCRIPTDIR
+      
+  echo "     done!"
+  echo ""
+  echo ""
+      
+  # using contactscorrelation.sh script to output the contact.dat file
+  echo "Analyzing contacts files to extract data..."
+  cat $SCRIPTDIR/contactscorrelation3.sh | sed s=NUMBER_OF_AA=$nb_aa= | sed s=PROA=$aa= | sed s=PROA=$aa= > contactscorrelation.sh
+  scp $SCRIPTDIR/contactscorrelation.sh $SCRIPTDIR/networks/
+  cd $SCRIPTDIR/networks/
+      
+  ls contacts/*
+  bash contactscorrelation.sh
+      
+  cd $SCRIPTDIR/
+  mv $SCRIPTDIR/networks/* $DATA/networks/
+      
+      
+  echo "  Done!"
+  echo ""
+
+fi
 
 #
 # lipid acyl chain order parameters
@@ -349,18 +520,67 @@ if [ "$orders" != "0" ]; then
   echo "Computing lipid order parameters..."
   mkdir -p $DATA/orderParameters
   cat $SCRIPTDIR/orders-popc.vmd | sed s=PSFFILE=$PSFFILE2= > orders-temp.vmd
+  if [ "$blocs" != "0" ]; then
+    for i in 3 4 5
+    do
 
-  for i in "${equils[@]}"
+      ln -sf bloc$i.dcd trajectory.dcd
+      vmd -dispdev text -e $SCRIPTDIR/orders-temp.vmd
+      rm trajectory.dcd
+      mv orderparameters-chain2.dat_plot\~ $DATA/orderParameters/orderparameters-chain2$i.dat
+      mv orderparameters-chain3.dat_plot\~ $DATA/orderParameters/orderparameters-chain3$i.dat
+
+    done
+  else
+    for i in "${equils[@]}"
+    do
+    
+      ln -sf centered$i.dcd trajectory.dcd
+      vmd -dispdev text -e $SCRIPTDIR/orders-temp.vmd
+      rm trajectory.dcd
+      mv orderparameters-chain2.dat_plot\~ $DATA/orderParameters/orderparameters-chain2$i.dat
+      mv orderparameters-chain3.dat_plot\~ $DATA/orderParameters/orderparameters-chain3$i.dat
+
+    done
+    rm orders-temp.vmd
+    echo "  Done!"
+    echo ""
+  fi
+
+fi
+
+#
+# solute density profiles
+#
+
+if [ "$solutes" != "0" ]; then
+
+  echo "Computing center of mass distribution timeseries for solutes: " $solute1 #$solute2
+  mkdir -p $DATA/solutes
+
+  # adjust last frame in script file (nb frames - 1) (otherwise, memory crash)
+  catdcd -o bloc1.dcd -first 0 -last 199 -stride 1 centered.dcd
+  catdcd -o bloc2.dcd -first 200 -last 399 -stride 1 centered.dcd
+  catdcd -o bloc3.dcd -first 400 -last 599 -stride 1 centered.dcd
+  catdcd -o bloc4.dcd -first 600 -last 799 -stride 1 centered.dcd
+  catdcd -o bloc5.dcd -first 800 -last 1000 -stride 1 centered.dcd
+
+  sed "s/AAA/$solute1/" $SCRIPTDIR/distribution-solutes.vmd > solutes.vmd #| \
+        #sed "s/BBB/$solute2/" 
+
+  for i in 1 2 3 4 5
   do
 
-    ln -sf centered$i.dcd trajectory.dcd
-    vmd -dispdev text -e $SCRIPTDIR/orders-temp.vmd
+    ln -sf bloc$i.dcd trajectory.dcd
+    vmd -dispdev text -e ./solutes.vmd
     rm trajectory.dcd
-    mv orderparameters-chain2.dat_plot\~ $DATA/orderParameters/orderparameters-chain2$i.dat
-    mv orderparameters-chain3.dat_plot\~ $DATA/orderParameters/orderparameters-chain3$i.dat
+    mv $solute1.dat $DATA/solutes/$solute1-com$i.dat
+    #mv $solute2.dat $DATA/solutes/$solute2-com$i.dat
 
   done
-  rm orders-temp.vmd
+
+  rm bloc*.dcd solutes.vmd
+
   echo "  Done!"
   echo ""
 
