@@ -11,22 +11,28 @@ results = []
 for filename in file_list:
     # Nom du système sans l'extension
     systeme_name = filename.split("-")[0]
+    if filename.split("-")[1] == "1":
+    	systeme_name = systeme_name + "-1"
 
     # Lecture du fichier
     df = pd.read_csv(filename, sep='\s+')
 
-    # Filtrage des sections entre 400 et 1000
-    df_filtered = df[(df["#section"] >= 400) & (df["#section"] <= 1000)]
+    # Récupérer toutes les colonnes "apl*"
+    apl_cols = [col for col in df.columns if col.startswith("apl")]
 
-    # Récupérer toutes les colonnes "thickness-*"
-    apl_cols = [col for col in df_filtered.columns if col.startswith("apl")]
+    # Calcul de la moyenne par batch de 200 sections pour chaque trajectoire
+    batches = [(401, 600), (601, 800), (801, 1000)]
+    batch_means = []
+    for start, end in batches:
+        df_batch = df[(df["#section"] >= start) & (df["#section"] <= end)]
+        for col in apl_cols:
+            vals = df_batch[col].dropna().values
+            if len(vals) > 0:
+                batch_means.append(np.mean(vals))
 
-    # Calcul de la moyenne et de l'erreur standard (std / sqrt(n))
-    all_values = df_filtered[apl_cols].values.flatten()
-    all_values = all_values[~np.isnan(all_values)]  # retirer les éventuels NaNs
-
-    mean_apl = np.mean(all_values)
-    std_error = np.std(all_values, ddof=1) / np.sqrt(len(all_values))
+    batch_means = np.array(batch_means)
+    mean_apl = np.mean(batch_means)
+    std_error = np.std(batch_means, ddof=1) / np.sqrt(len(batch_means))
 
     # Ajouter à la liste
     results.append([systeme_name, mean_apl, std_error])

@@ -6,9 +6,9 @@
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 #"NONE"
 
-aafile=("SCYM")
+aafile=("NONE")
 
-traj=(4 5 6)
+traj=(1 2 3)
 
 
 for aa in "${aafile[@]}"
@@ -24,7 +24,7 @@ do
       mv cell$t.dat cell3.dat
     fi
   done
-  cat get_apl.py | sed s=FILENAME=${aa,,}= > get_temp.py
+  cat get_apl.py | sed s=FILENAME="${aa,,}"= > get_temp.py
   python get_temp.py
   rm cell*.dat
   if [ $aa = 'NONE' ]; then
