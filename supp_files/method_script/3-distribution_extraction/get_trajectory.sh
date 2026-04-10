@@ -11,28 +11,31 @@
 #aafile=("SCC" "SCM") #sulfured side-chains
 #aafile=("SCS" "SCT" "SCN" "SCQ") #polar side-chains
 #aafile=("SCF" "SCY" "SCW") #aromatic side-chains
-#aafile=("PRO" "GLYD") #backbone-like side-chains
+#aafile=("SCP" "GLYD") #backbone-like side-chains
 #aafile=("SCHE" "SCHD" "SCDN" "SCEN" "SCKN" "SCRN") #titratable neutral side-chains
-aafile=("SCHP" "SCD" "SCE" "SCCM" "SCYM" "SCK" "SCR") #charged side-chains
+#aafile=("SCHP" "SCD" "SCE" "SCCM" "SCYM" "SCK" "SCR") #charged side-chains
+aafile=("BBB")
 nb_aa=26
 
 # Paramètres des lots
-BATCH_SIZE=51       # Nombre de sections par lot
+BATCH_SIZE=601       # Nombre de sections par lot
 SECTION_START=400   # Première section
 SECTION_END=1000    # Dernière section
+
+mkdir -p contacts/
 
 for aa in "${aafile[@]}"
 do
   # Déterminer le répertoire source
-  DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+  DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-1
   traj=(1 2 3)
-  if [[ "$aa" == "SCHP" || "$aa" == "SCK" || "$aa" == "SCR" || "$aa" == "SCCM" || "$aa" == "SCD" || "$aa" == "SCE" ]]; then
-    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
-  elif [[ "$aa" == "GLYD" || "$aa" == "SCV" || "$aa" == "SCA" || "$aa" == "SCP" || "$aa" == "SCW" ]]; then
-    traj=(4 2 3)
-  elif [[ "$aa" == "SCYM" ]]; then
-    traj=(4 5 6)
-  fi
+  #if [[ "$aa" == "SCHP" || "$aa" == "SCK" || "$aa" == "SCR" || "$aa" == "SCCM" || "$aa" == "SCD" || "$aa" == "SCE" ]]; then
+    #DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
+  #elif [[ "$aa" == "GLYD" || "$aa" == "SCV" || "$aa" == "SCA" || "$aa" == "SCP" || "$aa" == "SCW" ]]; then
+    #traj=(4 2 3)
+  #elif [[ "$aa" == "SCYM" ]]; then
+    #traj=(4 5 6)
+  #fi
   PSFFILE="$DIR/charmm-gui/namd/step5_input.psf"
   PDBFILE="$DIR/charmm-gui/namd/step5_input.pdb"
   # Copier le fichier PSF une seule fois
@@ -84,32 +87,16 @@ do
       vmd -dispdev text -e ./temp3.vmd >& /dev/null
       PSFFILE3="./analog-$aa.psf"
       catdcd -o trajectory.dcd -stride 1 -i findexfile.ind centered.dcd
-      
-      # Préparer le script TCL
-      cat ./densityProfiles-aa.vmd | sed s=AAA=$aa=  | sed s=PSFFILE=$PSFFILE3= | sed s=DCDFILE="./trajectory.dcd"= > solutes.vmd
-      
-      # Exécuter l'analyse VMD
-      vmd -dispdev text -e solutes.vmd
-      # Sauvegarder les résultats du lot avec le numéro de frame global
-      # Le numéro de frame global = batch_num * BATCH_SIZE * 100 + frame_local
-      # (100 frames par section DCD)
-      python ./average_profiles.py dens_mono_frame_*.dat > dens_mono_traj_${t}_batch_${batch_num}.dat
-      python ./average_profiles.py dens_nonmono_frame_*.dat > dens_nonmono_traj_${t}_batch_${batch_num}.dat
-      rm dens_mono_frame_*.dat dens_nonmono_frame_*.dat
-      
-      # Nettoyer la trajectoire temporaire
-      rm -f trajectory.dcd solutes.vmd centered.dcd analog*
-      
-      batch_num=$((batch_num + 1))
+      mv trajectory.dcd trajectory$t.dcd
+      if [ $t == 4 ]; then
+        mv trajectory$t.dcd trajectory1.dcd
+      elif [ $t == 5 ]; then
+        mv trajectory$t.dcd trajectory2.dcd
+      elif [ $t == 6 ]; then
+        mv trajectory$t.dcd trajectory3.dcd
+      fi
+      rm trajectory.dcd centered.dcd temp*
     done
-    python ./average_profiles.py dens_mono_traj_${t}_batch*.dat > dens_mono_avg.dat
-    python ./average_profiles.py dens_nonmono_traj_${t}_batch*.dat > dens_nonmono_avg.dat
-    python combine_profiles.py dens_mono_avg.dat dens_nonmono_avg.dat > dens_all_avg.dat
-    #
-    mkdir contacts-6A/${aa,,}
-    mv dens_*_avg.dat contacts-6A/${aa,,}/
-    mv dens_*mono_traj_${t}_batch*.dat contacts-6A/${aa,,}/
-    #cp -f contacts-6A/${aa,,}/dens_all_avg.dat  $DATA/densityProfiles/profile-aa-600-mono-6A.dat
   done
 done
 
