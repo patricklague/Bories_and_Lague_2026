@@ -7,7 +7,7 @@
 #traj456: "SCYM"
 #(-1):"SCRN" "SCW"
 
-aafile=("SCDN")
+aafile=("SCRN")
 chain=(2 3)
 traj=(1 2 3)
 
@@ -17,7 +17,7 @@ do
   do
     for t in "${traj[@]}"
     do
-      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
+      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-1/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
       for j in 3 4 5
       do
         mv orderparameters-chain${i}$j.dat scd${i}-t${t}-$((j-2)).dat
@@ -34,7 +34,7 @@ do
     if [ $aa = "NONE" ]; then
       mv trajectory_scd.dat popc-chain$i.dat
     else
-      mv trajectory_scd.dat ${aa,,}-chain$i.dat
+      mv trajectory_scd.dat ${aa,,}-1-chain$i.dat
     fi
     rm scd*-t*.dat
   done

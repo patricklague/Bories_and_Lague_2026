@@ -6,8 +6,9 @@
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 #traj456: "SCYM"
 #(-1):"SCRN" "SCW"
+#0.1M : "SCRN-1" "SCW-1"
 
-aafile=("SCRN" "SCW")
+aafile=("SCRN")
 profiles=("chains" "choline" "phosphate" "total" "water")
 traj=(1 2 3)
 
@@ -17,7 +18,7 @@ do
   do
     for t in "${traj[@]}"
     do
-      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-1/analyses/traj$t/data/densityProfiles/profile-${i}[3-5].dat .
+      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/densityProfiles/profile-${i}[3-5].dat .
       for j in 3 4 5
       do
         mv profile-${i}$j.dat trajectory$t-$((j-2)).dat
@@ -32,7 +33,7 @@ do
       done
     done
     python get_density.py
-    mv trajectory-dens.dat ${aa,,}-1-$i.dat
+    mv trajectory-dens.dat ${aa,,}-$i.dat
     if [ $aa = "NONE" ]; then
       mv ${aa,,}-$i.dat popc-$i.dat
     fi

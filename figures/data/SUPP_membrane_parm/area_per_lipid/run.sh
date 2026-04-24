@@ -6,7 +6,7 @@
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 #"NONE"
 
-aafile=("NONE")
+aafile=("SCRN")
 
 traj=(1 2 3)
 

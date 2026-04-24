@@ -31,6 +31,6 @@ merged = merged.sort_values(by="section")
 merged = merged.rename(columns={"section": "#section"})
 
 # Sauvegarde
-merged.to_csv("none-apl.dat", sep="\t", index=False, float_format="%.6f")
+merged.to_csv("scrn-1-apl.dat", sep="\t", index=False, float_format="%.6f")
 
 
