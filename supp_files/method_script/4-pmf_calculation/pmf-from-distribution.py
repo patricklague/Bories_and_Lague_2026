@@ -8,9 +8,9 @@ import os
 analogs = [
     "sca", "scv", "scl", "sci", "scc", "scm", "scs", "sct", "scq",
     "scn", "scf", "scy", "scw", "scp", "glyd", "schd", "sche", "scdn",
-    "scen", "sckn", "scrn", "schp", "sccm", "scym", "scd", "sce", "sck", "scr"
+    "scen", "sckn", "scrn", "schp", "sccm", "scym", "scd", "sce", "sck", "scr",
+    "scrn-1", "scw-1"
 ]
-analogs = ["scrn", "scw"]
 n_trajectories = 3
 n_batches = 3  # columns in each trajectory file (400-600, 600-800, 800-1000 ns)
 
@@ -77,8 +77,8 @@ def density_to_pmf(z, density, z_pos):
 # ============================================================
 
 for analog in analogs:
-    dist_analog_dir = os.path.join(distribution_dir, analog+"-1")
-    out_analog_dir = os.path.join(mode, analog+"-1")
+    dist_analog_dir = os.path.join(distribution_dir, analog)
+    out_analog_dir = os.path.join(mode, analog)
     os.makedirs(out_analog_dir, exist_ok=True)
 
     # --- Pass 1: read all trajectory files, build common |z| grid ---
@@ -138,7 +138,7 @@ for analog in analogs:
     mean_pmf = np.mean(all_pmfs, axis=0)
     se_pmf = np.std(all_pmfs, axis=0, ddof=1) / np.sqrt(all_pmfs.shape[0])
 
-    summary_file = os.path.join(out_analog_dir, f"pmf_{analog}-1.dat")
+    summary_file = os.path.join(out_analog_dir, f"pmf_{analog}.dat")
     header = f"{'z':>12s} {'mean':>12s} {'se':>12s}"
     np.savetxt(
         summary_file,

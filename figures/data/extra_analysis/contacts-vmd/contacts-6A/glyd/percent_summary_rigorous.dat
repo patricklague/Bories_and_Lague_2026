@@ -1,3 +1,0 @@
-# Méthode rigoureuse : moyenne ± erreur standard sur 3 réplicats indépendants
-# Chaque trajectoire est traitée comme UNE mesure indépendante
-# analog monomer_mean monomer_se n_traj n_frames_total
