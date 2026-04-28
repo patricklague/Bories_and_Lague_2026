@@ -6,9 +6,9 @@
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 #"NONE"
 
-aafile=("SCRN")
+aafile=("SCYM")
 
-traj=(1 2 3)
+traj=(4 5 6)
 
 
 for aa in "${aafile[@]}"

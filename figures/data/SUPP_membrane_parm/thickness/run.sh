@@ -7,22 +7,19 @@
 #"NONE"
 
 #aafile=("SCYM" "SCY" "SCI" "SCL" "SCF" "SCS" "SCT" "SCKN" "SCRN" "SCDN" "SCEN" "SCQ" "SCN" "SCHE" "SCHD" "SCC" "SCM" "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE" "SCV" "GLYD" "SCA" "SCP" "SCW")
-aafile=("SCRN")
+aafile=("SCYM")
 
-#traj=(4 5 6)
 
 
 for aa in "${aafile[@]}"
 do
   DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
   traj=(1 2 3)
-#  if [[ "$aa" == "SCHP" || "$aa" == "SCK" || "$aa" == "SCR" || "$aa" == "SCCM" || "$aa" == "SCD" || "$aa" == "SCE" ]]; then
-#    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
-#  elif [[ "$aa" == "GLYD" || "$aa" == "SCV" || "$aa" == "SCA" || "$aa" == "SCP" || "$aa" == "SCW" ]]; then
-#    traj=(4 2 3)
-#  elif [[ "$aa" == "SCYM" ]]; then
-#    traj=(4 5 6)
-#  fi
+  if [[ "$aa" == "SCK" || "$aa" == "SCD" ]]; then
+    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
+  elif [[ "$aa" == "SCYM" ]]; then
+    traj=(4 5 6)
+  fi
   for t in "${traj[@]}"
   do
     cp $DIR/analyses/traj$t/data/thickness.dat ./thickness$t.dat

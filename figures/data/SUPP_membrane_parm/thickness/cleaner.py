@@ -2,7 +2,7 @@ import pandas as pd
 import glob
 
 # Liste des fichiers
-file_list = sorted(glob.glob("*-1-thickness.dat"))
+file_list = sorted(glob.glob("scym-thickness.dat"))
 
 for filename in file_list:
     df = pd.read_csv(filename, sep='\s+')

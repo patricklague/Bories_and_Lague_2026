@@ -7,9 +7,9 @@
 #traj456: "SCYM"
 #(-1):"SCRN" "SCW"
 
-aafile=("SCRN")
+aafile=("SCYM")
 chain=(2 3)
-traj=(1 2 3)
+traj=(4 5 6)
 
 for i in "${chain[@]}"
 do
@@ -17,7 +17,7 @@ do
   do
     for t in "${traj[@]}"
     do
-      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-1/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
+      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
       for j in 3 4 5
       do
         mv orderparameters-chain${i}$j.dat scd${i}-t${t}-$((j-2)).dat

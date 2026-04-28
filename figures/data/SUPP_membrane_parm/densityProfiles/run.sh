@@ -8,9 +8,10 @@
 #(-1):"SCRN" "SCW"
 #0.1M : "SCRN-1" "SCW-1"
 
-aafile=("SCRN")
-profiles=("chains" "choline" "phosphate" "total" "water")
-traj=(1 2 3)
+aafile=("SCYM")
+#profiles=("chains" "choline" "phosphate")
+profiles=("total" "water")
+traj=(4 5 6)
 
 for i in "${profiles[@]}"
 do

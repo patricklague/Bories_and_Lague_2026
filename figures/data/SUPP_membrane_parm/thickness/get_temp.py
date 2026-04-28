@@ -27,5 +27,5 @@ result = result.sort_values(by="section")
 result = result.rename(columns={"section": "#frame"})
 
 # Sauvegarde
-result.to_csv("scrn-1-thickness.dat", sep="\t", index=False, float_format="%.2f")
+result.to_csv("scym-thickness.dat", sep="\t", index=False, float_format="%.2f")
 
