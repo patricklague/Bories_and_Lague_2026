@@ -28,15 +28,16 @@ out=1 #2 and 3 (correspond to each trajectory)
 
 # need to start the trajectory?
 if [ ! -f out$out/section1.dcd ]; then  
-   
-    # start trajectory
-    $NAMD step6.1_equilibration.inp >& step6.1_equilibration.out
-    $NAMD step6.2_equilibration.inp >& step6.2_equilibration.out
-    $NAMD step6.3_equilibration.inp >& step6.3_equilibration.out
-    $NAMD step6.4_equilibration.inp >& step6.4_equilibration.out
-    $NAMD step6.5_equilibration.inp >& step6.5_equilibration.out
-    $NAMD step6.6_equilibration.inp >& step6.6_equilibration.out
-
+    if [ $out -eq 1 ]; then
+        #start trajectory
+        $NAMD step6.1_equilibration.inp >& step6.1_equilibration.out
+        $NAMD step6.2_equilibration.inp >& step6.2_equilibration.out
+        $NAMD step6.3_equilibration.inp >& step6.3_equilibration.out
+        $NAMD step6.4_equilibration.inp >& step6.4_equilibration.out
+        $NAMD step6.5_equilibration.inp >& step6.5_equilibration.out
+        $NAMD step6.6_equilibration.inp >& step6.6_equilibration.out
+    fi
+    
     mkdir -p out$out
     cp step6.6_equilibration.xst out$out/restart.xst
     cp step6.6_equilibration.xsc out$out/restart.xsc
@@ -91,7 +92,7 @@ gzip -f out$out/section$COUNTER.out
 
 #rm out$out/*restart*
 if [ $COUNTER -le $NSECTION ]; then
-  /opt/software/slurm/bin/sbatch submit-narval.sh > jobid
+  /opt/software/slurm/bin/sbatch submit-alliancecan.sh > jobid
 fi
 
 exit

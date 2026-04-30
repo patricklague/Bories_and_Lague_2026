@@ -10,12 +10,20 @@ aafile=("SCYM")
 
 traj=(4 5 6)
 
+# Canonical destination for the per-analog merged file
+OUTDIR="../../../../figures/data/SUPP_membrane_parm/area_per_lipid"
+mkdir -p "$OUTDIR"
 
 for aa in "${aafile[@]}"
 do
+  # Original (local) source of the per-trajectory data:
+  DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+  # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
+  #DIR="../../../../results/POPC-aa/POPC-$aa"
+
   for t in "${traj[@]}"
   do
-    cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/cell.dat ./cell$t.dat
+    cp $DIR/analyses/traj$t/data/cell.dat ./cell$t.dat
     if [ $t = 4 ]; then
       mv cell$t.dat cell1.dat
     elif [ $t = 5 ]; then
@@ -26,9 +34,13 @@ do
   done
   cat get_apl.py | sed s=FILENAME="${aa,,}"= > get_temp.py
   python get_temp.py
-  rm cell*.dat
-  if [ $aa = 'NONE' ]; then
-    mv none-apl.dat popc-apl.dat
+  rm cell*.dat get_temp.py
+
+  out="${aa,,}-apl.dat"
+  if [ "$aa" = 'NONE' ]; then
+    out="popc-apl.dat"
+    mv none-apl.dat "$out"
   fi
+  mv "$out" "$OUTDIR/$out"
 done
 

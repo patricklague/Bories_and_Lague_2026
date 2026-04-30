@@ -9,7 +9,6 @@ mol load psf PSFFILE pdb PDBFILE
 
 set all [atomselect top "all"]
 
-#set sel1 [atomselect top "not (water or resname CLA or resname SOD or hydrogen)"]
 set sel1 [atomselect top "not (water or resname CLA or resname SOD or resname POPC)"]
 set sel2 [atomselect top "not [$sel1 text]"]
 

@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 #
-# Script pour extraire, depuis freq_angle_{AA}.dat,
-# les angles (theta_center) de plus forte fréquence
-# pour z_center entre 0 et 20 Å, pour chaque angle_type.
-# Usage :
-#   ./extract_top_angles.sh SCF    # pour un AA particulier
-#   ./extract_top_angles.sh all    # pour 'all'
+# Script to extract, from freq_angle_{AA}.dat,
+# the angles (theta_center) of highest frequency
+# for z_center between 0 and 20 Å, for each angle_type.
+# Usage:
+#   ./extract_top_angles.sh SCF    # for a specific AA
 
 AA=${1:-all}
 IN="../../data/aromatics_orientation/freq_angle_${AA,,}.dat"
 
 if [[ ! -f "$IN" ]]; then
-  echo "Fichier '$IN' introuvable." >&2
+  echo "File '$IN' not found." >&2
   exit 1
 fi
 

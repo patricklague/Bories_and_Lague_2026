@@ -3,7 +3,7 @@ import numpy as np
 import glob
 
 # Liste des fichiers système
-file_list = sorted(glob.glob("*-apl.dat"))
+file_list = sorted(glob.glob("../../../figures/data/SUPP_membrane_parm/area_per_lipid/*-apl.dat"))
 
 # Liste pour stocker les résultats
 results = []
@@ -41,5 +41,5 @@ for filename in file_list:
 summary_df = pd.DataFrame(results, columns=["name", "apl", "std_error"])
 
 # Sauvegarde
-summary_df.to_csv("all_apl.dat", sep="\t", index=False, float_format="%.4f")
+summary_df.to_csv("../../../figures/data/SUPP_membrane_parm/area_per_lipid/all_apl.dat", sep="\t", index=False, float_format="%.4f")
 

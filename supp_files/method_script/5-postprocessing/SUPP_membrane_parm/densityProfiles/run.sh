@@ -11,15 +11,24 @@
 aafile=("SCYM")
 #profiles=("chains" "choline" "phosphate")
 profiles=("total" "water")
-traj=(4 5 6)
+traj=(1 2 3)
+
+# Canonical destination for the per-analog merged file
+OUTDIR="../../../../figures/data/SUPP_membrane_parm/densityProfiles"
+mkdir -p "$OUTDIR"
 
 for i in "${profiles[@]}"
 do
   for aa in "${aafile[@]}"
   do
+    # Original (local) source of the per-trajectory data:
+    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+    # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
+    #DIR="../../../../results/POPC-aa/POPC-$aa"
+
     for t in "${traj[@]}"
     do
-      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/densityProfiles/profile-${i}[3-5].dat .
+      cp $DIR/analyses/traj$t/data/densityProfiles/profile-${i}[3-5].dat .
       for j in 3 4 5
       do
         mv profile-${i}$j.dat trajectory$t-$((j-2)).dat
@@ -34,10 +43,13 @@ do
       done
     done
     python get_density.py
-    mv trajectory-dens.dat ${aa,,}-$i.dat
-    if [ $aa = "NONE" ]; then
-      mv ${aa,,}-$i.dat popc-$i.dat
+
+    out="${aa,,}-$i.dat"
+    if [ "$aa" = "NONE" ]; then
+      out="popc-$i.dat"
     fi
+    mv trajectory-dens.dat "$out"
+    mv "$out" "$OUTDIR/$out"
     rm trajectory*.dat
   done
 done
