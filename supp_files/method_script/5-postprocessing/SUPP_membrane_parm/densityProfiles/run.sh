@@ -8,13 +8,13 @@
 #(-1):"SCRN" "SCW"
 #0.1M : "SCRN-1" "SCW-1"
 
-aafile=("SCYM")
-#profiles=("chains" "choline" "phosphate")
-profiles=("total" "water")
+aafile=("SCI" "SCL" "SCS")
+profiles=("chains" "choline" "phosphate" "total" "water")
+
 traj=(1 2 3)
 
 # Canonical destination for the per-analog merged file
-OUTDIR="../../../../figures/data/SUPP_membrane_parm/densityProfiles"
+OUTDIR="../../../../../figures/data/SUPP_membrane_parm/densityProfiles"
 mkdir -p "$OUTDIR"
 
 for i in "${profiles[@]}"

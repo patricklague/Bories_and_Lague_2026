@@ -13,8 +13,8 @@ LABELS = [
     'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+', 'ARG0 (0.1M)', 'TRP (0.1M)'
 ]
 
-INPUT = '../../../figures/data/SUPP_membrane_parm/thickness/all_thicknesses.dat'
-OUTPUT = '../../../figures/data/SUPP_membrane_parm/computed_thickness.csv'
+INPUT = '../../../../figures/data/SUPP_membrane_parm/thickness/all_thicknesses.dat'
+OUTPUT = '../../../../figures/data/SUPP_membrane_parm/computed_thickness.csv'
 
 
 def main():

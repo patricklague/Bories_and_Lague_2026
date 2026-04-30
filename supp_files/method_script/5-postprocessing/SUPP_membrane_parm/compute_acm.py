@@ -14,9 +14,9 @@ LABELS = [
     'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+', 'ARG0 (0.1M)', 'TRP (0.1M)'
 ]
 
-BOX_POPC = '../../../figures/data/SUPP_membrane_parm/area_per_lipid/popc-apl.dat'
-BOX_ANALOG = '../../../figures/data/SUPP_membrane_parm/area_per_lipid/{}-apl.dat'
-OUTPUT = '../../../figures/data/SUPP_membrane_parm/computed_acm.csv'
+BOX_POPC = '../../../../figures/data/SUPP_membrane_parm/area_per_lipid/popc-apl.dat'
+BOX_ANALOG = '../../../../figures/data/SUPP_membrane_parm/area_per_lipid/{}-apl.dat'
+OUTPUT = '../../../../figures/data/SUPP_membrane_parm/computed_acm.csv'
 BLOCKS = [(401, 600), (601, 800), (801, 1000)]  # frame ranges per replica
 
 

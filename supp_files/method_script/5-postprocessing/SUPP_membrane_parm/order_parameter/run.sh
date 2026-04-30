@@ -7,18 +7,20 @@
 #traj456: "SCYM"
 #(-1):"SCRN" "SCW"
 
-aafile=("SCYM")
+aafile=("SCD" "SCK")
 chain=(2 3)
-traj=(4 5 6)
+traj=(1 2 3)
+
+# Canonical destination for the per-analog merged file
+OUTDIR="../../../../../figures/data/SUPP_membrane_parm/order_parameter"
+mkdir -p "$OUTDIR"
 
 for i in "${chain[@]}"
 do
   for aa in "${aafile[@]}"
   do
     # Original (local) source of the per-trajectory data:
-    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
-    # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
-    #DIR="../../../../results/POPC-aa/POPC-$aa"
+    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
 
     for t in "${traj[@]}"
     do

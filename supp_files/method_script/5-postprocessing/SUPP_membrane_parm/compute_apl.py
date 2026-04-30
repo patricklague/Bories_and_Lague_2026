@@ -14,8 +14,8 @@ LABELS = [
     'ARG0', 'HSP+', 'ASP-', 'GLU-', 'CYS-', 'TYR-', 'LYS+', 'ARG+', 'ARG0 (0.1M)', 'TRP (0.1M)'
 ]
 
-INPUT = '../../../figures/data/SUPP_membrane_parm/area_per_lipid/all_apl.dat'
-OUTPUT = '../../../figures/data/SUPP_membrane_parm/computed_apl.csv'
+INPUT = '../../../../figures/data/SUPP_membrane_parm/area_per_lipid/all_apl.dat'
+OUTPUT = '../../../../figures/data/SUPP_membrane_parm/computed_apl.csv'
 
 
 def main():

@@ -6,12 +6,12 @@
 #traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
 #"NONE"
 
-aafile=("SCYM")
+aafile=("SCL" "SCI" "SCS")
 
-traj=(4 5 6)
+traj=(1 2 3)
 
 # Canonical destination for the per-analog merged file
-OUTDIR="../../../../figures/data/SUPP_membrane_parm/area_per_lipid"
+OUTDIR="../../../../../figures/data/SUPP_membrane_parm/area_per_lipid"
 mkdir -p "$OUTDIR"
 
 for aa in "${aafile[@]}"
@@ -24,13 +24,6 @@ do
   for t in "${traj[@]}"
   do
     cp $DIR/analyses/traj$t/data/cell.dat ./cell$t.dat
-    if [ $t = 4 ]; then
-      mv cell$t.dat cell1.dat
-    elif [ $t = 5 ]; then
-      mv cell$t.dat cell2.dat
-    elif [ $t = 6 ]; then
-      mv cell$t.dat cell3.dat
-    fi
   done
   cat get_apl.py | sed s=FILENAME="${aa,,}"= > get_temp.py
   python get_temp.py
