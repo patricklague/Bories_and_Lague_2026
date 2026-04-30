@@ -115,5 +115,5 @@ rm temp.inp temp.pdb temp.psf temp1.pdb temp1.psf temp.py temp.sh solute1.pdb so
 mv bilayer-solutes.pdb charmm-gui/namd/step5_input.pdb
 mv bilayer-solutes.psf charmm-gui/namd/step5_input.psf
 mv charmm-gui $DIRESULT/
-cp submit*.sh $DIRESULT/charmm-gui/namd/
+cp ../submit*.sh $DIRESULT/charmm-gui/namd/
 echo "Done!"

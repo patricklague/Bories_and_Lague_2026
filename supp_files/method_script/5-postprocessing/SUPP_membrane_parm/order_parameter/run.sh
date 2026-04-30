@@ -15,9 +15,14 @@ for i in "${chain[@]}"
 do
   for aa in "${aafile[@]}"
   do
+    # Original (local) source of the per-trajectory data:
+    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+    # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
+    #DIR="../../../../results/POPC-aa/POPC-$aa"
+
     for t in "${traj[@]}"
     do
-      cp /media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
+      cp $DIR/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
       for j in 3 4 5
       do
         mv orderparameters-chain${i}$j.dat scd${i}-t${t}-$((j-2)).dat
@@ -31,11 +36,14 @@ do
       done
     done
     python get_scd.py
-    if [ $aa = "NONE" ]; then
-      mv trajectory_scd.dat popc-chain$i.dat
+
+    if [ "$aa" = "NONE" ]; then
+      out="popc-chain$i.dat"
     else
-      mv trajectory_scd.dat ${aa,,}-1-chain$i.dat
+      out="${aa,,}-chain$i.dat"
     fi
+    mv trajectory_scd.dat "$out"
+    mv "$out" "$OUTDIR/$out"
     rm scd*-t*.dat
   done
 done

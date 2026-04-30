@@ -278,6 +278,43 @@ def fix_aromatics_headers() -> None:
 
 
 # ===========================================================================
+# 9) AROMATICS ATOM COORDINATES — RENAME SECTION SUFFIX
+# ---------------------------------------------------------------------------
+# Path of the data to be renamed:
+#   figures/data/aromatics_orientation/raw_data/total/<aa>/atom_coordinates/
+#       traj{1,2,3}/<atom>_coor_{3,4,5}.dat
+# Renames to:
+#   figures/data/aromatics_orientation/raw_data/total/<aa>/atom_coordinates/
+#       traj{1,2,3}/<atom>_coor_{401-600,601-800,801-1000}.dat
+# ===========================================================================
+
+def fix_atom_coordinates_filenames() -> None:
+    base = ROOT / "figures/data/aromatics_orientation/raw_data/total"
+    section_map = {
+        "3": "401-600",
+        "4": "601-800",
+        "5": "801-1000",
+    }
+    for aa_dir in sorted(base.glob("*/")):
+        coord_root = aa_dir / "atom_coordinates"
+        if not coord_root.is_dir():
+            continue
+        for traj_dir in sorted(coord_root.glob("traj*/")):
+            for f in sorted(traj_dir.glob("*_coor_*.dat")):
+                stem = f.stem  # e.g. "CG_coor_3"
+                # Only rename if the suffix after the last "_" is one of 3/4/5
+                prefix, _, suffix = stem.rpartition("_")
+                if suffix not in section_map:
+                    continue
+                new_name = f"{prefix}_{section_map[suffix]}{f.suffix}"
+                new_path = f.with_name(new_name)
+                if new_path.exists():
+                    # Skip rather than clobber an already-renamed file
+                    continue
+                f.rename(new_path)
+
+
+# ===========================================================================
 # Helpers
 # ===========================================================================
 
@@ -331,6 +368,7 @@ def main() -> None:
     fix_pmf_headers()
     fix_raw_contacts_headers()
     fix_aromatics_headers()
+    fix_atom_coordinates_filenames()
     fix_monomer_rate_headers()
     print("Header normalisation complete. Backups written next to each modified file (*.bak).")
 

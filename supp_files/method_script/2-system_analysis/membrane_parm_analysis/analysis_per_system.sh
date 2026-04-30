@@ -1,34 +1,45 @@
 #!/bin/bash
 
-# may2022 (already coded)
-# center the membrane
-# cell dimensions
-# membrane thickness (P-P distance, hydrophobic thickness)
-# electron densities (water penetration and P-P distance, hydrophobic thickness)
-
-# todo:
-# area compressibility modulus
-# area per lipid (voronoi tesselation)
-# solute distributions (center of mass)
-# free energies
-# averages and StdDev for bloc analysis (order parameters, electron densities)
-
-
-# see Pogozheva2022 pour les analyses à réaliser
-# electron densities
-# order parameters (the 16:0 sn-1 chain of the most abundant lipid in each system)
-# distance between lipid head groups, hydrophobic thickness, area per lipid
-# depth penetration H2O, sterol tilt angle, area compressibility modulus
-
-
-# 5) calculate the PMF using the script freeEprofile2.py
-#	 python freeEprofile2.py densityProfileSCF-200-300ns.dat 32 35 > freeE-200-300ns.dat
-# 5b) calculate normalized distribution functions (brut results before pmf)
-
-# 6) compare with MacCallum values:
-#       gnuplot> set xrange [0:]
-#       gnuplot> set yrange [-18:8]
-#       gnuplot> plot "freeE-200-300ns.dat" u 1:3 w l, "phe-maccallum.dat" u ($1*10.0):2:3 with errorbars
+# Per-system membrane analysis driver.
+#
+# Pipeline executed for one analog (`aa`) and one trajectory index (`t`):
+#   1) center the membrane on the bilayer mid-plane
+#   2) extract cell dimensions along the trajectory
+#   3) compute membrane thickness (P-P distance, hydrophobic thickness)
+#   4) compute electron / mass density profiles
+#         (water penetration, P-P distance, hydrophobic thickness)
+#   5) compute lipid acyl-chain order parameters (sn-1 / sn-2 of POPC)
+#
+# When batch analysis is enabled (`batches=1`), the production window
+# 401-1000 ns is split into three 200 ns batches:
+#     batch401-600, batch601-800, batch801-1000
+# Each batch produces its own centered trajectory file
+# (batch401-600.dcd, batch601-800.dcd, batch801-1000.dcd) and the
+# associated density / order-parameter outputs are tagged with the same
+# 401-600 / 601-800 / 801-1000 suffix.
+#
+# References for the membrane observables:
+#   Pogozheva 2022 — electron densities, order parameters,
+#   inter-headgroup distance, hydrophobic thickness, area per lipid,
+#   water penetration depth, sterol tilt angle, area compressibility
+#   modulus.
+#
+# Side observables computed downstream (NOT in this script):
+#   - area compressibility modulus
+#   - area per lipid (Voronoi tessellation)
+#   - solute distributions (centre of mass)
+#   - free energies (PMF)  via freeEprofile2.py, e.g.
+#         python freeEprofile2.py densityProfileSCF-200-300ns.dat 32 35 \
+#             > freeE-200-300ns.dat
+#   - normalised distribution functions (raw distributions before PMF)
+#   - per-batch averages and standard deviations
+#     (order parameters, electron densities)
+#
+# Comparison with reference data (gnuplot example):
+#       set xrange [0:]
+#       set yrange [-18:8]
+#       plot "freeE-200-300ns.dat"   u 1:3 w l, \
+#            "phe-maccallum.dat" u ($1*10.0):2:3 with errorbars
 
 
 ######################
@@ -53,16 +64,16 @@ help="0"	# print help menu
 
 first=1	# first section
 last=1000	# last section
-stride1=1	# with stride=1, we have 100K frame over the 1000ns
+stride=1	# with stride=1, we have 100K frame over the 1000ns
 
 # actions (whole trajectory. timeseries)
 center="1"	# get a centered bilayer trajectory
-blocs="1"	# get trajectory separated in blocs (401-600, 601-800, 801-1000) / if ="0", the trajectory is taken from 401 to 1000
-watdel="1"	# delete water for the dcd file (helpful to save space on disk, and to speed up the analysis) / can't be used to get the density profiles "water" and "total"
+batches="1"	# get trajectory split in batches (401-600, 601-800, 801-1000) / if "0", the trajectory is taken from 401 to 1000
+watdel="1"	# delete water from the dcd file (helpful to save space on disk, and to speed up the analysis) / cannot be used to get the "water" and "total" density profiles
 cells="1"	# extract cell dimensions along trajectory
-thickness="1"	# compute membrane thickness along trajectory
+thickness="1"	# compute membrane thickness (P-P distance) along trajectory
 
-# bloc analysis
+# batch analysis
 densProf="1"	# density profiles
 orders="1"	# lipid chain order parameters
 solute1=$aa
@@ -142,9 +153,9 @@ if [ "$center" != "0" ]; then
   echo "  First section: $first";
   echo "  Equilibration section: $equil";
   echo "  Last section: $last";
-  echo "  Stride: $stride1";
+  echo "  Stride: $stride";
 
-  if [ "$blocs" != "0" ]; then
+  if [ "$batches" != "0" ]; then
     files=""
     for (( i=401; i<=600; i++ ))
     do
@@ -155,16 +166,16 @@ if [ "$center" != "0" ]; then
       cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
       vmd -dispdev text -e temp.vmd  >& /dev/null
       rm temp.vmd
-      catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+      catdcd -o trajectory.dcd -stride $stride -i findexfile.ind $files
       PSFFILE2="./analog-$aa.psf"
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc3.dcd
+      mv centered.dcd batch401-600.dcd
     else
-      catdcd -o trajectory.dcd -stride $stride1 $files
+      catdcd -o trajectory.dcd -stride $stride $files
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc3.dcd
+      mv centered.dcd batch401-600.dcd
     fi
       
   
@@ -178,16 +189,16 @@ if [ "$center" != "0" ]; then
       cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
       vmd -dispdev text -e temp.vmd  >& /dev/null
       rm temp.vmd
-      catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+      catdcd -o trajectory.dcd -stride $stride -i findexfile.ind $files
       PSFFILE2="./analog-$aa.psf"
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc4.dcd
+      mv centered.dcd batch601-800.dcd
     else
-      catdcd -o trajectory.dcd -stride $stride1 $files
+      catdcd -o trajectory.dcd -stride $stride $files
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc4.dcd
+      mv centered.dcd batch601-800.dcd
     fi
  
     files=""
@@ -200,16 +211,16 @@ if [ "$center" != "0" ]; then
       cat $SCRIPTDIR/indexNoWat.vmd | sed s=PSFFILE=$PSFFILE= | sed s=PDBFILE=$PDBFILE= | sed s=AAA=$aa= > temp.vmd
       vmd -dispdev text -e temp.vmd  >& /dev/null
       rm temp.vmd
-      catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+      catdcd -o trajectory.dcd -stride $stride -i findexfile.ind $files
       PSFFILE2="./analog-$aa.psf"
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc5.dcd
+      mv centered.dcd batch801-1000.dcd
     else
-      catdcd -o trajectory.dcd -stride $stride1 $files
+      catdcd -o trajectory.dcd -stride $stride $files
       cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
-      mv centered.dcd bloc5.dcd
+      mv centered.dcd batch801-1000.dcd
     fi
     
   else
@@ -225,12 +236,12 @@ if [ "$center" != "0" ]; then
         vmd -dispdev text -e temp.vmd  >& /dev/null
     
         rm temp.vmd
-        catdcd -o trajectory.dcd -stride $stride1 -i findexfile.ind $files
+        catdcd -o trajectory.dcd -stride $stride -i findexfile.ind $files
         PSFFILE2="./analog-$aa.psf"
         cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
         vmd -dispdev text -e $SCRIPTDIR/temp.vmd
       else
-        catdcd -o trajectory.dcd -stride $stride10 $files
+        catdcd -o trajectory.dcd -stride $stride $files
         PSFFILE2="./bilayer.psf"
         cat $SCRIPTDIR/center.vmd | sed s=PSFFILE=$PSFFILE2= | sed s=DCDFILE="./trajectory.dcd"= > temp.vmd
         vmd -dispdev text -e $SCRIPTDIR/temp.vmd
@@ -304,7 +315,7 @@ if [ "$thickness" = "1" ]; then
 fi
 
 #
-# density profiles (bloc analysis)
+# density profiles (batch analysis)
 #
 
 if [ "$densProf" != "0" ]; then
@@ -312,10 +323,10 @@ if [ "$densProf" != "0" ]; then
   mkdir -p $DATA
   mkdir -p $DATA/densityProfiles
 
-  if [ "$blocs" != "0" ]; then
-    for i in 3 4 5
+  if [ "$batches" != "0" ]; then
+    for i in 401-600 601-800 801-1000
     do
-      ln -sf bloc$i.dcd trajectory.dcd
+      ln -sf batch$i.dcd trajectory.dcd
       if [ "$watdel" != "0" ]; then
         cat $SCRIPTDIR/densityProfiles-popc.vmd | sed s=PSFFILE=$PSFFILE2= > temp.vmd
       else
@@ -324,14 +335,14 @@ if [ "$densProf" != "0" ]; then
       vmd -dispdev text -e $SCRIPTDIR/temp.vmd
       rm trajectory.dcd
       if [ "$watdel" != "0" ]; then
-        mv profile-carbonyl.dat  $DATA/densityProfiles/profile-carbonyl$i.dat
-        mv profile-chains.dat  $DATA/densityProfiles/profile-chains$i.dat
-        mv profile-choline.dat  $DATA/densityProfiles/profile-choline$i.dat
-        mv profile-popc.dat  $DATA/densityProfiles/profile-popc$i.dat
-        mv profile-phosphate.dat  $DATA/densityProfiles/profile-phosphate$i.dat
+        mv profile-carbonyl.dat   $DATA/densityProfiles/profile-carbonyl-$i.dat
+        mv profile-chains.dat     $DATA/densityProfiles/profile-chains-$i.dat
+        mv profile-choline.dat    $DATA/densityProfiles/profile-choline-$i.dat
+        mv profile-popc.dat       $DATA/densityProfiles/profile-popc-$i.dat
+        mv profile-phosphate.dat  $DATA/densityProfiles/profile-phosphate-$i.dat
       else
-        mv profile-total.dat  $DATA/densityProfiles/profile-total$i-2.dat
-        mv profile-water.dat $DATA/densityProfiles/profile-water$i-2.dat
+        mv profile-total.dat  $DATA/densityProfiles/profile-total-$i-2.dat
+        mv profile-water.dat  $DATA/densityProfiles/profile-water-$i-2.dat
       fi
     done
   else
@@ -370,15 +381,15 @@ if [ "$orders" != "0" ]; then
   echo "Computing lipid order parameters..."
   mkdir -p $DATA/orderParameters
   cat $SCRIPTDIR/orders-popc.vmd | sed s=PSFFILE=$PSFFILE2= > orders-temp.vmd
-  if [ "$blocs" != "0" ]; then
-    for i in 3 4 5
+  if [ "$batches" != "0" ]; then
+    for i in 401-600 601-800 801-1000
     do
 
-      ln -sf bloc$i.dcd trajectory.dcd
+      ln -sf batch$i.dcd trajectory.dcd
       vmd -dispdev text -e $SCRIPTDIR/orders-temp.vmd
       rm trajectory.dcd
-      mv orderparameters-chain2.dat_plot\~ $DATA/orderParameters/orderparameters-chain2$i.dat
-      mv orderparameters-chain3.dat_plot\~ $DATA/orderParameters/orderparameters-chain3$i.dat
+      mv orderparameters-chain2.dat_plot\~ $DATA/orderParameters/orderparameters-chain2-$i.dat
+      mv orderparameters-chain3.dat_plot\~ $DATA/orderParameters/orderparameters-chain3-$i.dat
 
     done
   else

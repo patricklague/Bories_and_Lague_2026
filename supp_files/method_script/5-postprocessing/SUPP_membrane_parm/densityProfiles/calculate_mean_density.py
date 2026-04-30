@@ -4,7 +4,7 @@ import glob
 from functools import reduce
 
 # Liste des fichiers *‑PROFILE.dat
-file_list = sorted(glob.glob("*-PROFILE.dat"))
+file_list = sorted(glob.glob("../../../figures/data/SUPP_membrane_parm/densityProfiles/*-PROFILE.dat"))
 print("Fichiers trouvés :", file_list)
 
 # Liste pour stocker les DataFrames
@@ -31,7 +31,7 @@ summary_df = reduce(lambda left, right: pd.merge(left, right, on='z', how='outer
 summary_df = summary_df.fillna(0)
 
 # Sauvegarde du tableau résumé
-summary_df.to_csv("all_PROFILE.dat", sep="\t", index=False, float_format="%.4f")
+summary_df.to_csv("../../../figures/data/SUPP_membrane_parm/densityProfiles/all_PROFILE.dat", sep="\t", index=False, float_format="%.4f")
 print("Fichier 'all_PROFILE.dat' généré avec succès.")
 
 

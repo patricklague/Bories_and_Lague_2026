@@ -11,9 +11,16 @@ aafile=("SCYM")
 
 
 
+# Canonical destination for the per-analog merged file
+OUTDIR="../../../../figures/data/SUPP_membrane_parm/thickness"
+mkdir -p "$OUTDIR"
+
 for aa in "${aafile[@]}"
 do
+  # Original (local) source of the per-trajectory data:
   DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+  # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
+  #DIR="../../../../results/POPC-aa/POPC-$aa"
   traj=(1 2 3)
   if [[ "$aa" == "SCK" || "$aa" == "SCD" ]]; then
     DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
@@ -33,9 +40,13 @@ do
   done
   cat get_thickness.py | sed s=FILENAME="${aa,,}"= > get_temp.py
   python get_temp.py
-  rm thickness*.dat
-  if [ $aa = 'NONE' ]; then
-    mv none-thickness.dat popc-thickness.dat
+  rm thickness*.dat get_temp.py
+
+  out="${aa,,}-thickness.dat"
+  if [ "$aa" = 'NONE' ]; then
+    out="popc-thickness.dat"
+    mv none-thickness.dat "$out"
   fi
+  mv "$out" "$OUTDIR/$out"
 done
 

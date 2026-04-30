@@ -3,7 +3,7 @@ import numpy as np
 import glob
 
 # Liste des fichiers système
-file_list = sorted(glob.glob("*thickness.dat"))
+file_list = sorted(glob.glob("../../../figures/data/SUPP_membrane_parm/thickness/*thickness.dat"))
 
 # Liste pour stocker les résultats
 results = []
@@ -45,5 +45,5 @@ for filename in file_list:
 summary_df = pd.DataFrame(results, columns=["name", "thickness", "std_error"])
 
 # Sauvegarde
-summary_df.to_csv("all_thicknesses.dat", sep="\t", index=False, float_format="%.4f")
+summary_df.to_csv("../../../figures/data/SUPP_membrane_parm/thickness/all_thicknesses.dat", sep="\t", index=False, float_format="%.4f")
 
