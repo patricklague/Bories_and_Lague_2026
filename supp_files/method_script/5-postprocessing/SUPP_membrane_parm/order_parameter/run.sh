@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-#FAITS: "SCY" "SCI" "SCL" "SCF" "SCS" "SCT" "SCKN" "SCRN" "SCDN" "SCEN" "SCQ" "SCN" "SCHE" "SCHD" "SCC" "SCM"
-#A FAIRE:
-#(-N): "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE"
-#traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
-#traj456: "SCYM"
-#(-1):"SCRN" "SCW"
+aafile=( \
+  "SCA" "SCV" "SCL" "SCI" "SCC" "SCM" "SCS" "SCT" "SCN" "SCQ" \
+  "SCF" "SCY" "SCW" "SCP" "GLYD" \
+  "SCHE" "SCHD" "SCDN" "SCEN" "SCKN" "SCRN" \
+  "SCHP" "SCD" "SCE" "SCCM" "SCYM" "SCK" "SCR" \
+  "SCRN-1" "SCW-1" \
+  "NONE" \
+)
 
-aafile=("SCD" "SCK")
 chain=(2 3)
 traj=(1 2 3)
 
@@ -20,21 +21,14 @@ do
   for aa in "${aafile[@]}"
   do
     # Original (local) source of the per-trajectory data:
-    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
+    DIR=../../../POPC-aa/POPC-$aa
 
     for t in "${traj[@]}"
     do
-      cp $DIR/analyses/traj$t/data/orderParameters/orderparameters-chain${i}[3-5].dat .
-      for j in 3 4 5
+      cp $DIR/analyses/traj$t/data/orderParameters/orderparameters-chain${i}*.dat .
+      for j in 401-600 601-800 801-1000
       do
-        mv orderparameters-chain${i}$j.dat scd${i}-t${t}-$((j-2)).dat
-        if [ $t = 4 ]; then
-          mv scd${i}-t${t}-$((j-2)).dat scd${i}-t1-$((j-2)).dat
-        elif [ $t = 5 ]; then
-          mv scd${i}-t${t}-$((j-2)).dat scd${i}-t2-$((j-2)).dat
-        elif [ $t = 6 ]; then
-          mv scd${i}-t${t}-$((j-2)).dat scd${i}-t3-$((j-2)).dat
-        fi
+        mv orderparameters-chain${i}$j.dat scd${i}-t${t}-$j.dat
       done
     done
     python get_scd.py

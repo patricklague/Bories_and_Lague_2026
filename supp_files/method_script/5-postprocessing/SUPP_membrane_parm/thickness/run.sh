@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-#FAITS: "SCYM" "SCY" "SCI" "SCL" "SCF" "SCS" "SCT" "SCKN" "SCRN" "SCDN" "SCEN" "SCQ" "SCN" "SCHE" "SCHD" "SCC" "SCM"
-#A FAIRE: 
-#(-N): "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE"
-#traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
-#"NONE"
-
-#aafile=("SCYM" "SCY" "SCI" "SCL" "SCF" "SCS" "SCT" "SCKN" "SCRN" "SCDN" "SCEN" "SCQ" "SCN" "SCHE" "SCHD" "SCC" "SCM" "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE" "SCV" "GLYD" "SCA" "SCP" "SCW")
-aafile=("SCD" "SCK" "SCL" "SCI" "SCS")
-#aafile=("SCS")
-
+aafile=( \
+  "SCA" "SCV" "SCL" "SCI" "SCC" "SCM" "SCS" "SCT" "SCN" "SCQ" \
+  "SCF" "SCY" "SCW" "SCP" "GLYD" \
+  "SCHE" "SCHD" "SCDN" "SCEN" "SCKN" "SCRN" \
+  "SCHP" "SCD" "SCE" "SCCM" "SCYM" "SCK" "SCR" \
+  "SCRN-1" "SCW-1" \
+  "NONE" \
+)
 
 # Canonical destination for the per-analog merged file
 OUTDIR="../../../../../figures/data/SUPP_membrane_parm/thickness"
@@ -18,11 +16,8 @@ mkdir -p "$OUTDIR"
 for aa in "${aafile[@]}"
 do
   # Original (local) source of the per-trajectory data:
-  DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
+  DIR=../../../POPC-aa/POPC-$aa
   traj=(1 2 3)
-  if [[ "$aa" == "SCK" || "$aa" == "SCD" ]]; then
-    DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa-N
-  fi
   for t in "${traj[@]}"
   do
     cp $DIR/analyses/traj$t/data/thickness.dat ./thickness$t.dat

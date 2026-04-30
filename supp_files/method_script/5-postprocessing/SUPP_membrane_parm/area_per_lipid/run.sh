@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-#FAITS: "SCYM" "SCY" "SCI" "SCL" "SCF" "SCS" "SCT" "SCKN" "SCRN" "SCDN" "SCEN" "SCQ" "SCN" "SCHE" "SCHD" "SCC" "SCM"
-#A FAIRE: 
-#(-N): "SCHP" "SCK" "SCR" "SCCM" "SCD" "SCE"
-#traj4:"SCV" "GLYD" "SCA" "SCP" "SCW"
-#"NONE"
-
-aafile=("SCL" "SCI" "SCS")
+aafile=( \
+  "SCA" "SCV" "SCL" "SCI" "SCC" "SCM" "SCS" "SCT" "SCN" "SCQ" \
+  "SCF" "SCY" "SCW" "SCP" "GLYD" \
+  "SCHE" "SCHD" "SCDN" "SCEN" "SCKN" "SCRN" \
+  "SCHP" "SCD" "SCE" "SCCM" "SCYM" "SCK" "SCR" \
+  "SCRN-1" "SCW-1" \
+  "NONE" \
+)
 
 traj=(1 2 3)
 
@@ -17,9 +18,7 @@ mkdir -p "$OUTDIR"
 for aa in "${aafile[@]}"
 do
   # Original (local) source of the per-trajectory data:
-  DIR=/media/bories/Backup/bories/Documents/Travail/results/homoPOPC-aa/homoPOPC-$aa
-  # Reviewer-facing alternative (uncomment if running from the public POPC-aa tree):
-  #DIR="../../../../results/POPC-aa/POPC-$aa"
+  DIR=../../../POPC-aa/POPC-$aa
 
   for t in "${traj[@]}"
   do
