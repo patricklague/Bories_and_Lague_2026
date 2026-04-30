@@ -45,7 +45,7 @@ set sticks_radius, 0.3, lipid_tails
 
 # Color the chains gold
 # ("gold" is a standard PyMOL color; you could also use "yellow" or RGB)
-color gray60, lipid_tails
+color brightorange, lipid_tails
 # "gray60" is also a nice color
 
 # -------------- 4) Phosphate / choline headgroup representation --------------
