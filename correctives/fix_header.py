@@ -94,9 +94,9 @@ def fix_densityProfiles_headers() -> None:
         ROOT / "figures/data/densityProfile-popc",
     ]
     bloc_map = {
-        "bloc1": "401-600ns",
-        "bloc2": "601-800ns",
-        "bloc3": "801-1000ns",
+        "bloc1": "401-600",
+        "bloc2": "601-800",
+        "bloc3": "801-1000",
     }
     for folder in folders:
         for f in sorted(folder.glob("*.dat")):
@@ -131,9 +131,9 @@ def fix_densityProfiles_headers() -> None:
 def fix_order_parameter_headers() -> None:
     folder = ROOT / "figures/data/SUPP_membrane_parm/order_parameter"
     bloc_map = {
-        "bloc1": "401-600ns",
-        "bloc2": "601-800ns",
-        "bloc3": "801-1000ns",
+        "bloc1": "401-600",
+        "bloc2": "601-800",
+        "bloc3": "801-1000",
     }
     for f in sorted(folder.glob("*-chain*.dat")):
         with f.open("r", encoding="utf-8") as fh:

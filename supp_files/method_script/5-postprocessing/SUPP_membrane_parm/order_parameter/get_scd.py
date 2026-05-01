@@ -18,7 +18,7 @@ for filename in file_list:
     traj = parts[1].replace('t', '')
     bloc = parts[2]
 
-    col_name = f"SCD_traj{traj}_bloc{bloc}"
+    col_name = f"SCD_traj{traj}_{bloc}"
     col_names.append(col_name)
 
     # Lecture du fichier

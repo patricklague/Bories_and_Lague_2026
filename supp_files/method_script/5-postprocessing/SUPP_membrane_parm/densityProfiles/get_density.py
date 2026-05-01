@@ -19,7 +19,7 @@ for filename in file_list:
     traj = parts[0]
     bloc = parts[1]
 
-    col_name = f"dens_traj{traj}_bloc{bloc}"
+    col_name = f"dens_traj{traj}_{bloc}"
     col_names.append(col_name)
 
     # Lecture du fichier (pas d'en‑tête, séparation par espaces)
