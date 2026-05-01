@@ -11,7 +11,7 @@ for aa in "${aafile[@]}"
 do
   mkdir POPC-$aa
   cd POPC-$aa
-  DIR=../../results/homoPOPC-aa/homoPOPC-$aa
+  DIR=../../results/POPC-aa/POPC-$aa
   traj=(1 2 3)
   for t in "${traj[@]}"
   do

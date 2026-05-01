@@ -1,4 +1,4 @@
-# Charger les fichiers
+# Load files
 package require pbctools 
 mol new input.psf
 mol addfile traj.dcd waitfor all
@@ -37,7 +37,7 @@ $sel writepdb $outputfile
 #animate write dcd "traj_test.dcd"
 $sel delete
 
-puts "Dernière frame sauvegardée dans $outfile"
+puts "Last frame saved in $outfile"
 
 quit
 

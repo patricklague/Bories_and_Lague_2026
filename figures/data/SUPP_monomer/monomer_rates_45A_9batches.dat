@@ -1,4 +1,4 @@
-# Monomer/Multimer rates (4.5Å cutoff, 9 batches)
+# Monomer rates (4.5A cutoff, 9 batches)
 SC	mono_mean	mono_std	multi_mean	multi_std	n_batches
 GLYD	68.03	0.78	31.97	0.78	9
 SCP	83.88	1.53	16.12	1.53	9

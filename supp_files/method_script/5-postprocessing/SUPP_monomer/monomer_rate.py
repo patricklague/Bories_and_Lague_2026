@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 RAW_DIR = '../../../../figures/data/distribution_data/raw_data'
-OUTPUT = '../../../../figures/data/SUPP_monomer/monomer_multimer_rates_45A_9batches.dat'
+OUTPUT = '../../../../figures/data/SUPP_monomer/monomer_rates_45A_9batches.dat'
 
 aa_all = ['GLYD', 'SCP', 'SCA', 'SCV', 'SCL', 'SCI', 'SCC', 'SCM', 'SCS', 'SCT', 'SCN', 'SCQ',
           'SCF', 'SCY', 'SCW', 'SCCM', 'SCYM', 'SCE', 'SCEN', 'SCD',
@@ -62,6 +62,6 @@ monomer_rates = dict(zip(monomer_df['SC'], monomer_df['mono_mean']))
 
 os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
 with open(OUTPUT, 'w', newline='') as f:
-    f.write('# Monomer/Multimer rates (4.5Å cutoff, 9 batches)\n')
+    f.write('# Monomer rates (4.5A cutoff, 9 batches)\n')
     monomer_df.to_csv(f, sep='\t', index=False, float_format='%.2f')
 print(f"Saved: {OUTPUT}")
