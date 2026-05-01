@@ -3,6 +3,17 @@
 Supporting data and scripts for the article.
 
 ---
+## 1. Data Source and Citation
+
+- Repository: Github
+- DCD trajectory location : <Borealis_link> (DOI : unavalaible)
+- Companion article:
+  - Authors: `S. Bories and P. Lague`
+  - Title: `Amino Acid Insertion Energetics in a POPC Bilayer from Unbiased Molecular Dynamics`
+  - Journal / preprint: `...`
+  - Year: `2026`
+
+If you use these data, please cite both the Borealis dataset and the companion article above.
 
 ## figures/
 
