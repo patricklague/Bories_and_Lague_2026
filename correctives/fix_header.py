@@ -369,7 +369,6 @@ def main() -> None:
     fix_raw_contacts_headers()
     fix_aromatics_headers()
     fix_atom_coordinates_filenames()
-    fix_monomer_rate_headers()
     print("Header normalisation complete. Backups written next to each modified file (*.bak).")
 
 

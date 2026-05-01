@@ -43,9 +43,6 @@ output_dir = f"{mode}_{cutoff.split('_')[0]}" if mode != "total" else mode
 # ============================================================
 cutoff_col_map = {
     "4.5A_cutoff": 5,
-    "6A_cutoff": 6,
-    "8A_cutoff": 7,
-    "10A_cutoff": 8,
 }
 
 frame_col = 0  # column index of frame number
@@ -58,7 +55,7 @@ z_col = 4      # column index of z in the data file
 cutoff_idx = cutoff_col_map[cutoff]
 
 for analog in analogs:
-    out_analog_dir = os.path.join(output_dir, analog+"-1")
+    out_analog_dir = os.path.join(output_dir, analog)
     os.makedirs(out_analog_dir, exist_ok=True)
 
     # Collect z-values per (trajectory, batch) for two-pass processing
@@ -66,7 +63,7 @@ for analog in analogs:
 
     # --- Pass 1: read all trajectories & store filtered z-values per batch ---
     for traj in range(1, n_trajectories + 1):
-        input_file = os.path.join(raw_data_dir, analog+"-1", f"{analog}_contacts_{traj}.dat")
+        input_file = os.path.join(raw_data_dir, analog, f"{analog}_contacts_{traj}.dat")
         if not os.path.isfile(input_file):
             print(f"WARNING: {input_file} not found, skipping.")
             continue
@@ -135,7 +132,7 @@ for analog in analogs:
     mean_density = np.mean(all_densities, axis=0)
     se_density = np.std(all_densities, axis=0, ddof=1) / np.sqrt(all_densities.shape[0])
 
-    summary_file = os.path.join(out_analog_dir, f"summary_{analog}-1.dat")
+    summary_file = os.path.join(out_analog_dir, f"summary_{analog}.dat")
     header = f"{'z':>12s} {'mean':>12s} {'se':>12s}"
     np.savetxt(
         summary_file,
