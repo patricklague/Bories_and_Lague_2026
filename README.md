@@ -1,4 +1,4 @@
-# Bories and Lagüe, 2025
+# Bories and Lagüe, 2026
 
 Supporting data and scripts for the article.
 
