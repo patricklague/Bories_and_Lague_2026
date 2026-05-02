@@ -21,7 +21,7 @@ DENS_POPC = '../../../../figures/data/SUPP_membrane_parm/densityProfiles/popc-{}
 DENS_ANALOG = '../../../../figures/data/SUPP_membrane_parm/densityProfiles/{}-{}.dat'               # format with (analog, profile)
 OUTPUT = '../../../../figures/data/SUPP_membrane_parm/computed_density_deviation.csv'
 
-BLOCK_COLS = [f'dens_traj{t}_bloc{b}' for t in range(1, 4) for b in range(1, 4)]
+BLOCK_COLS = [f'dens_traj{t}_{b}' for t in range(1, 4) for b in ['401-600', '601-800', '801-1000']]
 
 
 def abc_deviation(x_ref, y_ref, x_test, y_test):

@@ -22,7 +22,7 @@ ORDER_POPC = '../../../../figures/data/SUPP_membrane_parm/order_parameter/popc-c
 ORDER_ANALOG = '../../../../figures/data/SUPP_membrane_parm/order_parameter/{}-chain{}.dat'     # format with (analog, chain)
 OUTPUT = '../../../../figures/data/SUPP_membrane_parm/computed_order_deviation.csv'
 
-BLOCK_COLS = [f'SCD_traj{t}_bloc{b}' for t in range(1, 4) for b in range(1, 4)]
+BLOCK_COLS = [f'SCD_traj{t}_{b}' for t in range(1, 4) for b in ['401-600', '601-800', '801-1000']]
 
 
 def abc_deviation(x_ref, y_ref, x_test, y_test):

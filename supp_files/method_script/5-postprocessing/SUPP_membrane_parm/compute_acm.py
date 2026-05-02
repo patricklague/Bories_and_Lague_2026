@@ -37,7 +37,7 @@ def compute_for_file(filepath):
     for i in range(1, 4):
         for start, end in BLOCKS:
             block = df[(df['#section'] >= start) & (df['#section'] <= end)]
-            vals.append(acm(block[f'x{i}'], block[f'y{i}'], block[f'z{i}']))
+            vals.append(acm(block[f'x-{i}'], block[f'y-{i}'], block[f'z-{i}']))
     return np.mean(vals), np.std(vals, ddof=1) / np.sqrt(len(vals))
 
 
