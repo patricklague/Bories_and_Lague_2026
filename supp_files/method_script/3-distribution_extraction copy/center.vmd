@@ -1,0 +1,141 @@
+# vmd -dispdev text -e center.vmd
+#
+# Centering for the z-density / PMF reaction coordinate.
+#
+#   (1) Standard global membrane centering (unchanged): the whole system is
+#       translated so the all-lipid membrane mass-COM sits at (0,0,0). This keeps
+#       centered.dcd and the downstream inter-solute contact distances consistent.
+#
+#   (2) Cylinder-based membrane COM (Nitschke, Atkovska & Hub, J. Chem. Phys. 145,
+#       125101 (2016)). For every solute and every frame a *local* membrane COM is
+#       computed from the lipids inside a cylinder aligned along z and centered at
+#       the solute's lateral (x,y) position. A lipid contributes with weight 1 while
+#       its lateral distance r <= RI, the weight is switched linearly to 0 between
+#       RI and RO, and lipids with r >= RO are ignored. Using a local reference
+#       removes the membrane-undulation artifacts that affect the all-lipid COM.
+#       The resulting local COM z is written per (frame, resid) to cylinder_com.dat;
+#       the distribution step (counting_script) subtracts it from the solute z so the
+#       reaction coordinate becomes z_solute - z_cylinderCOM.
+#
+# Nitschke tested RI/RO pairs of 1.0/1.5, 1.4/1.9 and 1.8/2.3 nm and recommends
+# radii around 1.5-2 nm; the defaults below use 1.5/2.0 nm (15/20 A).
+package require pbctools
+
+mol load psf PSFFILE dcd DCDFILE
+
+# ----- cylinder-based COM parameters -----
+set RI       15.0           ;# inner radius (A), weight = 1 for r <= RI   (~1.5 nm)
+set RO       20.0           ;# outer radius (A), weight = 0 for r >= RO   (~2.0 nm)
+set COM_OUT  "cylinder_com.dat"
+set MEMB_SEL "segname MEMB"
+set SOLU_SEL "not (water or resname CLA or resname SOD or segname MEMB)"
+
+#
+# 1st, 2-step centering on membrane, first step around lipid #1, second step around whole membrane
+#
+pbc join connected -now
+pbc wrap -centersel "segname MEMB and resid 1" -center com -compound residue -all
+pbc wrap -centersel "segname MEMB" -center com -compound residue -all
+
+#
+# 2nd step: center lipids at (0,0,0) and record the per-solute cylinder-based COM z
+#
+set total [atomselect top all]
+set ref   [atomselect top $MEMB_SEL]
+set solu  [atomselect top $SOLU_SEL]
+set nf [molinfo top get numframes]
+puts [format "%i frames\n" $nf]
+
+# One persistent selection per lipid residue: each lipid is represented by its
+# mass-COM, which is then weighted by the cylinder switch at its lateral position.
+set lipid_residues [lsort -unique -integer [$ref get residue]]
+set lipid_sels {}
+set lipid_mass {}
+foreach lr $lipid_residues {
+    set ls [atomselect top "$MEMB_SEL and residue $lr"]
+    lappend lipid_sels $ls
+    lappend lipid_mass [vecsum [$ls get mass]]
+}
+
+# One persistent selection per solute residue, plus its PDB resid label (used to
+# match the rows written by the distribution step).
+set solute_residues [lsort -unique -integer [$solu get residue]]
+set solute_sels {}
+set solute_resids {}
+foreach sr $solute_residues {
+    set s [atomselect top "residue $sr"]
+    lappend solute_sels $s
+    lappend solute_resids [lindex [$s get resid] 0]
+}
+
+set out [open $COM_OUT w]
+puts $out "frame\tresid\tz_cyl"
+
+# Center the reference system around (0, 0, 0)
+for {set f 0} {$f < $nf} {incr f} {
+    molinfo top set frame $f
+
+    # --- global membrane-COM centering for this frame (unchanged behaviour) ---
+    $ref frame $f
+    $total frame $f
+    $total moveby [vecinvert [measure center $ref weight mass]]
+
+    # lateral box lengths for minimum-image distances
+    set box [molinfo top get {a b c}]
+    set lx [lindex $box 0]
+    set ly [lindex $box 1]
+
+    # per-lipid mass-COM at this (now centered) frame
+    set lxv {}; set lyv {}; set lzv {}
+    foreach ls $lipid_sels {
+        $ls frame $f
+        set c [measure center $ls weight mass]
+        lappend lxv [lindex $c 0]
+        lappend lyv [lindex $c 1]
+        lappend lzv [lindex $c 2]
+    }
+    set nl [llength $lxv]
+
+    # cylinder-based local membrane COM z for each solute
+    for {set si 0} {$si < [llength $solute_sels]} {incr si} {
+        set s [lindex $solute_sels $si]
+        $s frame $f
+        set sc [measure center $s weight mass]
+        set xi [lindex $sc 0]
+        set yi [lindex $sc 1]
+        set sumw  0.0
+        set sumwz 0.0
+        for {set li 0} {$li < $nl} {incr li} {
+            set dx [expr {[lindex $lxv $li] - $xi}]
+            set dy [expr {[lindex $lyv $li] - $yi}]
+            set dx [expr {$dx - $lx*round($dx/$lx)}]
+            set dy [expr {$dy - $ly*round($dy/$ly)}]
+            set r  [expr {sqrt($dx*$dx + $dy*$dy)}]
+            if {$r >= $RO} { continue }
+            if {$r <= $RI} {
+                set w 1.0
+            } else {
+                set w [expr {($RO - $r)/($RO - $RI)}]
+            }
+            set wm [expr {$w * [lindex $lipid_mass $li]}]
+            set sumw  [expr {$sumw  + $wm}]
+            set sumwz [expr {$sumwz + $wm*[lindex $lzv $li]}]
+        }
+        if {$sumw > 0.0} {
+            set zcyl [expr {$sumwz/$sumw}]
+        } else {
+            set zcyl 0.0
+        }
+        puts $out [format "%d\t%d\t%.4f" $f [lindex $solute_resids $si] $zcyl]
+    }
+
+    if {$f % 100 == 0} { puts "Frame:$f/$nf" }
+}
+
+close $out
+
+animate write dcd centered.dcd
+
+exit
+
+
