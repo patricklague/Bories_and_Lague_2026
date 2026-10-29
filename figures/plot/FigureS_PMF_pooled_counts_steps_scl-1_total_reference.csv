@@ -1,0 +1,2 @@
+analog,n_blocks,n_bootstrap,water_counts_per_bin,water_probability_per_bin,reference_kJ_mol,reference_se_kJ_mol,reference_bootstrap_defined_fraction
+scl-1,9,10000,29.8,1.2735042735042734e-05,28.40769140210157,1.1248527351068964,0.6539

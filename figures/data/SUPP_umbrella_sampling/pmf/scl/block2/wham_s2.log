@@ -1,0 +1,24 @@
+# binless WHAM (MBAR, single state)  T=303.15  output bins=76  range=[-38.0,38.0]  tol=1e-07 (reduced units)
+# 38 windows, total samples = 189800
+# adjacent overlap (0.02 A histogram): min=0.0768 median=0.0854
+# warm start: binned WHAM with 3800 bins
+  iter    500  max|df| = 5.742e-06
+  iter   1000  max|df| = 3.792e-06
+  iter   1500  max|df| = 2.942e-06
+  iter   2000  max|df| = 2.355e-06
+  iter   2500  max|df| = 1.896e-06
+  iter   3000  max|df| = 1.528e-06
+  iter   3500  max|df| = 1.231e-06
+  iter   4000  max|df| = 9.920e-07
+  iter   4500  max|df| = 7.994e-07
+  iter   5000  max|df| = 6.441e-07
+  iter   5500  max|df| = 5.191e-07
+  iter   6000  max|df| = 4.183e-07
+  iter   6500  max|df| = 3.371e-07
+  iter   7000  max|df| = 2.716e-07
+  iter   7500  max|df| = 2.189e-07
+  iter   8000  max|df| = 1.764e-07
+  iter   8500  max|df| = 1.421e-07
+  iter   9000  max|df| = 1.145e-07
+  iter   9314  max|df| = 1.000e-07
+# converged in 9314 iterations

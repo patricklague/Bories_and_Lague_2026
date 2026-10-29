@@ -1,0 +1,17 @@
+analog,concentration,n_valid,n_total,status,selection,z_min_A,z_max_A
+scv,0.2 M,7,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scv-1,0.1 M,7,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scl,0.2 M,3,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scl-1,0.1 M,1,9,one block; no SE,complete 0-50 A blocks,0.5,49.5
+sci,0.2 M,3,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+sci-1,0.1 M,9,9,direct block SE,all blocks; shared positive prefix,0.5,20.5
+scm,0.2 M,5,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scm-1,0.1 M,1,9,one block; no SE,complete 0-50 A blocks,0.5,49.5
+scf,0.2 M,7,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scf-1,0.1 M,3,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scw,0.2 M,9,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scw-1,0.1 M,5,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scy,0.2 M,9,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scy-1,0.1 M,3,9,direct block SE,complete 0-50 A blocks,0.5,49.5
+scrn,0.2 M,1,9,one block; no SE,complete 0-50 A blocks,0.5,49.5
+scrn-1,0.1 M,1,9,one block; no SE,complete 0-50 A blocks,0.5,49.5

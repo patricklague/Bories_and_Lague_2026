@@ -86,6 +86,9 @@ Once the raw contact files are produced, `raw_to_distribution.py` bins them into
 
 `pmf-from-distribution.py` loops over all analogs, copies the relevant distribution files from step 3, and stores the output PMF data. The script handles the `total`, `monomer_4.5A`, and `multimer_4.5A` distribution modes through its parameters. Outputs land under `figures/data/pmf_data/{total,monomer_4.5A,multimer_4.5A}/<aa>/`.
 
+Procedure: an absolute PMF, −kT ln p(|z|), is computed for each of the 9 blocks (3 × 200 ns × 3 trajectories). The blocks are averaged without translation. The water reference *a* is the inverse-variance weighted mean of this averaged PMF over 40–50 Å, and the final PMF is shifted by −*a*. The SE of the shifted PMF (and σ_a) is obtained with a block bootstrap: the 9 blocks are resampled with replacement 10 000 times, and the averaging, reference and shift are repeated for each replicate. Outputs per analog: `pmf_<aa>.dat` (z, shifted mean, bootstrap SE), `pmf_<aa>_untranslated.dat` (z, unshifted mean, block SE), and `trajectory<n>.dat` (block PMFs shifted by the common *a*). `water_reference.dat` lists *a* and σ_a for every analog.
+
+Alternative estimator, `4-pmf_calculation_counting/` (same entry point and output layout; `pmf-from-distribution_cyl.py` for `total_cyl`): the exact counts of the 9 blocks are summed before the logarithm (no pseudocount, no block discarded), PMF(z) = −kT ln[n(z) / mean₄₀₋₅₀ n]. Bins never visited are written as `nan`. The 40–50 Å window is pooled into one reference, defined as soon as one block reached the water. The SE comes from the same 10 000-replicate block bootstrap; replicates with no water count are excluded, and their defined fraction is reported (`boot_defined`, `a_defined`). See `4-pmf_calculation_counting/parameter_choices.txt`.
 ---
 
 ## 5-postprocessing/
@@ -117,7 +120,7 @@ Once the raw contact files are produced, `raw_to_distribution.py` bins them into
 
   - `run.sh` — for each analog under `../system_us/runs/` and each 50 ns block (`section101-150`, `151-200`, `201-250`), calls `extract_metadata.py` then `get_pmf.py`. Env overrides: `PYTHON`, `WHAM_BACKEND` (`python`/`grossfield`), `WHAM_BIN`, `EQUIL_PS`, `NBOOT`.
   - `extract_metadata.py` — reads `system.psf`/`system.pdb` + `out/section*.dcd`, computes `z_solute − z_reference` (minimum-image along Lz), writes `traj/win<NN>_s{1,2}.dat` + `metadata_s{1,2}.dat`.
-  - `get_pmf.py` — runs WHAM per block (solutes 1 and 2 separately, folded to |z|), then averages the three blocks with SE = std/√n. Emits per-block `pmf_s{1,2}.dat` / `pmf-us-<analog>-<block>.dat` and the final `pmf-us-<analog>.dat` (`|z| (Å)`, `PMF (kcal/mol)`, `SE (kcal/mol)`, `n_blocks`).
+  - `get_pmf.py` — runs WHAM per block (solutes 1 and 2 run separately, then folded to |z| and averaged without translation). The three blocks are averaged without translation. The water reference *a* is the inverse-variance weighted mean over |z| ≥ 30 Å (to the end of sampling), and the PMF is shifted by −*a*. The SE comes from an exact block bootstrap (all 3³ resamples, repeating average + reference + shift), × √(n/(n−1)). Emits per-block `pmf_s{1,2}.dat` / `pmf-us-<analog>-<block>.dat` (shifted by the common *a*), `pmf-us-<analog>-untranslated.dat`, and the final `pmf-us-<analog>.dat` (`|z| (Å)`, `PMF (kcal/mol)`, `SE (kcal/mol)`, `n_blocks`; *a* ± σ_a in the header).
 
 All scripts in this step apply the canonical naming conventions defined in `correctives/list_of_script.md` and emit headers compatible with `correctives/fix_header.py` so that no post-hoc header rewriting is needed.
 

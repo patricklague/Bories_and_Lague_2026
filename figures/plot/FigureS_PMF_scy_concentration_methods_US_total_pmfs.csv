@@ -1,0 +1,1261 @@
+method,series,z_A,mean_kJ_mol,se_kJ_mol
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,0.5,-1.060463,0.904565
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,1.5,-1.528424,0.831802
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,2.5,-2.41635,0.821404
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,3.5,-4.172303,0.786353
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,4.5,-6.452799,0.72842
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,5.5,-8.725239,0.699585
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,6.5,-10.801677,0.700346
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,7.5,-12.579604,0.705126
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,8.5,-13.986682,0.703155
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,9.5,-15.035826,0.710807
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,10.5,-15.692572,0.719871
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,11.5,-15.948459,0.724945
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,12.5,-15.771027,0.725172
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,13.5,-15.203522,0.728193
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,14.5,-14.251668,0.722885
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,15.5,-13.000913,0.726062
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,16.5,-11.465048,0.725764
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,17.5,-9.671163,0.72408
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,18.5,-7.723104,0.729723
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,19.5,-5.77559,0.741415
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,20.5,-3.888809,0.765156
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,21.5,-2.371565,0.746408
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,22.5,-1.294234,0.598369
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,23.5,-1.120775,0.529401
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,24.5,-1.025138,0.500917
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,25.5,-1.207019,0.507745
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,26.5,-0.955337,0.440865
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,27.5,-0.786406,0.439118
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,28.5,-0.611644,0.468027
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,29.5,-0.613622,0.346129
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,30.5,-0.458329,0.356151
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,31.5,-0.343302,0.314599
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,32.5,-0.180354,0.217923
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,33.5,-0.207895,0.227682
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,34.5,-0.205053,0.20467
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,35.5,-0.00171,0.184209
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,36.5,-0.222486,0.192102
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,37.5,-0.147511,0.235354
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,38.5,-0.294568,0.258044
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,39.5,-0.211443,0.228131
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,40.5,-0.124037,0.117666
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,41.5,0.079942,0.090071
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,42.5,0.00523,0.07715
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,43.5,-0.148479,0.054576
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,44.5,-0.016604,0.077774
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,45.5,0.054363,0.1533
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,46.5,-0.023361,0.086006
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,47.5,0.016285,0.080436
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,48.5,0.132023,0.137542
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,49.5,0.115175,0.154237
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,0.5,-4.857298,1.224643
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,1.5,-5.229686,1.308038
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,2.5,-6.811922,1.332436
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,3.5,-8.703118,1.3778
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,4.5,-11.449052,1.464671
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,5.5,-13.904785,1.49051
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,6.5,-16.154885,1.477433
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,7.5,-18.030309,1.481858
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,8.5,-19.537475,1.476754
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,9.5,-20.656265,1.480429
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,10.5,-21.390068,1.471886
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,11.5,-21.686707,1.468425
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,12.5,-21.542313,1.469724
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,13.5,-21.013788,1.478144
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,14.5,-20.116612,1.483272
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,15.5,-18.805004,1.478989
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,16.5,-17.181689,1.467395
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,17.5,-15.27619,1.485228
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,18.5,-13.075214,1.498754
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,19.5,-10.793257,1.484179
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,20.5,-8.462313,1.393841
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,21.5,-6.349169,1.248262
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,22.5,-4.653527,1.03888
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,23.5,-2.702195,1.056006
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,24.5,-1.796264,0.99711
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,25.5,-1.468909,0.848317
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,26.5,-1.502747,0.869039
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,27.5,-1.177435,0.6544
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,28.5,-0.958754,0.587834
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,29.5,-0.866061,0.628846
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,30.5,-0.864018,0.652251
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,31.5,-0.761581,0.605823
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,32.5,-0.651336,0.506127
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,33.5,-0.682473,0.509199
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,34.5,-0.670682,0.524016
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,35.5,-0.485725,0.462008
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,36.5,-0.557641,0.439146
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,37.5,-0.38548,0.437768
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,38.5,-0.376228,0.392806
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,39.5,-0.164123,0.39298
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,40.5,-0.258725,0.316697
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,41.5,-0.08741,0.208655
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,42.5,-0.100813,0.207929
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,43.5,-0.124707,0.189057
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,44.5,0.030088,0.064941
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,45.5,-0.018982,0.089335
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,46.5,0.133168,0.126342
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,47.5,0.028057,0.073971
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,48.5,0.242725,0.279459
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,49.5,0.128842,0.218645
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,0.125,-2.0661010400000004,0.21074808
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,0.375,-2.26505024,0.2219612
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,0.625,-2.34914864,0.25848752
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,0.875,-2.21743632,0.254178
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,1.125,-2.28371088,0.3286532
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,1.375,-2.55324416,0.38425856
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,1.625,-2.77302968,0.42216560000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,1.875,-2.68918232,0.35651864
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,2.125,-2.7857072,0.31367448
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,2.375,-3.1254061600000003,0.27526536
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,2.625,-3.3417608,0.21748432
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,2.875,-3.47849392,0.23798592000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,3.125,-3.8934212,0.24982664000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,3.375,-4.45939088,0.26133264
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,3.625,-5.1967372,0.31827688
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,3.875,-5.697478320000001,0.35584920000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,4.125,-6.456874320000001,0.33279536
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,4.375,-7.29890432,0.32325584
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,4.625,-8.12926096,0.33112176000000004
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,4.875,-8.65573368,0.2838844
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,5.125,-9.33504792,0.30576672000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,5.375,-10.03080528,0.32568256000000007
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,5.625,-10.96283312,0.31497152
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,5.875,-11.452486640000002,0.24660496
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,6.125,-11.99255736,0.2401616
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,6.375,-12.56953096,0.2529228
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,6.625,-13.267087440000001,0.22099888
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,6.875,-13.60063592,0.21878136
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,7.125,-14.05535304,0.22158464
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,7.375,-14.701362640000001,0.17464016000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,7.625,-15.21745904,0.12167072000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,7.875,-15.48439824,0.10811456
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,8.125,-15.871083520000001,0.1416284
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,8.375,-16.364126080000002,0.10535312000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,8.625,-16.754702480000002,0.17012144
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,8.875,-16.95976032,0.15003824000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,9.125,-17.16711936,0.17263184
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,9.375,-17.58413864,0.134934
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,9.625,-17.80986544,0.22811168
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,9.875,-17.870910000000002,0.1953928
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,10.125,-18.05768376,0.22698200000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,10.375,-18.281402240000002,0.22890664000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,10.625,-18.390939359999997,0.2518768
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,10.875,-18.278933679999998,0.21125016000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,11.125,-18.264540720000003,0.19325896
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,11.375,-18.41805168,0.18112536
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,11.625,-18.313409840000002,0.15279968
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,11.875,-18.138476800000003,0.16982856000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,12.125,-18.0981012,0.15597952
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,12.375,-18.137598160000003,0.13020608
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,12.625,-17.971451520000002,0.2056436
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,12.875,-17.62945136,0.22585232000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,13.125,-17.488074,0.25811096
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,13.375,-17.47309528,0.22581048
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,13.625,-17.21649056,0.27823600000000004
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,13.875,-16.82545392,0.27601848
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,14.125,-16.58190328,0.27785944
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,14.375,-16.5876772,0.2491572
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,14.625,-16.11827424,0.27208552
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,14.875,-15.724894560000001,0.2600356
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,15.125,-15.32272848,0.28723160000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,15.375,-15.07988912,0.29430256
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,15.625,-14.622787120000002,0.23572656
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,15.875,-14.04941176,0.23811144
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,16.125,-13.6549024,0.26267152000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,16.375,-13.226795520000001,0.28907256
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,16.625,-12.66605584,0.249994
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,16.875,-11.98280864,0.25681392
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,17.125,-11.55110352,0.25003584
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,17.375,-11.2160488,0.238488
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,17.625,-10.51589824,0.23267224
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,17.875,-9.87629016,0.19861448
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,18.125,-9.316847520000001,0.23359272
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,18.375,-8.899577200000001,0.25267176
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,18.625,-8.18189568,0.29501384
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,18.875,-7.44408912,0.34061944
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,19.125,-6.8354008,0.31392552
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,19.375,-6.37281776,0.3958064
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,19.625,-5.5666028,0.39618296
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,19.875,-4.7790066399999995,0.37346384000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,20.125,-4.15391704,0.36028424000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,20.375,-3.5915456000000003,0.28894704
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,20.625,-2.9467075200000004,0.29898863999999997
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,20.875,-2.26212144,0.2460192
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,21.125,-1.7871956,0.26267152000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,21.375,-1.6677842400000003,0.18769423999999998
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,21.625,-1.28080608,0.13447376000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,21.875,-0.8905225600000001,0.12518528
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,22.125,-0.73165608,0.10443264000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,22.375,-0.78692672,0.08899368
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,22.625,-0.7144180000000001,0.05497776000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,22.875,-0.5199456800000001,0.02560608
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,23.125,-0.51479936,0.019371919999999997
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,23.375,-0.70404168,0.03824176000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,23.625,-0.66701328,0.04158896
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,23.875,-0.6142948800000001,0.06050064000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,24.125,-0.6863852,0.0569024
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,24.375,-0.8905225600000001,0.06183952
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,24.625,-0.9206892,0.07581408
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,24.875,-0.83495904,0.0625508
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,25.125,-0.90704936,0.07242504
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,25.375,-1.1730680800000002,0.07250872000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,25.625,-1.1721476000000002,0.09723616
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,25.875,-0.99462048,0.0840984
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,26.125,-1.07449304,0.04819968
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,26.375,-1.2583380000000002,0.04485248
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,26.625,-1.0862500800000001,0.04104504
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,26.875,-0.79772144,0.13970376
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,27.125,-0.75851736,0.12606392
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,27.375,-0.95357544,0.05296944
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,27.625,-1.07127136,0.08769664
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,27.875,-0.84324336,0.0665256
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,28.125,-0.8395196,0.06895232000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,28.375,-0.90893216,0.07480992
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,28.625,-0.91947584,0.08238296
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,28.875,-0.6585616000000001,0.054475680000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,29.125,-0.6027888800000001,0.06970544000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,29.375,-0.69404192,0.00807512
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,29.625,-0.69316328,0.05715344000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,29.875,-0.4292784,0.08142064000000002
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,30.125,-0.40831656,0.05874336
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,30.375,-0.476976,0.04221656
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,30.625,-0.3767692,0.06849208
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,30.875,-0.07819896,0.053387840000000006
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,31.125,-0.11870008,0.0274052
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,31.375,-0.20865608,0.05786472
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,31.625,0.09388896000000001,0.11664992
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,31.875,0.2568976,0.12941112
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,32.125,0.30154088,0.14547768000000003
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,32.375,-0.0353548,0.06267632000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,32.625,-0.16418016,0.05326232
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,32.875,0.023304880000000004,0.08514440000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,33.125,0.034518,0.057530000000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,33.375,-0.10489288,0.08543728
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,33.625,-0.12836512,0.06535408000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,33.875,0.0633876,0.03522928
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,34.125,0.06619088000000001,0.09075096
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,34.375,-0.06183952,0.054475680000000005
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,34.625,0.11070864000000001,0.051630560000000006
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,34.875,0.44701856,0.10719408000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,35.125,0.48291728,0.08121144000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,35.375,0.1230096,0.07522832
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,35.625,-0.06970544000000001,0.05874336
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,35.875,0.09970472000000001,0.07137903999999999
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,36.125,0.07631616,0.0529276
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,36.375,-0.06472648,0.05786472
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,36.625,-0.08535360000000002,0.12526896
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,36.875,0.08941208,0.09029071999999999
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,37.125,0.10535312000000001,0.0966504
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,37.375,0.03138,0.11330272000000001
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,37.625,-0.3198668,0.0876548
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),US,37.875,0.29635272,0.21999472
+Poisson-Gamma,0.2 M,0.5,-1.123583,0.955663
+Poisson-Gamma,0.2 M,1.5,-1.601046,0.880385
+Poisson-Gamma,0.2 M,2.5,-2.502624,0.868801
+Poisson-Gamma,0.2 M,3.5,-4.274848,0.835003
+Poisson-Gamma,0.2 M,4.5,-6.563574,0.77775
+Poisson-Gamma,0.2 M,5.5,-8.839699,0.750071
+Poisson-Gamma,0.2 M,6.5,-10.91742,0.751838
+Poisson-Gamma,0.2 M,7.5,-12.695871,0.757471
+Poisson-Gamma,0.2 M,8.5,-14.103165,0.755841
+Poisson-Gamma,0.2 M,9.5,-15.152407,0.763584
+Poisson-Gamma,0.2 M,10.5,-15.809197,0.772643
+Poisson-Gamma,0.2 M,11.5,-16.065096,0.77755
+Poisson-Gamma,0.2 M,12.5,-15.887659,0.777704
+Poisson-Gamma,0.2 M,13.5,-15.320109,0.780656
+Poisson-Gamma,0.2 M,14.5,-14.368171,0.775254
+Poisson-Gamma,0.2 M,15.5,-13.117248,0.778362
+Poisson-Gamma,0.2 M,16.5,-11.581029,0.777979
+Poisson-Gamma,0.2 M,17.5,-9.786384,0.776126
+Poisson-Gamma,0.2 M,18.5,-7.836379,0.781062
+Poisson-Gamma,0.2 M,19.5,-5.884918,0.792186
+Poisson-Gamma,0.2 M,20.5,-3.989831,0.81696
+Poisson-Gamma,0.2 M,21.5,-2.45834,0.800657
+Poisson-Gamma,0.2 M,22.5,-1.364881,0.651144
+Poisson-Gamma,0.2 M,23.5,-1.185816,0.5823
+Poisson-Gamma,0.2 M,24.5,-1.084992,0.551907
+Poisson-Gamma,0.2 M,25.5,-1.271544,0.559877
+Poisson-Gamma,0.2 M,26.5,-1.01295,0.490243
+Poisson-Gamma,0.2 M,27.5,-0.840026,0.486453
+Poisson-Gamma,0.2 M,28.5,-0.656876,0.517434
+Poisson-Gamma,0.2 M,29.5,-0.660233,0.388117
+Poisson-Gamma,0.2 M,30.5,-0.50254,0.400829
+Poisson-Gamma,0.2 M,31.5,-0.383645,0.355292
+Poisson-Gamma,0.2 M,32.5,-0.209577,0.248531
+Poisson-Gamma,0.2 M,33.5,-0.235359,0.256972
+Poisson-Gamma,0.2 M,34.5,-0.22995,0.230905
+Poisson-Gamma,0.2 M,35.5,-0.018266,0.207168
+Poisson-Gamma,0.2 M,36.5,-0.253029,0.218973
+Poisson-Gamma,0.2 M,37.5,-0.172751,0.267116
+Poisson-Gamma,0.2 M,38.5,-0.327122,0.290795
+Poisson-Gamma,0.2 M,39.5,-0.23986,0.260819
+Poisson-Gamma,0.2 M,40.5,-0.140437,0.132557
+Poisson-Gamma,0.2 M,41.5,0.083658,0.090841
+Poisson-Gamma,0.2 M,42.5,0.008834,0.079876
+Poisson-Gamma,0.2 M,43.5,-0.156937,0.055392
+Poisson-Gamma,0.2 M,44.5,-0.021145,0.074951
+Poisson-Gamma,0.2 M,45.5,0.087337,0.193006
+Poisson-Gamma,0.2 M,46.5,-0.035732,0.099887
+Poisson-Gamma,0.2 M,47.5,0.007498,0.092965
+Poisson-Gamma,0.2 M,48.5,0.170539,0.186096
+Poisson-Gamma,0.2 M,49.5,0.146893,0.181488
+Poisson-Gamma,0.1 M,0.5,-10.751325,3.564156
+Poisson-Gamma,0.1 M,1.5,-11.157536,3.63874
+Poisson-Gamma,0.1 M,2.5,-12.80774,3.761223
+Poisson-Gamma,0.1 M,3.5,-14.718859,3.807367
+Poisson-Gamma,0.1 M,4.5,-17.477502,3.934814
+Poisson-Gamma,0.1 M,5.5,-19.936646,3.973915
+Poisson-Gamma,0.1 M,6.5,-22.188137,3.962258
+Poisson-Gamma,0.1 M,7.5,-24.064024,3.971218
+Poisson-Gamma,0.1 M,8.5,-25.571384,3.96811
+Poisson-Gamma,0.1 M,9.5,-26.690259,3.972509
+Poisson-Gamma,0.1 M,10.5,-27.424102,3.964483
+Poisson-Gamma,0.1 M,11.5,-27.720747,3.960067
+Poisson-Gamma,0.1 M,12.5,-27.576349,3.960467
+Poisson-Gamma,0.1 M,13.5,-27.047797,3.969109
+Poisson-Gamma,0.1 M,14.5,-26.150566,3.976069
+Poisson-Gamma,0.1 M,15.5,-24.83883,3.972873
+Poisson-Gamma,0.1 M,16.5,-23.215244,3.958111
+Poisson-Gamma,0.1 M,17.5,-21.309099,3.972001
+Poisson-Gamma,0.1 M,18.5,-19.106445,3.979146
+Poisson-Gamma,0.1 M,19.5,-16.819494,3.945953
+Poisson-Gamma,0.1 M,20.5,-14.476484,3.833823
+Poisson-Gamma,0.1 M,21.5,-12.330743,3.68534
+Poisson-Gamma,0.1 M,22.5,-10.545185,3.386204
+Poisson-Gamma,0.1 M,23.5,-7.695853,3.000713
+Poisson-Gamma,0.1 M,24.5,-5.426062,2.752147
+Poisson-Gamma,0.1 M,25.5,-3.960266,2.363216
+Poisson-Gamma,0.1 M,26.5,-3.080877,2.369063
+Poisson-Gamma,0.1 M,27.5,-2.668729,1.998573
+Poisson-Gamma,0.1 M,28.5,-2.307522,1.687411
+Poisson-Gamma,0.1 M,29.5,-2.351147,1.86554
+Poisson-Gamma,0.1 M,30.5,-2.409322,1.973547
+Poisson-Gamma,0.1 M,31.5,-2.325016,1.933079
+Poisson-Gamma,0.1 M,32.5,-2.097134,1.726084
+Poisson-Gamma,0.1 M,33.5,-2.120101,1.720212
+Poisson-Gamma,0.1 M,34.5,-2.119532,1.723989
+Poisson-Gamma,0.1 M,35.5,-1.719888,1.410466
+Poisson-Gamma,0.1 M,36.5,-2.030473,1.731557
+Poisson-Gamma,0.1 M,37.5,-0.445281,0.473249
+Poisson-Gamma,0.1 M,38.5,-1.638106,1.42098
+Poisson-Gamma,0.1 M,39.5,-1.498284,1.472714
+Poisson-Gamma,0.1 M,40.5,-0.325577,0.356511
+Poisson-Gamma,0.1 M,41.5,-0.178697,0.222818
+Poisson-Gamma,0.1 M,42.5,-0.174993,0.223277
+Poisson-Gamma,0.1 M,43.5,-0.181331,0.21177
+Poisson-Gamma,0.1 M,44.5,0.011735,0.018451
+Poisson-Gamma,0.1 M,45.5,-0.062621,0.077803
+Poisson-Gamma,0.1 M,46.5,0.143254,0.154265
+Poisson-Gamma,0.1 M,47.5,0.017147,0.042516
+Poisson-Gamma,0.1 M,48.5,0.391023,0.450413
+Poisson-Gamma,0.1 M,49.5,0.233174,0.305591
+Poisson-Gamma,US,0.125,-2.0661010400000004,0.21074808
+Poisson-Gamma,US,0.375,-2.26505024,0.2219612
+Poisson-Gamma,US,0.625,-2.34914864,0.25848752
+Poisson-Gamma,US,0.875,-2.21743632,0.254178
+Poisson-Gamma,US,1.125,-2.28371088,0.3286532
+Poisson-Gamma,US,1.375,-2.55324416,0.38425856
+Poisson-Gamma,US,1.625,-2.77302968,0.42216560000000003
+Poisson-Gamma,US,1.875,-2.68918232,0.35651864
+Poisson-Gamma,US,2.125,-2.7857072,0.31367448
+Poisson-Gamma,US,2.375,-3.1254061600000003,0.27526536
+Poisson-Gamma,US,2.625,-3.3417608,0.21748432
+Poisson-Gamma,US,2.875,-3.47849392,0.23798592000000002
+Poisson-Gamma,US,3.125,-3.8934212,0.24982664000000002
+Poisson-Gamma,US,3.375,-4.45939088,0.26133264
+Poisson-Gamma,US,3.625,-5.1967372,0.31827688
+Poisson-Gamma,US,3.875,-5.697478320000001,0.35584920000000003
+Poisson-Gamma,US,4.125,-6.456874320000001,0.33279536
+Poisson-Gamma,US,4.375,-7.29890432,0.32325584
+Poisson-Gamma,US,4.625,-8.12926096,0.33112176000000004
+Poisson-Gamma,US,4.875,-8.65573368,0.2838844
+Poisson-Gamma,US,5.125,-9.33504792,0.30576672000000005
+Poisson-Gamma,US,5.375,-10.03080528,0.32568256000000007
+Poisson-Gamma,US,5.625,-10.96283312,0.31497152
+Poisson-Gamma,US,5.875,-11.452486640000002,0.24660496
+Poisson-Gamma,US,6.125,-11.99255736,0.2401616
+Poisson-Gamma,US,6.375,-12.56953096,0.2529228
+Poisson-Gamma,US,6.625,-13.267087440000001,0.22099888
+Poisson-Gamma,US,6.875,-13.60063592,0.21878136
+Poisson-Gamma,US,7.125,-14.05535304,0.22158464
+Poisson-Gamma,US,7.375,-14.701362640000001,0.17464016000000002
+Poisson-Gamma,US,7.625,-15.21745904,0.12167072000000001
+Poisson-Gamma,US,7.875,-15.48439824,0.10811456
+Poisson-Gamma,US,8.125,-15.871083520000001,0.1416284
+Poisson-Gamma,US,8.375,-16.364126080000002,0.10535312000000001
+Poisson-Gamma,US,8.625,-16.754702480000002,0.17012144
+Poisson-Gamma,US,8.875,-16.95976032,0.15003824000000002
+Poisson-Gamma,US,9.125,-17.16711936,0.17263184
+Poisson-Gamma,US,9.375,-17.58413864,0.134934
+Poisson-Gamma,US,9.625,-17.80986544,0.22811168
+Poisson-Gamma,US,9.875,-17.870910000000002,0.1953928
+Poisson-Gamma,US,10.125,-18.05768376,0.22698200000000002
+Poisson-Gamma,US,10.375,-18.281402240000002,0.22890664000000002
+Poisson-Gamma,US,10.625,-18.390939359999997,0.2518768
+Poisson-Gamma,US,10.875,-18.278933679999998,0.21125016000000002
+Poisson-Gamma,US,11.125,-18.264540720000003,0.19325896
+Poisson-Gamma,US,11.375,-18.41805168,0.18112536
+Poisson-Gamma,US,11.625,-18.313409840000002,0.15279968
+Poisson-Gamma,US,11.875,-18.138476800000003,0.16982856000000002
+Poisson-Gamma,US,12.125,-18.0981012,0.15597952
+Poisson-Gamma,US,12.375,-18.137598160000003,0.13020608
+Poisson-Gamma,US,12.625,-17.971451520000002,0.2056436
+Poisson-Gamma,US,12.875,-17.62945136,0.22585232000000002
+Poisson-Gamma,US,13.125,-17.488074,0.25811096
+Poisson-Gamma,US,13.375,-17.47309528,0.22581048
+Poisson-Gamma,US,13.625,-17.21649056,0.27823600000000004
+Poisson-Gamma,US,13.875,-16.82545392,0.27601848
+Poisson-Gamma,US,14.125,-16.58190328,0.27785944
+Poisson-Gamma,US,14.375,-16.5876772,0.2491572
+Poisson-Gamma,US,14.625,-16.11827424,0.27208552
+Poisson-Gamma,US,14.875,-15.724894560000001,0.2600356
+Poisson-Gamma,US,15.125,-15.32272848,0.28723160000000003
+Poisson-Gamma,US,15.375,-15.07988912,0.29430256
+Poisson-Gamma,US,15.625,-14.622787120000002,0.23572656
+Poisson-Gamma,US,15.875,-14.04941176,0.23811144
+Poisson-Gamma,US,16.125,-13.6549024,0.26267152000000005
+Poisson-Gamma,US,16.375,-13.226795520000001,0.28907256
+Poisson-Gamma,US,16.625,-12.66605584,0.249994
+Poisson-Gamma,US,16.875,-11.98280864,0.25681392
+Poisson-Gamma,US,17.125,-11.55110352,0.25003584
+Poisson-Gamma,US,17.375,-11.2160488,0.238488
+Poisson-Gamma,US,17.625,-10.51589824,0.23267224
+Poisson-Gamma,US,17.875,-9.87629016,0.19861448
+Poisson-Gamma,US,18.125,-9.316847520000001,0.23359272
+Poisson-Gamma,US,18.375,-8.899577200000001,0.25267176
+Poisson-Gamma,US,18.625,-8.18189568,0.29501384
+Poisson-Gamma,US,18.875,-7.44408912,0.34061944
+Poisson-Gamma,US,19.125,-6.8354008,0.31392552
+Poisson-Gamma,US,19.375,-6.37281776,0.3958064
+Poisson-Gamma,US,19.625,-5.5666028,0.39618296
+Poisson-Gamma,US,19.875,-4.7790066399999995,0.37346384000000005
+Poisson-Gamma,US,20.125,-4.15391704,0.36028424000000003
+Poisson-Gamma,US,20.375,-3.5915456000000003,0.28894704
+Poisson-Gamma,US,20.625,-2.9467075200000004,0.29898863999999997
+Poisson-Gamma,US,20.875,-2.26212144,0.2460192
+Poisson-Gamma,US,21.125,-1.7871956,0.26267152000000005
+Poisson-Gamma,US,21.375,-1.6677842400000003,0.18769423999999998
+Poisson-Gamma,US,21.625,-1.28080608,0.13447376000000003
+Poisson-Gamma,US,21.875,-0.8905225600000001,0.12518528
+Poisson-Gamma,US,22.125,-0.73165608,0.10443264000000001
+Poisson-Gamma,US,22.375,-0.78692672,0.08899368
+Poisson-Gamma,US,22.625,-0.7144180000000001,0.05497776000000001
+Poisson-Gamma,US,22.875,-0.5199456800000001,0.02560608
+Poisson-Gamma,US,23.125,-0.51479936,0.019371919999999997
+Poisson-Gamma,US,23.375,-0.70404168,0.03824176000000001
+Poisson-Gamma,US,23.625,-0.66701328,0.04158896
+Poisson-Gamma,US,23.875,-0.6142948800000001,0.06050064000000001
+Poisson-Gamma,US,24.125,-0.6863852,0.0569024
+Poisson-Gamma,US,24.375,-0.8905225600000001,0.06183952
+Poisson-Gamma,US,24.625,-0.9206892,0.07581408
+Poisson-Gamma,US,24.875,-0.83495904,0.0625508
+Poisson-Gamma,US,25.125,-0.90704936,0.07242504
+Poisson-Gamma,US,25.375,-1.1730680800000002,0.07250872000000001
+Poisson-Gamma,US,25.625,-1.1721476000000002,0.09723616
+Poisson-Gamma,US,25.875,-0.99462048,0.0840984
+Poisson-Gamma,US,26.125,-1.07449304,0.04819968
+Poisson-Gamma,US,26.375,-1.2583380000000002,0.04485248
+Poisson-Gamma,US,26.625,-1.0862500800000001,0.04104504
+Poisson-Gamma,US,26.875,-0.79772144,0.13970376
+Poisson-Gamma,US,27.125,-0.75851736,0.12606392
+Poisson-Gamma,US,27.375,-0.95357544,0.05296944
+Poisson-Gamma,US,27.625,-1.07127136,0.08769664
+Poisson-Gamma,US,27.875,-0.84324336,0.0665256
+Poisson-Gamma,US,28.125,-0.8395196,0.06895232000000001
+Poisson-Gamma,US,28.375,-0.90893216,0.07480992
+Poisson-Gamma,US,28.625,-0.91947584,0.08238296
+Poisson-Gamma,US,28.875,-0.6585616000000001,0.054475680000000005
+Poisson-Gamma,US,29.125,-0.6027888800000001,0.06970544000000001
+Poisson-Gamma,US,29.375,-0.69404192,0.00807512
+Poisson-Gamma,US,29.625,-0.69316328,0.05715344000000001
+Poisson-Gamma,US,29.875,-0.4292784,0.08142064000000002
+Poisson-Gamma,US,30.125,-0.40831656,0.05874336
+Poisson-Gamma,US,30.375,-0.476976,0.04221656
+Poisson-Gamma,US,30.625,-0.3767692,0.06849208
+Poisson-Gamma,US,30.875,-0.07819896,0.053387840000000006
+Poisson-Gamma,US,31.125,-0.11870008,0.0274052
+Poisson-Gamma,US,31.375,-0.20865608,0.05786472
+Poisson-Gamma,US,31.625,0.09388896000000001,0.11664992
+Poisson-Gamma,US,31.875,0.2568976,0.12941112
+Poisson-Gamma,US,32.125,0.30154088,0.14547768000000003
+Poisson-Gamma,US,32.375,-0.0353548,0.06267632000000001
+Poisson-Gamma,US,32.625,-0.16418016,0.05326232
+Poisson-Gamma,US,32.875,0.023304880000000004,0.08514440000000001
+Poisson-Gamma,US,33.125,0.034518,0.057530000000000005
+Poisson-Gamma,US,33.375,-0.10489288,0.08543728
+Poisson-Gamma,US,33.625,-0.12836512,0.06535408000000001
+Poisson-Gamma,US,33.875,0.0633876,0.03522928
+Poisson-Gamma,US,34.125,0.06619088000000001,0.09075096
+Poisson-Gamma,US,34.375,-0.06183952,0.054475680000000005
+Poisson-Gamma,US,34.625,0.11070864000000001,0.051630560000000006
+Poisson-Gamma,US,34.875,0.44701856,0.10719408000000001
+Poisson-Gamma,US,35.125,0.48291728,0.08121144000000001
+Poisson-Gamma,US,35.375,0.1230096,0.07522832
+Poisson-Gamma,US,35.625,-0.06970544000000001,0.05874336
+Poisson-Gamma,US,35.875,0.09970472000000001,0.07137903999999999
+Poisson-Gamma,US,36.125,0.07631616,0.0529276
+Poisson-Gamma,US,36.375,-0.06472648,0.05786472
+Poisson-Gamma,US,36.625,-0.08535360000000002,0.12526896
+Poisson-Gamma,US,36.875,0.08941208,0.09029071999999999
+Poisson-Gamma,US,37.125,0.10535312000000001,0.0966504
+Poisson-Gamma,US,37.375,0.03138,0.11330272000000001
+Poisson-Gamma,US,37.625,-0.3198668,0.0876548
+Poisson-Gamma,US,37.875,0.29635272,0.21999472
+Bayesian (Dirichlet),0.2 M,0.5,-1.135316,0.957287
+Bayesian (Dirichlet),0.2 M,1.5,-1.612378,0.881531
+Bayesian (Dirichlet),0.2 M,2.5,-2.515496,0.869846
+Bayesian (Dirichlet),0.2 M,3.5,-4.289829,0.836135
+Bayesian (Dirichlet),0.2 M,4.5,-6.579611,0.779192
+Bayesian (Dirichlet),0.2 M,5.5,-8.856096,0.751573
+Bayesian (Dirichlet),0.2 M,6.5,-10.933956,0.753419
+Bayesian (Dirichlet),0.2 M,7.5,-12.712466,0.759088
+Bayesian (Dirichlet),0.2 M,8.5,-14.119784,0.757427
+Bayesian (Dirichlet),0.2 M,9.5,-15.169036,0.765161
+Bayesian (Dirichlet),0.2 M,10.5,-15.825831,0.774218
+Bayesian (Dirichlet),0.2 M,11.5,-16.081731,0.779156
+Bayesian (Dirichlet),0.2 M,12.5,-15.904293,0.779312
+Bayesian (Dirichlet),0.2 M,13.5,-15.336738,0.782252
+Bayesian (Dirichlet),0.2 M,14.5,-14.384792,0.776851
+Bayesian (Dirichlet),0.2 M,15.5,-13.133851,0.779994
+Bayesian (Dirichlet),0.2 M,16.5,-11.597592,0.77966
+Bayesian (Dirichlet),0.2 M,17.5,-9.802853,0.777859
+Bayesian (Dirichlet),0.2 M,18.5,-7.85263,0.782761
+Bayesian (Dirichlet),0.2 M,19.5,-5.900658,0.793997
+Bayesian (Dirichlet),0.2 M,20.5,-4.004715,0.818714
+Bayesian (Dirichlet),0.2 M,21.5,-2.471851,0.802494
+Bayesian (Dirichlet),0.2 M,22.5,-1.376582,0.65358
+Bayesian (Dirichlet),0.2 M,23.5,-1.197192,0.585457
+Bayesian (Dirichlet),0.2 M,24.5,-1.09559,0.555031
+Bayesian (Dirichlet),0.2 M,25.5,-1.282545,0.562972
+Bayesian (Dirichlet),0.2 M,26.5,-1.024095,0.492854
+Bayesian (Dirichlet),0.2 M,27.5,-0.850659,0.489378
+Bayesian (Dirichlet),0.2 M,28.5,-0.667334,0.520222
+Bayesian (Dirichlet),0.2 M,29.5,-0.669878,0.390321
+Bayesian (Dirichlet),0.2 M,30.5,-0.511774,0.403019
+Bayesian (Dirichlet),0.2 M,31.5,-0.391676,0.35791
+Bayesian (Dirichlet),0.2 M,32.5,-0.216973,0.250767
+Bayesian (Dirichlet),0.2 M,33.5,-0.241825,0.259319
+Bayesian (Dirichlet),0.2 M,34.5,-0.236963,0.232308
+Bayesian (Dirichlet),0.2 M,35.5,-0.023514,0.207653
+Bayesian (Dirichlet),0.2 M,36.5,-0.259249,0.220363
+Bayesian (Dirichlet),0.2 M,37.5,-0.180697,0.269496
+Bayesian (Dirichlet),0.2 M,38.5,-0.334906,0.293395
+Bayesian (Dirichlet),0.2 M,39.5,-0.247641,0.263592
+Bayesian (Dirichlet),0.2 M,40.5,-0.145224,0.135277
+Bayesian (Dirichlet),0.2 M,41.5,0.08096,0.094502
+Bayesian (Dirichlet),0.2 M,42.5,0.007244,0.080833
+Bayesian (Dirichlet),0.2 M,43.5,-0.157928,0.056263
+Bayesian (Dirichlet),0.2 M,44.5,-0.020881,0.07902
+Bayesian (Dirichlet),0.2 M,45.5,0.095322,0.194795
+Bayesian (Dirichlet),0.2 M,46.5,-0.038216,0.099735
+Bayesian (Dirichlet),0.2 M,47.5,0.004962,0.091323
+Bayesian (Dirichlet),0.2 M,48.5,0.181452,0.187986
+Bayesian (Dirichlet),0.2 M,49.5,0.152817,0.180803
+Bayesian (Dirichlet),0.1 M,0.5,-7.468865,1.806886
+Bayesian (Dirichlet),0.1 M,1.5,-7.900367,1.882872
+Bayesian (Dirichlet),0.1 M,2.5,-9.581326,1.948116
+Bayesian (Dirichlet),0.1 M,3.5,-11.503102,1.996755
+Bayesian (Dirichlet),0.1 M,4.5,-14.266183,2.103892
+Bayesian (Dirichlet),0.1 M,5.5,-16.726521,2.135572
+Bayesian (Dirichlet),0.1 M,6.5,-18.978354,2.122917
+Bayesian (Dirichlet),0.1 M,7.5,-20.854377,2.129203
+Bayesian (Dirichlet),0.1 M,8.5,-22.361789,2.124818
+Bayesian (Dirichlet),0.1 M,9.5,-23.480689,2.128808
+Bayesian (Dirichlet),0.1 M,10.5,-24.214544,2.120348
+Bayesian (Dirichlet),0.1 M,11.5,-24.511195,2.116456
+Bayesian (Dirichlet),0.1 M,12.5,-24.366793,2.11741
+Bayesian (Dirichlet),0.1 M,13.5,-23.838233,2.125982
+Bayesian (Dirichlet),0.1 M,14.5,-22.940987,2.131843
+Bayesian (Dirichlet),0.1 M,15.5,-21.629215,2.127934
+Bayesian (Dirichlet),0.1 M,16.5,-20.005545,2.11494
+Bayesian (Dirichlet),0.1 M,17.5,-18.099202,2.131492
+Bayesian (Dirichlet),0.1 M,18.5,-15.895962,2.142514
+Bayesian (Dirichlet),0.1 M,19.5,-13.607773,2.119864
+Bayesian (Dirichlet),0.1 M,20.5,-11.261041,2.017815
+Bayesian (Dirichlet),0.1 M,21.5,-9.107741,1.864764
+Bayesian (Dirichlet),0.1 M,22.5,-7.304289,1.601122
+Bayesian (Dirichlet),0.1 M,23.5,-4.561292,1.543213
+Bayesian (Dirichlet),0.1 M,24.5,-2.942542,1.450515
+Bayesian (Dirichlet),0.1 M,25.5,-2.167156,1.227059
+Bayesian (Dirichlet),0.1 M,26.5,-1.990058,1.249711
+Bayesian (Dirichlet),0.1 M,27.5,-1.624009,0.949382
+Bayesian (Dirichlet),0.1 M,28.5,-1.325119,0.76117
+Bayesian (Dirichlet),0.1 M,29.5,-1.279592,0.867597
+Bayesian (Dirichlet),0.1 M,30.5,-1.294298,0.930177
+Bayesian (Dirichlet),0.1 M,31.5,-1.182433,0.880001
+Bayesian (Dirichlet),0.1 M,32.5,-1.012582,0.710824
+Bayesian (Dirichlet),0.1 M,33.5,-1.044719,0.711975
+Bayesian (Dirichlet),0.1 M,34.5,-1.033699,0.723821
+Bayesian (Dirichlet),0.1 M,35.5,-0.735423,0.556684
+Bayesian (Dirichlet),0.1 M,36.5,-0.916234,0.664159
+Bayesian (Dirichlet),0.1 M,37.5,-0.421587,0.467484
+Bayesian (Dirichlet),0.1 M,38.5,-0.623006,0.499232
+Bayesian (Dirichlet),0.1 M,39.5,-0.405623,0.508197
+Bayesian (Dirichlet),0.1 M,40.5,-0.290446,0.341039
+Bayesian (Dirichlet),0.1 M,41.5,-0.109845,0.221439
+Bayesian (Dirichlet),0.1 M,42.5,-0.123472,0.221097
+Bayesian (Dirichlet),0.1 M,43.5,-0.147778,0.202227
+Bayesian (Dirichlet),0.1 M,44.5,0.024813,0.045215
+Bayesian (Dirichlet),0.1 M,45.5,-0.033754,0.084744
+Bayesian (Dirichlet),0.1 M,46.5,0.141061,0.128051
+Bayesian (Dirichlet),0.1 M,47.5,0.024017,0.059003
+Bayesian (Dirichlet),0.1 M,48.5,0.300171,0.338748
+Bayesian (Dirichlet),0.1 M,49.5,0.160703,0.251178
+Bayesian (Dirichlet),US,0.125,-2.0661010400000004,0.21074808
+Bayesian (Dirichlet),US,0.375,-2.26505024,0.2219612
+Bayesian (Dirichlet),US,0.625,-2.34914864,0.25848752
+Bayesian (Dirichlet),US,0.875,-2.21743632,0.254178
+Bayesian (Dirichlet),US,1.125,-2.28371088,0.3286532
+Bayesian (Dirichlet),US,1.375,-2.55324416,0.38425856
+Bayesian (Dirichlet),US,1.625,-2.77302968,0.42216560000000003
+Bayesian (Dirichlet),US,1.875,-2.68918232,0.35651864
+Bayesian (Dirichlet),US,2.125,-2.7857072,0.31367448
+Bayesian (Dirichlet),US,2.375,-3.1254061600000003,0.27526536
+Bayesian (Dirichlet),US,2.625,-3.3417608,0.21748432
+Bayesian (Dirichlet),US,2.875,-3.47849392,0.23798592000000002
+Bayesian (Dirichlet),US,3.125,-3.8934212,0.24982664000000002
+Bayesian (Dirichlet),US,3.375,-4.45939088,0.26133264
+Bayesian (Dirichlet),US,3.625,-5.1967372,0.31827688
+Bayesian (Dirichlet),US,3.875,-5.697478320000001,0.35584920000000003
+Bayesian (Dirichlet),US,4.125,-6.456874320000001,0.33279536
+Bayesian (Dirichlet),US,4.375,-7.29890432,0.32325584
+Bayesian (Dirichlet),US,4.625,-8.12926096,0.33112176000000004
+Bayesian (Dirichlet),US,4.875,-8.65573368,0.2838844
+Bayesian (Dirichlet),US,5.125,-9.33504792,0.30576672000000005
+Bayesian (Dirichlet),US,5.375,-10.03080528,0.32568256000000007
+Bayesian (Dirichlet),US,5.625,-10.96283312,0.31497152
+Bayesian (Dirichlet),US,5.875,-11.452486640000002,0.24660496
+Bayesian (Dirichlet),US,6.125,-11.99255736,0.2401616
+Bayesian (Dirichlet),US,6.375,-12.56953096,0.2529228
+Bayesian (Dirichlet),US,6.625,-13.267087440000001,0.22099888
+Bayesian (Dirichlet),US,6.875,-13.60063592,0.21878136
+Bayesian (Dirichlet),US,7.125,-14.05535304,0.22158464
+Bayesian (Dirichlet),US,7.375,-14.701362640000001,0.17464016000000002
+Bayesian (Dirichlet),US,7.625,-15.21745904,0.12167072000000001
+Bayesian (Dirichlet),US,7.875,-15.48439824,0.10811456
+Bayesian (Dirichlet),US,8.125,-15.871083520000001,0.1416284
+Bayesian (Dirichlet),US,8.375,-16.364126080000002,0.10535312000000001
+Bayesian (Dirichlet),US,8.625,-16.754702480000002,0.17012144
+Bayesian (Dirichlet),US,8.875,-16.95976032,0.15003824000000002
+Bayesian (Dirichlet),US,9.125,-17.16711936,0.17263184
+Bayesian (Dirichlet),US,9.375,-17.58413864,0.134934
+Bayesian (Dirichlet),US,9.625,-17.80986544,0.22811168
+Bayesian (Dirichlet),US,9.875,-17.870910000000002,0.1953928
+Bayesian (Dirichlet),US,10.125,-18.05768376,0.22698200000000002
+Bayesian (Dirichlet),US,10.375,-18.281402240000002,0.22890664000000002
+Bayesian (Dirichlet),US,10.625,-18.390939359999997,0.2518768
+Bayesian (Dirichlet),US,10.875,-18.278933679999998,0.21125016000000002
+Bayesian (Dirichlet),US,11.125,-18.264540720000003,0.19325896
+Bayesian (Dirichlet),US,11.375,-18.41805168,0.18112536
+Bayesian (Dirichlet),US,11.625,-18.313409840000002,0.15279968
+Bayesian (Dirichlet),US,11.875,-18.138476800000003,0.16982856000000002
+Bayesian (Dirichlet),US,12.125,-18.0981012,0.15597952
+Bayesian (Dirichlet),US,12.375,-18.137598160000003,0.13020608
+Bayesian (Dirichlet),US,12.625,-17.971451520000002,0.2056436
+Bayesian (Dirichlet),US,12.875,-17.62945136,0.22585232000000002
+Bayesian (Dirichlet),US,13.125,-17.488074,0.25811096
+Bayesian (Dirichlet),US,13.375,-17.47309528,0.22581048
+Bayesian (Dirichlet),US,13.625,-17.21649056,0.27823600000000004
+Bayesian (Dirichlet),US,13.875,-16.82545392,0.27601848
+Bayesian (Dirichlet),US,14.125,-16.58190328,0.27785944
+Bayesian (Dirichlet),US,14.375,-16.5876772,0.2491572
+Bayesian (Dirichlet),US,14.625,-16.11827424,0.27208552
+Bayesian (Dirichlet),US,14.875,-15.724894560000001,0.2600356
+Bayesian (Dirichlet),US,15.125,-15.32272848,0.28723160000000003
+Bayesian (Dirichlet),US,15.375,-15.07988912,0.29430256
+Bayesian (Dirichlet),US,15.625,-14.622787120000002,0.23572656
+Bayesian (Dirichlet),US,15.875,-14.04941176,0.23811144
+Bayesian (Dirichlet),US,16.125,-13.6549024,0.26267152000000005
+Bayesian (Dirichlet),US,16.375,-13.226795520000001,0.28907256
+Bayesian (Dirichlet),US,16.625,-12.66605584,0.249994
+Bayesian (Dirichlet),US,16.875,-11.98280864,0.25681392
+Bayesian (Dirichlet),US,17.125,-11.55110352,0.25003584
+Bayesian (Dirichlet),US,17.375,-11.2160488,0.238488
+Bayesian (Dirichlet),US,17.625,-10.51589824,0.23267224
+Bayesian (Dirichlet),US,17.875,-9.87629016,0.19861448
+Bayesian (Dirichlet),US,18.125,-9.316847520000001,0.23359272
+Bayesian (Dirichlet),US,18.375,-8.899577200000001,0.25267176
+Bayesian (Dirichlet),US,18.625,-8.18189568,0.29501384
+Bayesian (Dirichlet),US,18.875,-7.44408912,0.34061944
+Bayesian (Dirichlet),US,19.125,-6.8354008,0.31392552
+Bayesian (Dirichlet),US,19.375,-6.37281776,0.3958064
+Bayesian (Dirichlet),US,19.625,-5.5666028,0.39618296
+Bayesian (Dirichlet),US,19.875,-4.7790066399999995,0.37346384000000005
+Bayesian (Dirichlet),US,20.125,-4.15391704,0.36028424000000003
+Bayesian (Dirichlet),US,20.375,-3.5915456000000003,0.28894704
+Bayesian (Dirichlet),US,20.625,-2.9467075200000004,0.29898863999999997
+Bayesian (Dirichlet),US,20.875,-2.26212144,0.2460192
+Bayesian (Dirichlet),US,21.125,-1.7871956,0.26267152000000005
+Bayesian (Dirichlet),US,21.375,-1.6677842400000003,0.18769423999999998
+Bayesian (Dirichlet),US,21.625,-1.28080608,0.13447376000000003
+Bayesian (Dirichlet),US,21.875,-0.8905225600000001,0.12518528
+Bayesian (Dirichlet),US,22.125,-0.73165608,0.10443264000000001
+Bayesian (Dirichlet),US,22.375,-0.78692672,0.08899368
+Bayesian (Dirichlet),US,22.625,-0.7144180000000001,0.05497776000000001
+Bayesian (Dirichlet),US,22.875,-0.5199456800000001,0.02560608
+Bayesian (Dirichlet),US,23.125,-0.51479936,0.019371919999999997
+Bayesian (Dirichlet),US,23.375,-0.70404168,0.03824176000000001
+Bayesian (Dirichlet),US,23.625,-0.66701328,0.04158896
+Bayesian (Dirichlet),US,23.875,-0.6142948800000001,0.06050064000000001
+Bayesian (Dirichlet),US,24.125,-0.6863852,0.0569024
+Bayesian (Dirichlet),US,24.375,-0.8905225600000001,0.06183952
+Bayesian (Dirichlet),US,24.625,-0.9206892,0.07581408
+Bayesian (Dirichlet),US,24.875,-0.83495904,0.0625508
+Bayesian (Dirichlet),US,25.125,-0.90704936,0.07242504
+Bayesian (Dirichlet),US,25.375,-1.1730680800000002,0.07250872000000001
+Bayesian (Dirichlet),US,25.625,-1.1721476000000002,0.09723616
+Bayesian (Dirichlet),US,25.875,-0.99462048,0.0840984
+Bayesian (Dirichlet),US,26.125,-1.07449304,0.04819968
+Bayesian (Dirichlet),US,26.375,-1.2583380000000002,0.04485248
+Bayesian (Dirichlet),US,26.625,-1.0862500800000001,0.04104504
+Bayesian (Dirichlet),US,26.875,-0.79772144,0.13970376
+Bayesian (Dirichlet),US,27.125,-0.75851736,0.12606392
+Bayesian (Dirichlet),US,27.375,-0.95357544,0.05296944
+Bayesian (Dirichlet),US,27.625,-1.07127136,0.08769664
+Bayesian (Dirichlet),US,27.875,-0.84324336,0.0665256
+Bayesian (Dirichlet),US,28.125,-0.8395196,0.06895232000000001
+Bayesian (Dirichlet),US,28.375,-0.90893216,0.07480992
+Bayesian (Dirichlet),US,28.625,-0.91947584,0.08238296
+Bayesian (Dirichlet),US,28.875,-0.6585616000000001,0.054475680000000005
+Bayesian (Dirichlet),US,29.125,-0.6027888800000001,0.06970544000000001
+Bayesian (Dirichlet),US,29.375,-0.69404192,0.00807512
+Bayesian (Dirichlet),US,29.625,-0.69316328,0.05715344000000001
+Bayesian (Dirichlet),US,29.875,-0.4292784,0.08142064000000002
+Bayesian (Dirichlet),US,30.125,-0.40831656,0.05874336
+Bayesian (Dirichlet),US,30.375,-0.476976,0.04221656
+Bayesian (Dirichlet),US,30.625,-0.3767692,0.06849208
+Bayesian (Dirichlet),US,30.875,-0.07819896,0.053387840000000006
+Bayesian (Dirichlet),US,31.125,-0.11870008,0.0274052
+Bayesian (Dirichlet),US,31.375,-0.20865608,0.05786472
+Bayesian (Dirichlet),US,31.625,0.09388896000000001,0.11664992
+Bayesian (Dirichlet),US,31.875,0.2568976,0.12941112
+Bayesian (Dirichlet),US,32.125,0.30154088,0.14547768000000003
+Bayesian (Dirichlet),US,32.375,-0.0353548,0.06267632000000001
+Bayesian (Dirichlet),US,32.625,-0.16418016,0.05326232
+Bayesian (Dirichlet),US,32.875,0.023304880000000004,0.08514440000000001
+Bayesian (Dirichlet),US,33.125,0.034518,0.057530000000000005
+Bayesian (Dirichlet),US,33.375,-0.10489288,0.08543728
+Bayesian (Dirichlet),US,33.625,-0.12836512,0.06535408000000001
+Bayesian (Dirichlet),US,33.875,0.0633876,0.03522928
+Bayesian (Dirichlet),US,34.125,0.06619088000000001,0.09075096
+Bayesian (Dirichlet),US,34.375,-0.06183952,0.054475680000000005
+Bayesian (Dirichlet),US,34.625,0.11070864000000001,0.051630560000000006
+Bayesian (Dirichlet),US,34.875,0.44701856,0.10719408000000001
+Bayesian (Dirichlet),US,35.125,0.48291728,0.08121144000000001
+Bayesian (Dirichlet),US,35.375,0.1230096,0.07522832
+Bayesian (Dirichlet),US,35.625,-0.06970544000000001,0.05874336
+Bayesian (Dirichlet),US,35.875,0.09970472000000001,0.07137903999999999
+Bayesian (Dirichlet),US,36.125,0.07631616,0.0529276
+Bayesian (Dirichlet),US,36.375,-0.06472648,0.05786472
+Bayesian (Dirichlet),US,36.625,-0.08535360000000002,0.12526896
+Bayesian (Dirichlet),US,36.875,0.08941208,0.09029071999999999
+Bayesian (Dirichlet),US,37.125,0.10535312000000001,0.0966504
+Bayesian (Dirichlet),US,37.375,0.03138,0.11330272000000001
+Bayesian (Dirichlet),US,37.625,-0.3198668,0.0876548
+Bayesian (Dirichlet),US,37.875,0.29635272,0.21999472
+Latent logarithm,0.2 M,0.5,-1.135949,0.959103
+Latent logarithm,0.2 M,1.5,-1.613614,0.883311
+Latent logarithm,0.2 M,2.5,-2.517736,0.871739
+Latent logarithm,0.2 M,3.5,-4.293532,0.838097
+Latent logarithm,0.2 M,4.5,-6.584406,0.781149
+Latent logarithm,0.2 M,5.5,-8.861442,0.753572
+Latent logarithm,0.2 M,6.5,-10.939555,0.755428
+Latent logarithm,0.2 M,7.5,-12.718179,0.7611
+Latent logarithm,0.2 M,8.5,-14.12555,0.759439
+Latent logarithm,0.2 M,9.5,-15.174828,0.767169
+Latent logarithm,0.2 M,10.5,-15.831635,0.776227
+Latent logarithm,0.2 M,11.5,-16.087539,0.781168
+Latent logarithm,0.2 M,12.5,-15.910098,0.781323
+Latent logarithm,0.2 M,13.5,-15.342534,0.784264
+Latent logarithm,0.2 M,14.5,-14.390565,0.778865
+Latent logarithm,0.2 M,15.5,-13.139583,0.782008
+Latent logarithm,0.2 M,16.5,-11.603242,0.781671
+Latent logarithm,0.2 M,17.5,-9.808337,0.779868
+Latent logarithm,0.2 M,18.5,-7.857783,0.784771
+Latent logarithm,0.2 M,19.5,-5.905209,0.796008
+Latent logarithm,0.2 M,20.5,-4.008254,0.820704
+Latent logarithm,0.2 M,21.5,-2.474105,0.804344
+Latent logarithm,0.2 M,22.5,-1.37756,0.655011
+Latent logarithm,0.2 M,23.5,-1.197898,0.586689
+Latent logarithm,0.2 M,24.5,-1.096128,0.556132
+Latent logarithm,0.2 M,25.5,-1.283323,0.564129
+Latent logarithm,0.2 M,26.5,-1.024529,0.493817
+Latent logarithm,0.2 M,27.5,-0.850849,0.490267
+Latent logarithm,0.2 M,28.5,-0.667275,0.521108
+Latent logarithm,0.2 M,29.5,-0.669826,0.390996
+Latent logarithm,0.2 M,30.5,-0.511511,0.403655
+Latent logarithm,0.2 M,31.5,-0.391265,0.358449
+Latent logarithm,0.2 M,32.5,-0.216339,0.250971
+Latent logarithm,0.2 M,33.5,-0.241253,0.259575
+Latent logarithm,0.2 M,34.5,-0.23638,0.232473
+Latent logarithm,0.2 M,35.5,-0.022728,0.207744
+Latent logarithm,0.2 M,36.5,-0.258726,0.220516
+Latent logarithm,0.2 M,37.5,-0.179998,0.269717
+Latent logarithm,0.2 M,38.5,-0.334408,0.293721
+Latent logarithm,0.2 M,39.5,-0.247032,0.263801
+Latent logarithm,0.2 M,40.5,-0.144717,0.135312
+Latent logarithm,0.2 M,41.5,0.081395,0.094581
+Latent logarithm,0.2 M,42.5,0.007369,0.080947
+Latent logarithm,0.2 M,43.5,-0.157852,0.056371
+Latent logarithm,0.2 M,44.5,-0.020957,0.079162
+Latent logarithm,0.2 M,45.5,0.093127,0.194103
+Latent logarithm,0.2 M,46.5,-0.037711,0.099722
+Latent logarithm,0.2 M,47.5,0.005429,0.09133
+Latent logarithm,0.2 M,48.5,0.179343,0.187161
+Latent logarithm,0.2 M,49.5,0.151732,0.180684
+Latent logarithm,0.1 M,0.5,-8.722414,2.442126
+Latent logarithm,0.1 M,1.5,-9.171292,2.527989
+Latent logarithm,0.1 M,2.5,-10.875697,2.622796
+Latent logarithm,0.1 M,3.5,-12.805975,2.672524
+Latent logarithm,0.1 M,4.5,-15.574089,2.791019
+Latent logarithm,0.1 M,5.5,-18.035992,2.825798
+Latent logarithm,0.1 M,6.5,-20.288417,2.812745
+Latent logarithm,0.1 M,7.5,-22.164669,2.819848
+Latent logarithm,0.1 M,8.5,-23.672178,2.816032
+Latent logarithm,0.1 M,9.5,-24.791123,2.820432
+Latent logarithm,0.1 M,10.5,-25.524998,2.812318
+Latent logarithm,0.1 M,11.5,-25.821656,2.808481
+Latent logarithm,0.1 M,12.5,-25.67725,2.809444
+Latent logarithm,0.1 M,13.5,-25.148677,2.818143
+Latent logarithm,0.1 M,14.5,-24.251401,2.824336
+Latent logarithm,0.1 M,15.5,-22.939564,2.820628
+Latent logarithm,0.1 M,16.5,-21.315753,2.807295
+Latent logarithm,0.1 M,17.5,-19.40909,2.823457
+Latent logarithm,0.1 M,18.5,-17.205054,2.833601
+Latent logarithm,0.1 M,19.5,-14.914952,2.808015
+Latent logarithm,0.1 M,20.5,-12.563461,2.701057
+Latent logarithm,0.1 M,21.5,-10.399785,2.542358
+Latent logarithm,0.1 M,22.5,-8.567996,2.240189
+Latent logarithm,0.1 M,23.5,-5.512226,1.974243
+Latent logarithm,0.1 M,24.5,-3.525401,1.755166
+Latent logarithm,0.1 M,25.5,-2.528338,1.435167
+Latent logarithm,0.1 M,26.5,-2.212473,1.437989
+Latent logarithm,0.1 M,27.5,-1.836703,1.111886
+Latent logarithm,0.1 M,28.5,-1.516789,0.877766
+Latent logarithm,0.1 M,29.5,-1.482304,1.015346
+Latent logarithm,0.1 M,30.5,-1.502352,1.094132
+Latent logarithm,0.1 M,31.5,-1.387772,1.04489
+Latent logarithm,0.1 M,32.5,-1.202776,0.852106
+Latent logarithm,0.1 M,33.5,-1.235101,0.851206
+Latent logarithm,0.1 M,34.5,-1.224075,0.862265
+Latent logarithm,0.1 M,35.5,-0.884178,0.63775
+Latent logarithm,0.1 M,36.5,-1.105793,0.817868
+Latent logarithm,0.1 M,37.5,-0.430925,0.473194
+Latent logarithm,0.1 M,38.5,-0.77097,0.594107
+Latent logarithm,0.1 M,39.5,-0.551998,0.61636
+Latent logarithm,0.1 M,40.5,-0.298561,0.345505
+Latent logarithm,0.1 M,41.5,-0.11591,0.223313
+Latent logarithm,0.1 M,42.5,-0.12955,0.223102
+Latent logarithm,0.1 M,43.5,-0.153884,0.204205
+Latent logarithm,0.1 M,44.5,0.023078,0.038812
+Latent logarithm,0.1 M,45.5,-0.037388,0.082296
+Latent logarithm,0.1 M,46.5,0.143836,0.130437
+Latent logarithm,0.1 M,47.5,0.022783,0.055553
+Latent logarithm,0.1 M,48.5,0.316539,0.355233
+Latent logarithm,0.1 M,49.5,0.168903,0.260647
+Latent logarithm,US,0.125,-2.0661010400000004,0.21074808
+Latent logarithm,US,0.375,-2.26505024,0.2219612
+Latent logarithm,US,0.625,-2.34914864,0.25848752
+Latent logarithm,US,0.875,-2.21743632,0.254178
+Latent logarithm,US,1.125,-2.28371088,0.3286532
+Latent logarithm,US,1.375,-2.55324416,0.38425856
+Latent logarithm,US,1.625,-2.77302968,0.42216560000000003
+Latent logarithm,US,1.875,-2.68918232,0.35651864
+Latent logarithm,US,2.125,-2.7857072,0.31367448
+Latent logarithm,US,2.375,-3.1254061600000003,0.27526536
+Latent logarithm,US,2.625,-3.3417608,0.21748432
+Latent logarithm,US,2.875,-3.47849392,0.23798592000000002
+Latent logarithm,US,3.125,-3.8934212,0.24982664000000002
+Latent logarithm,US,3.375,-4.45939088,0.26133264
+Latent logarithm,US,3.625,-5.1967372,0.31827688
+Latent logarithm,US,3.875,-5.697478320000001,0.35584920000000003
+Latent logarithm,US,4.125,-6.456874320000001,0.33279536
+Latent logarithm,US,4.375,-7.29890432,0.32325584
+Latent logarithm,US,4.625,-8.12926096,0.33112176000000004
+Latent logarithm,US,4.875,-8.65573368,0.2838844
+Latent logarithm,US,5.125,-9.33504792,0.30576672000000005
+Latent logarithm,US,5.375,-10.03080528,0.32568256000000007
+Latent logarithm,US,5.625,-10.96283312,0.31497152
+Latent logarithm,US,5.875,-11.452486640000002,0.24660496
+Latent logarithm,US,6.125,-11.99255736,0.2401616
+Latent logarithm,US,6.375,-12.56953096,0.2529228
+Latent logarithm,US,6.625,-13.267087440000001,0.22099888
+Latent logarithm,US,6.875,-13.60063592,0.21878136
+Latent logarithm,US,7.125,-14.05535304,0.22158464
+Latent logarithm,US,7.375,-14.701362640000001,0.17464016000000002
+Latent logarithm,US,7.625,-15.21745904,0.12167072000000001
+Latent logarithm,US,7.875,-15.48439824,0.10811456
+Latent logarithm,US,8.125,-15.871083520000001,0.1416284
+Latent logarithm,US,8.375,-16.364126080000002,0.10535312000000001
+Latent logarithm,US,8.625,-16.754702480000002,0.17012144
+Latent logarithm,US,8.875,-16.95976032,0.15003824000000002
+Latent logarithm,US,9.125,-17.16711936,0.17263184
+Latent logarithm,US,9.375,-17.58413864,0.134934
+Latent logarithm,US,9.625,-17.80986544,0.22811168
+Latent logarithm,US,9.875,-17.870910000000002,0.1953928
+Latent logarithm,US,10.125,-18.05768376,0.22698200000000002
+Latent logarithm,US,10.375,-18.281402240000002,0.22890664000000002
+Latent logarithm,US,10.625,-18.390939359999997,0.2518768
+Latent logarithm,US,10.875,-18.278933679999998,0.21125016000000002
+Latent logarithm,US,11.125,-18.264540720000003,0.19325896
+Latent logarithm,US,11.375,-18.41805168,0.18112536
+Latent logarithm,US,11.625,-18.313409840000002,0.15279968
+Latent logarithm,US,11.875,-18.138476800000003,0.16982856000000002
+Latent logarithm,US,12.125,-18.0981012,0.15597952
+Latent logarithm,US,12.375,-18.137598160000003,0.13020608
+Latent logarithm,US,12.625,-17.971451520000002,0.2056436
+Latent logarithm,US,12.875,-17.62945136,0.22585232000000002
+Latent logarithm,US,13.125,-17.488074,0.25811096
+Latent logarithm,US,13.375,-17.47309528,0.22581048
+Latent logarithm,US,13.625,-17.21649056,0.27823600000000004
+Latent logarithm,US,13.875,-16.82545392,0.27601848
+Latent logarithm,US,14.125,-16.58190328,0.27785944
+Latent logarithm,US,14.375,-16.5876772,0.2491572
+Latent logarithm,US,14.625,-16.11827424,0.27208552
+Latent logarithm,US,14.875,-15.724894560000001,0.2600356
+Latent logarithm,US,15.125,-15.32272848,0.28723160000000003
+Latent logarithm,US,15.375,-15.07988912,0.29430256
+Latent logarithm,US,15.625,-14.622787120000002,0.23572656
+Latent logarithm,US,15.875,-14.04941176,0.23811144
+Latent logarithm,US,16.125,-13.6549024,0.26267152000000005
+Latent logarithm,US,16.375,-13.226795520000001,0.28907256
+Latent logarithm,US,16.625,-12.66605584,0.249994
+Latent logarithm,US,16.875,-11.98280864,0.25681392
+Latent logarithm,US,17.125,-11.55110352,0.25003584
+Latent logarithm,US,17.375,-11.2160488,0.238488
+Latent logarithm,US,17.625,-10.51589824,0.23267224
+Latent logarithm,US,17.875,-9.87629016,0.19861448
+Latent logarithm,US,18.125,-9.316847520000001,0.23359272
+Latent logarithm,US,18.375,-8.899577200000001,0.25267176
+Latent logarithm,US,18.625,-8.18189568,0.29501384
+Latent logarithm,US,18.875,-7.44408912,0.34061944
+Latent logarithm,US,19.125,-6.8354008,0.31392552
+Latent logarithm,US,19.375,-6.37281776,0.3958064
+Latent logarithm,US,19.625,-5.5666028,0.39618296
+Latent logarithm,US,19.875,-4.7790066399999995,0.37346384000000005
+Latent logarithm,US,20.125,-4.15391704,0.36028424000000003
+Latent logarithm,US,20.375,-3.5915456000000003,0.28894704
+Latent logarithm,US,20.625,-2.9467075200000004,0.29898863999999997
+Latent logarithm,US,20.875,-2.26212144,0.2460192
+Latent logarithm,US,21.125,-1.7871956,0.26267152000000005
+Latent logarithm,US,21.375,-1.6677842400000003,0.18769423999999998
+Latent logarithm,US,21.625,-1.28080608,0.13447376000000003
+Latent logarithm,US,21.875,-0.8905225600000001,0.12518528
+Latent logarithm,US,22.125,-0.73165608,0.10443264000000001
+Latent logarithm,US,22.375,-0.78692672,0.08899368
+Latent logarithm,US,22.625,-0.7144180000000001,0.05497776000000001
+Latent logarithm,US,22.875,-0.5199456800000001,0.02560608
+Latent logarithm,US,23.125,-0.51479936,0.019371919999999997
+Latent logarithm,US,23.375,-0.70404168,0.03824176000000001
+Latent logarithm,US,23.625,-0.66701328,0.04158896
+Latent logarithm,US,23.875,-0.6142948800000001,0.06050064000000001
+Latent logarithm,US,24.125,-0.6863852,0.0569024
+Latent logarithm,US,24.375,-0.8905225600000001,0.06183952
+Latent logarithm,US,24.625,-0.9206892,0.07581408
+Latent logarithm,US,24.875,-0.83495904,0.0625508
+Latent logarithm,US,25.125,-0.90704936,0.07242504
+Latent logarithm,US,25.375,-1.1730680800000002,0.07250872000000001
+Latent logarithm,US,25.625,-1.1721476000000002,0.09723616
+Latent logarithm,US,25.875,-0.99462048,0.0840984
+Latent logarithm,US,26.125,-1.07449304,0.04819968
+Latent logarithm,US,26.375,-1.2583380000000002,0.04485248
+Latent logarithm,US,26.625,-1.0862500800000001,0.04104504
+Latent logarithm,US,26.875,-0.79772144,0.13970376
+Latent logarithm,US,27.125,-0.75851736,0.12606392
+Latent logarithm,US,27.375,-0.95357544,0.05296944
+Latent logarithm,US,27.625,-1.07127136,0.08769664
+Latent logarithm,US,27.875,-0.84324336,0.0665256
+Latent logarithm,US,28.125,-0.8395196,0.06895232000000001
+Latent logarithm,US,28.375,-0.90893216,0.07480992
+Latent logarithm,US,28.625,-0.91947584,0.08238296
+Latent logarithm,US,28.875,-0.6585616000000001,0.054475680000000005
+Latent logarithm,US,29.125,-0.6027888800000001,0.06970544000000001
+Latent logarithm,US,29.375,-0.69404192,0.00807512
+Latent logarithm,US,29.625,-0.69316328,0.05715344000000001
+Latent logarithm,US,29.875,-0.4292784,0.08142064000000002
+Latent logarithm,US,30.125,-0.40831656,0.05874336
+Latent logarithm,US,30.375,-0.476976,0.04221656
+Latent logarithm,US,30.625,-0.3767692,0.06849208
+Latent logarithm,US,30.875,-0.07819896,0.053387840000000006
+Latent logarithm,US,31.125,-0.11870008,0.0274052
+Latent logarithm,US,31.375,-0.20865608,0.05786472
+Latent logarithm,US,31.625,0.09388896000000001,0.11664992
+Latent logarithm,US,31.875,0.2568976,0.12941112
+Latent logarithm,US,32.125,0.30154088,0.14547768000000003
+Latent logarithm,US,32.375,-0.0353548,0.06267632000000001
+Latent logarithm,US,32.625,-0.16418016,0.05326232
+Latent logarithm,US,32.875,0.023304880000000004,0.08514440000000001
+Latent logarithm,US,33.125,0.034518,0.057530000000000005
+Latent logarithm,US,33.375,-0.10489288,0.08543728
+Latent logarithm,US,33.625,-0.12836512,0.06535408000000001
+Latent logarithm,US,33.875,0.0633876,0.03522928
+Latent logarithm,US,34.125,0.06619088000000001,0.09075096
+Latent logarithm,US,34.375,-0.06183952,0.054475680000000005
+Latent logarithm,US,34.625,0.11070864000000001,0.051630560000000006
+Latent logarithm,US,34.875,0.44701856,0.10719408000000001
+Latent logarithm,US,35.125,0.48291728,0.08121144000000001
+Latent logarithm,US,35.375,0.1230096,0.07522832
+Latent logarithm,US,35.625,-0.06970544000000001,0.05874336
+Latent logarithm,US,35.875,0.09970472000000001,0.07137903999999999
+Latent logarithm,US,36.125,0.07631616,0.0529276
+Latent logarithm,US,36.375,-0.06472648,0.05786472
+Latent logarithm,US,36.625,-0.08535360000000002,0.12526896
+Latent logarithm,US,36.875,0.08941208,0.09029071999999999
+Latent logarithm,US,37.125,0.10535312000000001,0.0966504
+Latent logarithm,US,37.375,0.03138,0.11330272000000001
+Latent logarithm,US,37.625,-0.3198668,0.0876548
+Latent logarithm,US,37.875,0.29635272,0.21999472
+Pooled counts,0.2 M,0.5,-0.665233,0.818237
+Pooled counts,0.2 M,1.5,-1.093483,0.726833
+Pooled counts,0.2 M,2.5,-1.951509,0.718733
+Pooled counts,0.2 M,3.5,-3.670186,0.681687
+Pooled counts,0.2 M,4.5,-5.936133,0.622775
+Pooled counts,0.2 M,5.5,-8.187152,0.584109
+Pooled counts,0.2 M,6.5,-10.253749,0.571519
+Pooled counts,0.2 M,7.5,-12.02759,0.564753
+Pooled counts,0.2 M,8.5,-13.433782,0.558229
+Pooled counts,0.2 M,9.5,-14.482993,0.564261
+Pooled counts,0.2 M,10.5,-15.139786,0.572557
+Pooled counts,0.2 M,11.5,-15.395679,0.578686
+Pooled counts,0.2 M,12.5,-15.21821,0.579625
+Pooled counts,0.2 M,13.5,-14.650914,0.583175
+Pooled counts,0.2 M,14.5,-13.698867,0.579581
+Pooled counts,0.2 M,15.5,-12.448151,0.582777
+Pooled counts,0.2 M,16.5,-10.91272,0.582588
+Pooled counts,0.2 M,17.5,-9.119183,0.581947
+Pooled counts,0.2 M,18.5,-7.173573,0.594645
+Pooled counts,0.2 M,19.5,-5.228636,0.605145
+Pooled counts,0.2 M,20.5,-3.330608,0.620574
+Pooled counts,0.2 M,21.5,-1.818046,0.582679
+Pooled counts,0.2 M,22.5,-0.814703,0.391736
+Pooled counts,0.2 M,23.5,-0.728202,0.271712
+Pooled counts,0.2 M,24.5,-0.691562,0.240423
+Pooled counts,0.2 M,25.5,-0.869654,0.255293
+Pooled counts,0.2 M,26.5,-0.642271,0.210529
+Pooled counts,0.2 M,27.5,-0.503774,0.213851
+Pooled counts,0.2 M,28.5,-0.335376,0.215737
+Pooled counts,0.2 M,29.5,-0.340855,0.188253
+Pooled counts,0.2 M,30.5,-0.181292,0.193468
+Pooled counts,0.2 M,31.5,-0.077129,0.154889
+Pooled counts,0.2 M,32.5,-0.035773,0.084609
+Pooled counts,0.2 M,33.5,-0.034228,0.115507
+Pooled counts,0.2 M,34.5,-0.067997,0.102662
+Pooled counts,0.2 M,35.5,0.148396,0.106552
+Pooled counts,0.2 M,36.5,-0.086228,0.105672
+Pooled counts,0.2 M,37.5,-0.015616,0.111207
+Pooled counts,0.2 M,38.5,-0.134208,0.106243
+Pooled counts,0.2 M,39.5,-0.122299,0.113311
+Pooled counts,0.2 M,40.5,-0.071045,0.074248
+Pooled counts,0.2 M,41.5,0.045841,0.07834
+Pooled counts,0.2 M,42.5,-0.049634,0.078632
+Pooled counts,0.2 M,43.5,-0.107332,0.059593
+Pooled counts,0.2 M,44.5,-0.045022,0.081481
+Pooled counts,0.2 M,45.5,-0.081683,0.050943
+Pooled counts,0.2 M,46.5,0.084419,0.07136
+Pooled counts,0.2 M,47.5,0.071494,0.059065
+Pooled counts,0.2 M,48.5,0.092531,0.080946
+Pooled counts,0.2 M,49.5,0.071494,0.146338
+Pooled counts,0.1 M,0.5,-2.022799,1.786358
+Pooled counts,0.1 M,1.5,-2.316246,1.968314
+Pooled counts,0.1 M,2.5,-3.653177,1.945905
+Pooled counts,0.1 M,3.5,-5.5168,2.008666
+Pooled counts,0.1 M,4.5,-8.122386,2.062784
+Pooled counts,0.1 M,5.5,-10.556417,2.074248
+Pooled counts,0.1 M,6.5,-12.802939,2.064469
+Pooled counts,0.1 M,7.5,-14.676064,2.062778
+Pooled counts,0.1 M,8.5,-16.18229,2.056775
+Pooled counts,0.1 M,9.5,-17.299804,2.059227
+Pooled counts,0.1 M,10.5,-18.032476,2.052198
+Pooled counts,0.1 M,11.5,-18.328846,2.050577
+Pooled counts,0.1 M,12.5,-18.184781,2.05221
+Pooled counts,0.1 M,13.5,-17.657047,2.058271
+Pooled counts,0.1 M,14.5,-16.760897,2.060223
+Pooled counts,0.1 M,15.5,-15.449097,2.055755
+Pooled counts,0.1 M,16.5,-13.826066,2.048699
+Pooled counts,0.1 M,17.5,-11.921935,2.066462
+Pooled counts,0.1 M,18.5,-9.732651,2.074731
+Pooled counts,0.1 M,19.5,-7.479996,2.08603
+Pooled counts,0.1 M,20.5,-5.215691,2.041534
+Pooled counts,0.1 M,21.5,-3.185378,1.902143
+Pooled counts,0.1 M,22.5,-1.97858,1.642905
+Pooled counts,0.1 M,23.5,-1.393768,1.555734
+Pooled counts,0.1 M,24.5,-1.272766,1.487025
+Pooled counts,0.1 M,25.5,-1.46039,1.258774
+Pooled counts,0.1 M,26.5,-1.774238,1.231829
+Pooled counts,0.1 M,27.5,-1.598966,1.105545
+Pooled counts,0.1 M,28.5,-1.482212,1.162926
+Pooled counts,0.1 M,29.5,-1.018341,1.3568
+Pooled counts,0.1 M,30.5,-0.835575,1.366139
+Pooled counts,0.1 M,31.5,-0.553591,1.299152
+Pooled counts,0.1 M,32.5,-0.569246,1.093569
+Pooled counts,0.1 M,33.5,-0.65365,1.093445
+Pooled counts,0.1 M,34.5,-0.584804,1.170206
+Pooled counts,0.1 M,35.5,-0.408143,1.077584
+Pooled counts,0.1 M,36.5,-0.306296,0.944888
+Pooled counts,0.1 M,37.5,-0.391452,1.026724
+Pooled counts,0.1 M,38.5,-0.117515,0.915597
+Pooled counts,0.1 M,39.5,0.527925,0.937366
+Pooled counts,0.1 M,40.5,-0.191108,0.645095
+Pooled counts,0.1 M,41.5,0.179344,0.360269
+Pooled counts,0.1 M,42.5,0.076457,0.362818
+Pooled counts,0.1 M,43.5,-0.041708,0.29435
+Pooled counts,0.1 M,44.5,0.056374,0.24665
+Pooled counts,0.1 M,45.5,0.066395,0.053034
+Pooled counts,0.1 M,46.5,0.127375,0.550403
+Pooled counts,0.1 M,47.5,0.026546,0.341766
+Pooled counts,0.1 M,48.5,-0.079897,1.198802
+Pooled counts,0.1 M,49.5,-0.191108,0.969685
+Pooled counts,US,0.125,-2.0661010400000004,0.21074808
+Pooled counts,US,0.375,-2.26505024,0.2219612
+Pooled counts,US,0.625,-2.34914864,0.25848752
+Pooled counts,US,0.875,-2.21743632,0.254178
+Pooled counts,US,1.125,-2.28371088,0.3286532
+Pooled counts,US,1.375,-2.55324416,0.38425856
+Pooled counts,US,1.625,-2.77302968,0.42216560000000003
+Pooled counts,US,1.875,-2.68918232,0.35651864
+Pooled counts,US,2.125,-2.7857072,0.31367448
+Pooled counts,US,2.375,-3.1254061600000003,0.27526536
+Pooled counts,US,2.625,-3.3417608,0.21748432
+Pooled counts,US,2.875,-3.47849392,0.23798592000000002
+Pooled counts,US,3.125,-3.8934212,0.24982664000000002
+Pooled counts,US,3.375,-4.45939088,0.26133264
+Pooled counts,US,3.625,-5.1967372,0.31827688
+Pooled counts,US,3.875,-5.697478320000001,0.35584920000000003
+Pooled counts,US,4.125,-6.456874320000001,0.33279536
+Pooled counts,US,4.375,-7.29890432,0.32325584
+Pooled counts,US,4.625,-8.12926096,0.33112176000000004
+Pooled counts,US,4.875,-8.65573368,0.2838844
+Pooled counts,US,5.125,-9.33504792,0.30576672000000005
+Pooled counts,US,5.375,-10.03080528,0.32568256000000007
+Pooled counts,US,5.625,-10.96283312,0.31497152
+Pooled counts,US,5.875,-11.452486640000002,0.24660496
+Pooled counts,US,6.125,-11.99255736,0.2401616
+Pooled counts,US,6.375,-12.56953096,0.2529228
+Pooled counts,US,6.625,-13.267087440000001,0.22099888
+Pooled counts,US,6.875,-13.60063592,0.21878136
+Pooled counts,US,7.125,-14.05535304,0.22158464
+Pooled counts,US,7.375,-14.701362640000001,0.17464016000000002
+Pooled counts,US,7.625,-15.21745904,0.12167072000000001
+Pooled counts,US,7.875,-15.48439824,0.10811456
+Pooled counts,US,8.125,-15.871083520000001,0.1416284
+Pooled counts,US,8.375,-16.364126080000002,0.10535312000000001
+Pooled counts,US,8.625,-16.754702480000002,0.17012144
+Pooled counts,US,8.875,-16.95976032,0.15003824000000002
+Pooled counts,US,9.125,-17.16711936,0.17263184
+Pooled counts,US,9.375,-17.58413864,0.134934
+Pooled counts,US,9.625,-17.80986544,0.22811168
+Pooled counts,US,9.875,-17.870910000000002,0.1953928
+Pooled counts,US,10.125,-18.05768376,0.22698200000000002
+Pooled counts,US,10.375,-18.281402240000002,0.22890664000000002
+Pooled counts,US,10.625,-18.390939359999997,0.2518768
+Pooled counts,US,10.875,-18.278933679999998,0.21125016000000002
+Pooled counts,US,11.125,-18.264540720000003,0.19325896
+Pooled counts,US,11.375,-18.41805168,0.18112536
+Pooled counts,US,11.625,-18.313409840000002,0.15279968
+Pooled counts,US,11.875,-18.138476800000003,0.16982856000000002
+Pooled counts,US,12.125,-18.0981012,0.15597952
+Pooled counts,US,12.375,-18.137598160000003,0.13020608
+Pooled counts,US,12.625,-17.971451520000002,0.2056436
+Pooled counts,US,12.875,-17.62945136,0.22585232000000002
+Pooled counts,US,13.125,-17.488074,0.25811096
+Pooled counts,US,13.375,-17.47309528,0.22581048
+Pooled counts,US,13.625,-17.21649056,0.27823600000000004
+Pooled counts,US,13.875,-16.82545392,0.27601848
+Pooled counts,US,14.125,-16.58190328,0.27785944
+Pooled counts,US,14.375,-16.5876772,0.2491572
+Pooled counts,US,14.625,-16.11827424,0.27208552
+Pooled counts,US,14.875,-15.724894560000001,0.2600356
+Pooled counts,US,15.125,-15.32272848,0.28723160000000003
+Pooled counts,US,15.375,-15.07988912,0.29430256
+Pooled counts,US,15.625,-14.622787120000002,0.23572656
+Pooled counts,US,15.875,-14.04941176,0.23811144
+Pooled counts,US,16.125,-13.6549024,0.26267152000000005
+Pooled counts,US,16.375,-13.226795520000001,0.28907256
+Pooled counts,US,16.625,-12.66605584,0.249994
+Pooled counts,US,16.875,-11.98280864,0.25681392
+Pooled counts,US,17.125,-11.55110352,0.25003584
+Pooled counts,US,17.375,-11.2160488,0.238488
+Pooled counts,US,17.625,-10.51589824,0.23267224
+Pooled counts,US,17.875,-9.87629016,0.19861448
+Pooled counts,US,18.125,-9.316847520000001,0.23359272
+Pooled counts,US,18.375,-8.899577200000001,0.25267176
+Pooled counts,US,18.625,-8.18189568,0.29501384
+Pooled counts,US,18.875,-7.44408912,0.34061944
+Pooled counts,US,19.125,-6.8354008,0.31392552
+Pooled counts,US,19.375,-6.37281776,0.3958064
+Pooled counts,US,19.625,-5.5666028,0.39618296
+Pooled counts,US,19.875,-4.7790066399999995,0.37346384000000005
+Pooled counts,US,20.125,-4.15391704,0.36028424000000003
+Pooled counts,US,20.375,-3.5915456000000003,0.28894704
+Pooled counts,US,20.625,-2.9467075200000004,0.29898863999999997
+Pooled counts,US,20.875,-2.26212144,0.2460192
+Pooled counts,US,21.125,-1.7871956,0.26267152000000005
+Pooled counts,US,21.375,-1.6677842400000003,0.18769423999999998
+Pooled counts,US,21.625,-1.28080608,0.13447376000000003
+Pooled counts,US,21.875,-0.8905225600000001,0.12518528
+Pooled counts,US,22.125,-0.73165608,0.10443264000000001
+Pooled counts,US,22.375,-0.78692672,0.08899368
+Pooled counts,US,22.625,-0.7144180000000001,0.05497776000000001
+Pooled counts,US,22.875,-0.5199456800000001,0.02560608
+Pooled counts,US,23.125,-0.51479936,0.019371919999999997
+Pooled counts,US,23.375,-0.70404168,0.03824176000000001
+Pooled counts,US,23.625,-0.66701328,0.04158896
+Pooled counts,US,23.875,-0.6142948800000001,0.06050064000000001
+Pooled counts,US,24.125,-0.6863852,0.0569024
+Pooled counts,US,24.375,-0.8905225600000001,0.06183952
+Pooled counts,US,24.625,-0.9206892,0.07581408
+Pooled counts,US,24.875,-0.83495904,0.0625508
+Pooled counts,US,25.125,-0.90704936,0.07242504
+Pooled counts,US,25.375,-1.1730680800000002,0.07250872000000001
+Pooled counts,US,25.625,-1.1721476000000002,0.09723616
+Pooled counts,US,25.875,-0.99462048,0.0840984
+Pooled counts,US,26.125,-1.07449304,0.04819968
+Pooled counts,US,26.375,-1.2583380000000002,0.04485248
+Pooled counts,US,26.625,-1.0862500800000001,0.04104504
+Pooled counts,US,26.875,-0.79772144,0.13970376
+Pooled counts,US,27.125,-0.75851736,0.12606392
+Pooled counts,US,27.375,-0.95357544,0.05296944
+Pooled counts,US,27.625,-1.07127136,0.08769664
+Pooled counts,US,27.875,-0.84324336,0.0665256
+Pooled counts,US,28.125,-0.8395196,0.06895232000000001
+Pooled counts,US,28.375,-0.90893216,0.07480992
+Pooled counts,US,28.625,-0.91947584,0.08238296
+Pooled counts,US,28.875,-0.6585616000000001,0.054475680000000005
+Pooled counts,US,29.125,-0.6027888800000001,0.06970544000000001
+Pooled counts,US,29.375,-0.69404192,0.00807512
+Pooled counts,US,29.625,-0.69316328,0.05715344000000001
+Pooled counts,US,29.875,-0.4292784,0.08142064000000002
+Pooled counts,US,30.125,-0.40831656,0.05874336
+Pooled counts,US,30.375,-0.476976,0.04221656
+Pooled counts,US,30.625,-0.3767692,0.06849208
+Pooled counts,US,30.875,-0.07819896,0.053387840000000006
+Pooled counts,US,31.125,-0.11870008,0.0274052
+Pooled counts,US,31.375,-0.20865608,0.05786472
+Pooled counts,US,31.625,0.09388896000000001,0.11664992
+Pooled counts,US,31.875,0.2568976,0.12941112
+Pooled counts,US,32.125,0.30154088,0.14547768000000003
+Pooled counts,US,32.375,-0.0353548,0.06267632000000001
+Pooled counts,US,32.625,-0.16418016,0.05326232
+Pooled counts,US,32.875,0.023304880000000004,0.08514440000000001
+Pooled counts,US,33.125,0.034518,0.057530000000000005
+Pooled counts,US,33.375,-0.10489288,0.08543728
+Pooled counts,US,33.625,-0.12836512,0.06535408000000001
+Pooled counts,US,33.875,0.0633876,0.03522928
+Pooled counts,US,34.125,0.06619088000000001,0.09075096
+Pooled counts,US,34.375,-0.06183952,0.054475680000000005
+Pooled counts,US,34.625,0.11070864000000001,0.051630560000000006
+Pooled counts,US,34.875,0.44701856,0.10719408000000001
+Pooled counts,US,35.125,0.48291728,0.08121144000000001
+Pooled counts,US,35.375,0.1230096,0.07522832
+Pooled counts,US,35.625,-0.06970544000000001,0.05874336
+Pooled counts,US,35.875,0.09970472000000001,0.07137903999999999
+Pooled counts,US,36.125,0.07631616,0.0529276
+Pooled counts,US,36.375,-0.06472648,0.05786472
+Pooled counts,US,36.625,-0.08535360000000002,0.12526896
+Pooled counts,US,36.875,0.08941208,0.09029071999999999
+Pooled counts,US,37.125,0.10535312000000001,0.0966504
+Pooled counts,US,37.375,0.03138,0.11330272000000001
+Pooled counts,US,37.625,-0.3198668,0.0876548
+Pooled counts,US,37.875,0.29635272,0.21999472

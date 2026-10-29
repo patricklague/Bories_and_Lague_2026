@@ -1,0 +1,11 @@
+method,series,analog,source,minimum_z_A,minimum_kJ_mol,se_at_minimum_kJ_mol,min_boot_defined
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,scl,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation\total\scl\pmf_scl.dat,0.5,-21.067121,1.368746,
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,scl-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation\total\scl-1\pmf_scl-1.dat,0.5,-23.190439,0.711584,
+Poisson-Gamma,0.2 M,scl,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_poisson\total\scl\pmf_scl.dat,0.5,-26.697216,3.907602,
+Poisson-Gamma,0.1 M,scl-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_poisson\total\scl-1\pmf_scl-1.dat,0.5,-33.625285,2.217791,
+Bayesian (Dirichlet),0.2 M,scl,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_bayesian\total\scl\pmf_scl.dat,0.5,-24.535942,2.314218,
+Bayesian (Dirichlet),0.1 M,scl-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_bayesian\total\scl-1\pmf_scl-1.dat,0.5,-26.900828,1.157049,
+Latent logarithm,0.2 M,scl,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_latent\total\scl\pmf_scl.dat,0.5,-25.640661,3.00675,
+Latent logarithm,0.1 M,scl-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_latent\total\scl-1\pmf_scl-1.dat,0.5,-29.572694,1.797736,
+Pooled counts,0.2 M,scl,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_counting\total\scl\pmf_scl.dat,0.5,-18.461828,2.044092,0.9706
+Pooled counts,0.1 M,scl-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_counting\total\scl-1\pmf_scl-1.dat,0.5,-23.276718,1.137178,0.6539

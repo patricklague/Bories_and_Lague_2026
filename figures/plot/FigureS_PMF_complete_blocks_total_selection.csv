@@ -1,0 +1,30 @@
+analog,n_valid,n_total,status,retained_blocks
+glyd,0,9,no complete block,
+sccm,0,9,no complete block,
+scd,0,9,no complete block,
+scdn,8,9,direct block SE,traj1:400-600ns;traj1:600-800ns;traj1:800-1000ns;traj2:400-600ns;traj2:600-800ns;traj3:400-600ns;traj3:600-800ns;traj3:800-1000ns
+sce,0,9,no complete block,
+scf,7,9,direct block SE,traj1:400-600ns;traj1:600-800ns;traj2:400-600ns;traj2:600-800ns;traj2:800-1000ns;traj3:400-600ns;traj3:800-1000ns
+scf-1,3,9,direct block SE,traj1:600-800ns;traj2:400-600ns;traj3:600-800ns
+schd,0,9,no complete block,
+sche,0,9,no complete block,
+schp,0,9,no complete block,
+sci,3,9,direct block SE,traj2:400-600ns;traj3:400-600ns;traj3:600-800ns
+sci-1,0,9,no complete block,
+sck,0,9,no complete block,
+scl,3,9,direct block SE,traj1:600-800ns;traj3:400-600ns;traj3:800-1000ns
+scl-1,1,9,SE unavailable (one block),traj1:400-600ns
+scm,5,9,direct block SE,traj1:400-600ns;traj1:600-800ns;traj1:800-1000ns;traj2:600-800ns;traj3:400-600ns
+scm-1,1,9,SE unavailable (one block),traj2:800-1000ns
+scn,0,9,no complete block,
+scq,1,9,SE unavailable (one block),traj2:400-600ns
+scr,0,9,no complete block,
+scrn,1,9,SE unavailable (one block),traj3:800-1000ns
+scrn-1,1,9,SE unavailable (one block),traj2:400-600ns
+scs,6,9,direct block SE,traj1:400-600ns;traj2:600-800ns;traj2:800-1000ns;traj3:400-600ns;traj3:600-800ns;traj3:800-1000ns
+sct,6,9,direct block SE,traj1:400-600ns;traj2:400-600ns;traj2:800-1000ns;traj3:400-600ns;traj3:600-800ns;traj3:800-1000ns
+scv,7,9,direct block SE,traj1:400-600ns;traj1:800-1000ns;traj2:400-600ns;traj2:600-800ns;traj3:400-600ns;traj3:600-800ns;traj3:800-1000ns
+scv-1,7,9,direct block SE,traj1:400-600ns;traj1:600-800ns;traj1:800-1000ns;traj2:600-800ns;traj2:800-1000ns;traj3:600-800ns;traj3:800-1000ns
+scw-1,5,9,direct block SE,traj1:400-600ns;traj1:600-800ns;traj2:800-1000ns;traj3:400-600ns;traj3:800-1000ns
+scy-1,3,9,direct block SE,traj1:600-800ns;traj1:800-1000ns;traj2:800-1000ns
+scym,0,9,no complete block,

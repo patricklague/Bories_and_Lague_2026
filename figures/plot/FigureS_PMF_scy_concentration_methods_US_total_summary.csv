@@ -1,0 +1,11 @@
+method,series,analog,source,minimum_z_A,minimum_kJ_mol,se_at_minimum_kJ_mol,min_boot_defined
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.2 M,scy,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation\total\scy\pmf_scy.dat,11.5,-15.948459,0.724945,
+Pseudocount ($\varepsilon=10^{-5}$ at both concentrations),0.1 M,scy-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation\total\scy-1\pmf_scy-1.dat,11.5,-21.686707,1.468425,
+Poisson-Gamma,0.2 M,scy,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_poisson\total\scy\pmf_scy.dat,11.5,-16.065096,0.77755,
+Poisson-Gamma,0.1 M,scy-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_poisson\total\scy-1\pmf_scy-1.dat,11.5,-27.720747,3.960067,
+Bayesian (Dirichlet),0.2 M,scy,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_bayesian\total\scy\pmf_scy.dat,11.5,-16.081731,0.779156,
+Bayesian (Dirichlet),0.1 M,scy-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_bayesian\total\scy-1\pmf_scy-1.dat,11.5,-24.511195,2.116456,
+Latent logarithm,0.2 M,scy,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_latent\total\scy\pmf_scy.dat,11.5,-16.087539,0.781168,
+Latent logarithm,0.1 M,scy-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_latent\total\scy-1\pmf_scy-1.dat,11.5,-25.821656,2.808481,
+Pooled counts,0.2 M,scy,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_counting\total\scy\pmf_scy.dat,11.5,-15.395679,0.578686,1.0
+Pooled counts,0.1 M,scy-1,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\supp_files\method_script\4-pmf_calculation_counting\total\scy-1\pmf_scy-1.dat,11.5,-18.328846,2.050577,0.972

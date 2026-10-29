@@ -1,0 +1,45 @@
+# PMF for analog 'scw'  (averaged over 3 50 ns blocks: block1, block2, block3)
+# columns: |z|(A)   PMF(kcal/mol)   SE(kcal/mol)   n_blocks
+# each folded block independently shifted by its arithmetic-mean PMF over |z| >= 30 A (8 bins sampled by all blocks)
+# mean of block references = 4.12038 +/- 0.03859 kcal/mol (bootstrap; references depend on arbitrary WHAM constants)
+# per-leaflet WHAM backend = binless, output bin width = 1 A
+# PMF = average of independently water-zeroed blocks; each block folds solute 1 (+z) and mirrored solute 2 (-z) leaflets
+# SE = block bootstrap of independently water-zeroed blocks (exact (all 27 resamples)), x sqrt(n/(n-1)) = 1.2247 small-sample correction
+   0.500     -1.79153      0.22797    3
+   1.500     -1.74984      0.21581    3
+   2.500     -1.64127      0.19422    3
+   3.500     -1.72124      0.16934    3
+   4.500     -1.83760      0.17094    3
+   5.500     -2.15206      0.15171    3
+   6.500     -2.57993      0.15925    3
+   7.500     -3.04237      0.12427    3
+   8.500     -3.42630      0.09652    3
+   9.500     -3.70416      0.09059    3
+  10.500     -3.93152      0.03619    3
+  11.500     -4.09280      0.03271    3
+  12.500     -4.08235      0.03450    3
+  13.500     -3.90326      0.06976    3
+  14.500     -3.67872      0.10737    3
+  15.500     -3.57857      0.11519    3
+  16.500     -3.16505      0.12359    3
+  17.500     -2.69424      0.13050    3
+  18.500     -2.20752      0.10791    3
+  19.500     -1.67849      0.10861    3
+  20.500     -1.19336      0.10812    3
+  21.500     -0.85315      0.08590    3
+  22.500     -0.64658      0.03995    3
+  23.500     -0.62256      0.03086    3
+  24.500     -0.56993      0.01428    3
+  25.500     -0.49243      0.01669    3
+  26.500     -0.42994      0.01770    3
+  27.500     -0.33374      0.01071    3
+  28.500     -0.22126      0.00816    3
+  29.500     -0.14129      0.01868    3
+  30.500     -0.11621      0.02354    3
+  31.500     -0.06208      0.02142    3
+  32.500     -0.02358      0.01918    3
+  33.500      0.04623      0.00768    3
+  34.500      0.05843      0.01658    3
+  35.500      0.01611      0.01674    3
+  36.500      0.03323      0.01327    3
+  37.500      0.04787      0.02498    3

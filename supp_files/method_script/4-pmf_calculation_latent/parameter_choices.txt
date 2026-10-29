@@ -1,0 +1,55 @@
+Parameter choices in pmf-from-distribution.py (latent-logarithm PMF)
+=====================================================================
+
+Sampling and blocks. Each analog was simulated in 3 independent trajectories
+(n_trajectories = 3). The 400-1000 ns production window is split into 3
+non-overlapping 200 ns blocks (n_batches = 3), giving n = 9 blocks treated as
+independent samples. This assumes 200 ns is longer than the correlation time
+of the solute depth (assumed, not measured here). mode = "total" uses every solute molecule. The sampling
+depth N of a block (number of molecule-frames, 520 000, or 260 000 for the "-1"
+analogs) is taken from the raw data (raw_data_summary.dat, otherwise the raw
+line count). With it, the stored 6-decimal densities convert back to exact
+integer counts. If the rounding residual exceeds 0.45 count, or the total
+differs from N by more than 1 %, a warning flags the mismatch.
+
+Physical constants and grid. k_B = 0.008314 kJ mol-1 K-1 and T = 303.15 K are
+the simulation temperature, so PMFs are in kJ/mol. z_bin = 1.0 A is the
+histogram bin width of the distribution files. The +z and -z bins are summed
+onto a |z| grid. The grid is extended to 50 A when the data stop earlier, and
+these extra bins count as genuine zero-count observations.
+
+Water reference. recal_lo = 40 A and recal_hi = 50 A define the bulk-water
+window: it lies well outside the bilayer, where the PMF is flat. The reference
+a is the inverse-variance weighted mean of the untranslated block-averaged PMF
+over this window. Bins whose SE is <= 1e-9 kJ/mol (se_floor) are identical
+across blocks, so their SE is floating-point noise. If the window contains such
+a bin, an unweighted mean is used instead, to avoid arbitrary weights.
+
+Latent logarithm (Biswas 2016). One Normal prior on the log-rates is shared by
+all bins of the 9 blocks, as Biswas recommends for linked datasets. Exposures
+are expressed as N/K (expected count per bin of a uniform histogram, K bins),
+so that latent rates are O(1). This makes the paper's initialisation,
+mean/variance of log(t/o + 1), meaningful; the units only affect the starting
+point, not the result. The initial variance is floored at 1e-6 to avoid
+division by zero. Iterated conditional modes stop when mu and the relative
+change of sigma^2 vary by less than lag_tol = 1e-8. lag_max_iter = 5000 is a
+safety cap; in practice convergence takes 10-17 iterations, and a different
+initialisation gives the same mu and sigma. The per-bin Newton-Raphson MAP
+step (strictly concave objective) uses a tolerance of 1e-10, at most 200
+iterations, and steps clipped to +/-5 log units, which prevents overflow of
+exp(z) far from the optimum.
+
+Bootstrap. n_bootstrap = 10 000 replicates keep the Monte Carlo noise of the
+bootstrap SE below 1 % (tested: 0.7 % spread across 20 seeds; 2.4 % at 1 000
+and 4.7 % at 200 replicates). This is well above the 50-200 replicates usual
+for a standard error (Efron & Tibshirani 1993), and still cheap (~10 s per
+analog including the lag refit). bootstrap_seed = 2025 is arbitrary and only
+makes the output reproducible; another seed changes the SE by ~0.7 %. Each
+replicate resamples the 9 count histograms with replacement and repeats the
+whole procedure (lag fit, averaging, reference, shift). small_sample_correction
+= True multiplies the bootstrap SE by sqrt(n/(n-1)) = 1.061 for n = 9. This
+removes the known downward bias of the bootstrap variance of a mean,
+((n-1)/n) s^2/n, so the SE matches the conventional s/sqrt(n) block SE (tested
+on sca: 0.240 kJ/mol corrected vs 0.240 analytical vs 0.226 uncorrected).
+bootstrap_chunk = 1000 only sets how many replicates are processed at once
+(memory/speed trade-off) and does not affect the results.

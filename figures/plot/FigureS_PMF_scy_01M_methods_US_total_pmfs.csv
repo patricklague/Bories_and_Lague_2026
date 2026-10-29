@@ -1,0 +1,805 @@
+reference,method,z_A,mean_kJ_mol,se_kJ_mol
+membrane,Pseudocount ($\varepsilon=10^{-5}$),0.5,16.829409000000002,0.77694
+membrane,Pseudocount ($\varepsilon=10^{-5}$),1.5,16.45702,0.691345
+membrane,Pseudocount ($\varepsilon=10^{-5}$),2.5,14.874784000000002,0.44473
+membrane,Pseudocount ($\varepsilon=10^{-5}$),3.5,12.983588000000001,0.372327
+membrane,Pseudocount ($\varepsilon=10^{-5}$),4.5,10.237655,0.161811
+membrane,Pseudocount ($\varepsilon=10^{-5}$),5.5,7.781922000000001,0.089575
+membrane,Pseudocount ($\varepsilon=10^{-5}$),6.5,5.531821,0.067878
+membrane,Pseudocount ($\varepsilon=10^{-5}$),7.5,3.6563969999999992,0.051843
+membrane,Pseudocount ($\varepsilon=10^{-5}$),8.5,2.1492320000000005,0.044178
+membrane,Pseudocount ($\varepsilon=10^{-5}$),9.5,1.0304419999999999,0.032664
+membrane,Pseudocount ($\varepsilon=10^{-5}$),10.5,0.29663799999999974,0.017937
+membrane,Pseudocount ($\varepsilon=10^{-5}$),11.5,0.0,0.011905
+membrane,Pseudocount ($\varepsilon=10^{-5}$),12.5,0.144393,0.018904
+membrane,Pseudocount ($\varepsilon=10^{-5}$),13.5,0.6729180000000001,0.02964
+membrane,Pseudocount ($\varepsilon=10^{-5}$),14.5,1.570094,0.039515
+membrane,Pseudocount ($\varepsilon=10^{-5}$),15.5,2.8817019999999998,0.039583
+membrane,Pseudocount ($\varepsilon=10^{-5}$),16.5,4.505018000000001,0.045282
+membrane,Pseudocount ($\varepsilon=10^{-5}$),17.5,6.410516,0.060112
+membrane,Pseudocount ($\varepsilon=10^{-5}$),18.5,8.611493,0.114721
+membrane,Pseudocount ($\varepsilon=10^{-5}$),19.5,10.893450000000001,0.189211
+membrane,Pseudocount ($\varepsilon=10^{-5}$),20.5,13.224393,0.303806
+membrane,Pseudocount ($\varepsilon=10^{-5}$),21.5,15.337537000000001,0.41645
+membrane,Pseudocount ($\varepsilon=10^{-5}$),22.5,17.033179,0.770247
+membrane,Pseudocount ($\varepsilon=10^{-5}$),23.5,18.984511,1.322605
+membrane,Pseudocount ($\varepsilon=10^{-5}$),24.5,19.890442,1.501895
+membrane,Pseudocount ($\varepsilon=10^{-5}$),25.5,20.217797,1.626065
+membrane,Pseudocount ($\varepsilon=10^{-5}$),26.5,20.183959,1.707501
+membrane,Pseudocount ($\varepsilon=10^{-5}$),27.5,20.509272,1.672087
+membrane,Pseudocount ($\varepsilon=10^{-5}$),28.5,20.727952000000002,1.674496
+membrane,Pseudocount ($\varepsilon=10^{-5}$),29.5,20.820645000000003,1.585867
+membrane,Pseudocount ($\varepsilon=10^{-5}$),30.5,20.822688,1.549732
+membrane,Pseudocount ($\varepsilon=10^{-5}$),31.5,20.925126000000002,1.511947
+membrane,Pseudocount ($\varepsilon=10^{-5}$),32.5,21.035371,1.523739
+membrane,Pseudocount ($\varepsilon=10^{-5}$),33.5,21.004234,1.538431
+membrane,Pseudocount ($\varepsilon=10^{-5}$),34.5,21.016024,1.530308
+membrane,Pseudocount ($\varepsilon=10^{-5}$),35.5,21.200982,1.521954
+membrane,Pseudocount ($\varepsilon=10^{-5}$),36.5,21.129065,1.479768
+membrane,Pseudocount ($\varepsilon=10^{-5}$),37.5,21.301227,1.540585
+membrane,Pseudocount ($\varepsilon=10^{-5}$),38.5,21.310479,1.470994
+membrane,Pseudocount ($\varepsilon=10^{-5}$),39.5,21.522583,1.365842
+membrane,Pseudocount ($\varepsilon=10^{-5}$),40.5,21.427982,1.490916
+membrane,Pseudocount ($\varepsilon=10^{-5}$),41.5,21.599296000000002,1.42116
+membrane,Pseudocount ($\varepsilon=10^{-5}$),42.5,21.585893000000002,1.431518
+membrane,Pseudocount ($\varepsilon=10^{-5}$),43.5,21.561999,1.447533
+membrane,Pseudocount ($\varepsilon=10^{-5}$),44.5,21.716795,1.415276
+membrane,Pseudocount ($\varepsilon=10^{-5}$),45.5,21.667724,1.420496
+membrane,Pseudocount ($\varepsilon=10^{-5}$),46.5,21.819874000000002,1.400015
+membrane,Pseudocount ($\varepsilon=10^{-5}$),47.5,21.714764000000002,1.422091
+membrane,Pseudocount ($\varepsilon=10^{-5}$),48.5,21.929431,1.425764
+membrane,Pseudocount ($\varepsilon=10^{-5}$),49.5,21.815549,1.446806
+membrane,Poisson-Gamma,0.5,16.969422,0.887498
+membrane,Poisson-Gamma,1.5,16.563211000000003,0.756664
+membrane,Poisson-Gamma,2.5,14.913006999999999,0.457403
+membrane,Poisson-Gamma,3.5,13.001888,0.379626
+membrane,Poisson-Gamma,4.5,10.243245,0.163799
+membrane,Poisson-Gamma,5.5,7.784101999999999,0.089809
+membrane,Poisson-Gamma,6.5,5.53261,0.068338
+membrane,Poisson-Gamma,7.5,3.6567240000000005,0.052519
+membrane,Poisson-Gamma,8.5,2.1493639999999994,0.044712
+membrane,Poisson-Gamma,9.5,1.030488,0.033095
+membrane,Poisson-Gamma,10.5,0.29664599999999997,0.018132
+membrane,Poisson-Gamma,11.5,0.0,0.011849
+membrane,Poisson-Gamma,12.5,0.1443979999999998,0.018923
+membrane,Poisson-Gamma,13.5,0.6729509999999994,0.029894
+membrane,Poisson-Gamma,14.5,1.5701809999999998,0.039886
+membrane,Poisson-Gamma,15.5,2.8819169999999996,0.040054
+membrane,Poisson-Gamma,16.5,4.505502999999999,0.045807
+membrane,Poisson-Gamma,17.5,6.411648999999999,0.06052
+membrane,Poisson-Gamma,18.5,8.614303,0.115813
+membrane,Poisson-Gamma,19.5,10.901253,0.191849
+membrane,Poisson-Gamma,20.5,13.244264,0.309512
+membrane,Poisson-Gamma,21.5,15.390004,0.431114
+membrane,Poisson-Gamma,22.5,17.175562,0.835212
+membrane,Poisson-Gamma,23.5,20.024895,1.943549
+membrane,Poisson-Gamma,24.5,22.294686,2.87412
+membrane,Poisson-Gamma,25.5,23.760482000000003,3.475836
+membrane,Poisson-Gamma,26.5,24.639870000000002,4.150419
+membrane,Poisson-Gamma,27.5,25.052017999999997,3.997195
+membrane,Poisson-Gamma,28.5,25.413224999999997,3.889373
+membrane,Poisson-Gamma,29.5,25.3696,3.842813
+membrane,Poisson-Gamma,30.5,25.311425,3.838389
+membrane,Poisson-Gamma,31.5,25.395730999999998,3.788263
+membrane,Poisson-Gamma,32.5,25.623613999999996,3.724346
+membrane,Poisson-Gamma,33.5,25.600645999999998,3.741646
+membrane,Poisson-Gamma,34.5,25.601216,3.73713
+membrane,Poisson-Gamma,35.5,26.000859,3.656947
+membrane,Poisson-Gamma,36.5,25.690275,3.672781
+membrane,Poisson-Gamma,37.5,27.275466,4.25106
+membrane,Poisson-Gamma,38.5,26.082641000000002,3.59396
+membrane,Poisson-Gamma,39.5,26.222464000000002,3.474548
+membrane,Poisson-Gamma,40.5,27.39517,4.167636
+membrane,Poisson-Gamma,41.5,27.542049999999996,4.055814
+membrane,Poisson-Gamma,42.5,27.545753999999995,4.060543
+membrane,Poisson-Gamma,43.5,27.539415999999996,4.072481
+membrane,Poisson-Gamma,44.5,27.732482999999995,3.952399
+membrane,Poisson-Gamma,45.5,27.658125999999996,3.995318
+membrane,Poisson-Gamma,46.5,27.864002,3.870878
+membrane,Poisson-Gamma,47.5,27.737893999999997,3.952038
+membrane,Poisson-Gamma,48.5,28.11177,3.74424
+membrane,Poisson-Gamma,49.5,27.953921,3.844508
+membrane,Bayesian (Dirichlet),0.5,17.04233,0.897773
+membrane,Bayesian (Dirichlet),1.5,16.610829000000003,0.765015
+membrane,Bayesian (Dirichlet),2.5,14.92987,0.457836
+membrane,Bayesian (Dirichlet),3.5,13.008093,0.37634
+membrane,Bayesian (Dirichlet),4.5,10.245012000000001,0.16231
+membrane,Bayesian (Dirichlet),5.5,7.784674000000001,0.089641
+membrane,Bayesian (Dirichlet),6.5,5.5328409999999995,0.067891
+membrane,Bayesian (Dirichlet),7.5,3.6568179999999995,0.051836
+membrane,Bayesian (Dirichlet),8.5,2.149407,0.04417
+membrane,Bayesian (Dirichlet),9.5,1.030506,0.03264
+membrane,Bayesian (Dirichlet),10.5,0.29665100000000066,0.017919
+membrane,Bayesian (Dirichlet),11.5,0.0,0.011886
+membrane,Bayesian (Dirichlet),12.5,0.14440200000000036,0.018887
+membrane,Bayesian (Dirichlet),13.5,0.6729630000000002,0.029618
+membrane,Bayesian (Dirichlet),14.5,1.5702090000000002,0.0395
+membrane,Bayesian (Dirichlet),15.5,2.8819800000000004,0.039577
+membrane,Bayesian (Dirichlet),16.5,4.505650000000001,0.0453
+membrane,Bayesian (Dirichlet),17.5,6.411994,0.060123
+membrane,Bayesian (Dirichlet),18.5,8.615233,0.114854
+membrane,Bayesian (Dirichlet),19.5,10.903423,0.190026
+membrane,Bayesian (Dirichlet),20.5,13.250154,0.307237
+membrane,Bayesian (Dirichlet),21.5,15.403454000000002,0.427561
+membrane,Bayesian (Dirichlet),22.5,17.206906000000004,0.828589
+membrane,Bayesian (Dirichlet),23.5,19.949904000000004,1.732826
+membrane,Bayesian (Dirichlet),24.5,21.568652999999998,2.088589
+membrane,Bayesian (Dirichlet),25.5,22.34404,2.281027
+membrane,Bayesian (Dirichlet),26.5,22.521138,2.413231
+membrane,Bayesian (Dirichlet),27.5,22.887186,2.346596
+membrane,Bayesian (Dirichlet),28.5,23.186076999999997,2.326198
+membrane,Bayesian (Dirichlet),29.5,23.231603999999997,2.246207
+membrane,Bayesian (Dirichlet),30.5,23.216897000000003,2.218367
+membrane,Bayesian (Dirichlet),31.5,23.328761999999998,2.178111
+membrane,Bayesian (Dirichlet),32.5,23.498613,2.175406
+membrane,Bayesian (Dirichlet),33.5,23.466476,2.190462
+membrane,Bayesian (Dirichlet),34.5,23.477496000000002,2.183472
+membrane,Bayesian (Dirichlet),35.5,23.775772000000003,2.169198
+membrane,Bayesian (Dirichlet),36.5,23.594960999999998,2.130502
+membrane,Bayesian (Dirichlet),37.5,24.089608,2.223039
+membrane,Bayesian (Dirichlet),38.5,23.88819,2.116231
+membrane,Bayesian (Dirichlet),39.5,24.105572000000002,2.009041
+membrane,Bayesian (Dirichlet),40.5,24.220750000000002,2.167405
+membrane,Bayesian (Dirichlet),41.5,24.40135,2.088877
+membrane,Bayesian (Dirichlet),42.5,24.387724,2.09835
+membrane,Bayesian (Dirichlet),43.5,24.363417,2.113545
+membrane,Bayesian (Dirichlet),44.5,24.536009,2.062451
+membrane,Bayesian (Dirichlet),45.5,24.477442000000003,2.076121
+membrane,Bayesian (Dirichlet),46.5,24.652257,2.033637
+membrane,Bayesian (Dirichlet),47.5,24.535213,2.067664
+membrane,Bayesian (Dirichlet),48.5,24.811366,2.031431
+membrane,Bayesian (Dirichlet),49.5,24.671899000000003,2.065753
+membrane,Latent logarithm,0.5,17.099242,0.92907
+membrane,Latent logarithm,1.5,16.650363,0.782181
+membrane,Latent logarithm,2.5,14.945958000000001,0.461397
+membrane,Latent logarithm,3.5,13.01568,0.377532
+membrane,Latent logarithm,4.5,10.247567,0.162473
+membrane,Latent logarithm,5.5,7.785664,0.08967
+membrane,Latent logarithm,6.5,5.533239000000001,0.067902
+membrane,Latent logarithm,7.5,3.656987,0.051837
+membrane,Latent logarithm,8.5,2.149478,0.044169
+membrane,Latent logarithm,9.5,1.0305330000000001,0.032632
+membrane,Latent logarithm,10.5,0.29665799999999987,0.017913
+membrane,Latent logarithm,11.5,0.0,0.011882
+membrane,Latent logarithm,12.5,0.1444049999999999,0.018882
+membrane,Latent logarithm,13.5,0.6729790000000007,0.029608
+membrane,Latent logarithm,14.5,1.5702550000000004,0.03949
+membrane,Latent logarithm,15.5,2.882092,0.03957
+membrane,Latent logarithm,16.5,4.505903000000001,0.045304
+membrane,Latent logarithm,17.5,6.412566000000001,0.060129
+membrane,Latent logarithm,18.5,8.616602,0.114911
+membrane,Latent logarithm,19.5,10.906704000000001,0.190255
+membrane,Latent logarithm,20.5,13.258195,0.308175
+membrane,Latent logarithm,21.5,15.421871,0.430473
+membrane,Latent logarithm,22.5,17.25366,0.843509
+membrane,Latent logarithm,23.5,20.30943,1.911104
+membrane,Latent logarithm,24.5,22.296255,2.369209
+membrane,Latent logarithm,25.5,23.293318,2.587607
+membrane,Latent logarithm,26.5,23.609182999999998,2.747357
+membrane,Latent logarithm,27.5,23.984953,2.669842
+membrane,Latent logarithm,28.5,24.304866999999998,2.637676
+membrane,Latent logarithm,29.5,24.339351999999998,2.563615
+membrane,Latent logarithm,30.5,24.319304,2.539717
+membrane,Latent logarithm,31.5,24.433884,2.498417
+membrane,Latent logarithm,32.5,24.61888,2.487668
+membrane,Latent logarithm,33.5,24.586554,2.502705
+membrane,Latent logarithm,34.5,24.597580999999998,2.495962
+membrane,Latent logarithm,35.5,24.937478,2.473124
+membrane,Latent logarithm,36.5,24.715863,2.44278
+membrane,Latent logarithm,37.5,25.390731,2.544073
+membrane,Latent logarithm,38.5,25.050686,2.419803
+membrane,Latent logarithm,39.5,25.269658,2.312466
+membrane,Latent logarithm,40.5,25.523094,2.486666
+membrane,Latent logarithm,41.5,25.705745999999998,2.405752
+membrane,Latent logarithm,42.5,25.692106,2.414916
+membrane,Latent logarithm,43.5,25.667772,2.429799
+membrane,Latent logarithm,44.5,25.844732999999998,2.372832
+membrane,Latent logarithm,45.5,25.784267,2.389041
+membrane,Latent logarithm,46.5,25.965492,2.339137
+membrane,Latent logarithm,47.5,25.844438,2.377382
+membrane,Latent logarithm,48.5,26.138195,2.325387
+membrane,Latent logarithm,49.5,25.990559,2.365501
+membrane,Pooled counts,0.5,16.306047,0.503233
+membrane,Pooled counts,1.5,16.0126,0.48973
+membrane,Pooled counts,2.5,14.675669,0.353893
+membrane,Pooled counts,3.5,12.812045999999999,0.337964
+membrane,Pooled counts,4.5,10.20646,0.15786
+membrane,Pooled counts,5.5,7.772429000000001,0.09329
+membrane,Pooled counts,6.5,5.525907,0.069487
+membrane,Pooled counts,7.5,3.652782,0.054118
+membrane,Pooled counts,8.5,2.1465560000000004,0.045136
+membrane,Pooled counts,9.5,1.0290420000000005,0.033453
+membrane,Pooled counts,10.5,0.29637000000000047,0.01815
+membrane,Pooled counts,11.5,0.0,0.011893
+membrane,Pooled counts,12.5,0.14406500000000033,0.018832
+membrane,Pooled counts,13.5,0.671799,0.030075
+membrane,Pooled counts,14.5,1.5679490000000005,0.040638
+membrane,Pooled counts,15.5,2.8797490000000003,0.040815
+membrane,Pooled counts,16.5,4.50278,0.045629
+membrane,Pooled counts,17.5,6.406911000000001,0.059556
+membrane,Pooled counts,18.5,8.596195,0.11042
+membrane,Pooled counts,19.5,10.84885,0.191281
+membrane,Pooled counts,20.5,13.113154999999999,0.293117
+membrane,Pooled counts,21.5,15.143467999999999,0.407006
+membrane,Pooled counts,22.5,16.350266,0.674585
+membrane,Pooled counts,23.5,16.935078,1.180746
+membrane,Pooled counts,24.5,17.05608,1.549939
+membrane,Pooled counts,25.5,16.868456,1.781016
+membrane,Pooled counts,26.5,16.554608,1.550688
+membrane,Pooled counts,27.5,16.72988,1.934349
+membrane,Pooled counts,28.5,16.846634,2.258668
+membrane,Pooled counts,29.5,17.310505,2.052498
+membrane,Pooled counts,30.5,17.493271,1.933294
+membrane,Pooled counts,31.5,17.775255,1.905451
+membrane,Pooled counts,32.5,17.7596,2.152645
+membrane,Pooled counts,33.5,17.675196,2.156333
+membrane,Pooled counts,34.5,17.744042,2.124388
+membrane,Pooled counts,35.5,17.920702,2.484343
+membrane,Pooled counts,36.5,18.02255,2.134867
+membrane,Pooled counts,37.5,17.937394,1.40183
+membrane,Pooled counts,38.5,18.211331,2.471737
+membrane,Pooled counts,39.5,18.856771,2.390369
+membrane,Pooled counts,40.5,18.137737,1.609774
+membrane,Pooled counts,41.5,18.50819,1.779775
+membrane,Pooled counts,42.5,18.405302,1.839353
+membrane,Pooled counts,43.5,18.287138,1.880023
+membrane,Pooled counts,44.5,18.38522,2.254407
+membrane,Pooled counts,45.5,18.395241,2.091043
+membrane,Pooled counts,46.5,18.456221,2.498105
+membrane,Pooled counts,47.5,18.355392,2.278484
+membrane,Pooled counts,48.5,18.248949,3.094989
+membrane,Pooled counts,49.5,18.137737,2.826189
+membrane,Umbrella sampling,0.125,16.3519088,0.22267248000000003
+membrane,Umbrella sampling,0.375,16.1529596,0.20012072
+membrane,Umbrella sampling,0.625,16.0688612,0.19894920000000002
+membrane,Umbrella sampling,0.875,16.200573520000003,0.16451488
+membrane,Umbrella sampling,1.125,16.13429896,0.18882392000000003
+membrane,Umbrella sampling,1.375,15.86480752,0.22597784
+membrane,Umbrella sampling,1.625,15.64498016,0.26447064000000003
+membrane,Umbrella sampling,1.875,15.728869360000001,0.19648064
+membrane,Umbrella sampling,2.125,15.63230264,0.15359464
+membrane,Umbrella sampling,2.375,15.292603680000001,0.11606416000000001
+membrane,Umbrella sampling,2.625,15.07624904,0.09865872
+membrane,Umbrella sampling,2.875,14.939557760000001,0.07761320000000001
+membrane,Umbrella sampling,3.125,14.524588640000001,0.09125304000000001
+membrane,Umbrella sampling,3.375,13.958618959999999,0.10137832000000001
+membrane,Umbrella sampling,3.625,13.22127264,0.15798784000000002
+membrane,Umbrella sampling,3.875,12.72053152,0.19744296000000003
+membrane,Umbrella sampling,4.125,11.961135520000001,0.17342680000000002
+membrane,Umbrella sampling,4.375,11.119147360000001,0.16577008000000001
+membrane,Umbrella sampling,4.625,10.28879072,0.19275688000000002
+membrane,Umbrella sampling,4.875,9.762318,0.14526848
+membrane,Umbrella sampling,5.125,9.08296192,0.17204608
+membrane,Umbrella sampling,5.375,8.38720456,0.20949288000000002
+membrane,Umbrella sampling,5.625,7.455176720000001,0.19606224
+membrane,Umbrella sampling,5.875,6.965523200000001,0.11660808
+membrane,Umbrella sampling,6.125,6.4254524800000015,0.12547816
+membrane,Umbrella sampling,6.375,5.848520720000001,0.13355328
+membrane,Umbrella sampling,6.625,5.150922400000001,0.10384688
+membrane,Umbrella sampling,6.875,4.8173739200000005,0.06012408
+membrane,Umbrella sampling,7.125,4.362656800000001,0.07522832
+membrane,Umbrella sampling,7.375,3.7166472,0.02979008
+membrane,Umbrella sampling,7.625,3.2005508000000003,0.05589824
+membrane,Umbrella sampling,7.875,2.9336116,0.055563520000000005
+membrane,Umbrella sampling,8.125,2.5469263200000003,0.025355040000000002
+membrane,Umbrella sampling,8.375,2.0538837599999997,0.07648352000000001
+membrane,Umbrella sampling,8.625,1.6633073600000001,0.06911968
+membrane,Umbrella sampling,8.875,1.45824952,0.1100392
+membrane,Umbrella sampling,9.125,1.25093232,0.10974632000000001
+membrane,Umbrella sampling,9.375,0.8338712,0.13560344000000002
+membrane,Umbrella sampling,9.625,0.6081444,0.13849039999999999
+membrane,Umbrella sampling,9.875,0.54709984,0.12828144
+membrane,Umbrella sampling,10.125,0.36032608000000005,0.11150360000000001
+membrane,Umbrella sampling,10.375,0.1366076,0.09238272
+membrane,Umbrella sampling,10.625,0.027070480000000022,0.09506048
+membrane,Umbrella sampling,10.875,0.13907616,0.056400320000000004
+membrane,Umbrella sampling,11.125,0.15346911999999996,0.041254240000000005
+membrane,Umbrella sampling,11.375,0.0,0.05372256
+membrane,Umbrella sampling,11.625,0.10464184000000003,0.04091952
+membrane,Umbrella sampling,11.875,0.27953304,0.039748
+membrane,Umbrella sampling,12.125,0.31990864,0.01062736
+membrane,Umbrella sampling,12.375,0.28045352,0.04179816
+membrane,Umbrella sampling,12.625,0.44655832000000006,0.11263328
+membrane,Umbrella sampling,12.875,0.78855848,0.13129392
+membrane,Umbrella sampling,13.125,0.9299776800000001,0.18053960000000002
+membrane,Umbrella sampling,13.375,0.94491456,0.17476568
+membrane,Umbrella sampling,13.625,1.20151928,0.17886600000000002
+membrane,Umbrella sampling,13.875,1.59255592,0.17518408
+membrane,Umbrella sampling,14.125,1.8361065600000002,0.18087432
+membrane,Umbrella sampling,14.375,1.83033264,0.16522615999999998
+membrane,Umbrella sampling,14.625,2.2997356,0.15681632
+membrane,Umbrella sampling,14.875,2.6931571200000004,0.13275832
+membrane,Umbrella sampling,15.125,3.09528136,0.17267368000000002
+membrane,Umbrella sampling,15.375,3.3381625600000002,0.16183712
+membrane,Umbrella sampling,15.625,3.7952227200000004,0.12422296000000001
+membrane,Umbrella sampling,15.875,4.368598080000001,0.13091736
+membrane,Umbrella sampling,16.125,4.763107440000001,0.15978696
+membrane,Umbrella sampling,16.375,5.191256160000001,0.16928464000000001
+membrane,Umbrella sampling,16.625,5.7519540000000005,0.18405416000000002
+membrane,Umbrella sampling,16.875,6.435201200000001,0.20120856
+membrane,Umbrella sampling,17.125,6.866906320000001,0.23091496000000003
+membrane,Umbrella sampling,17.375,7.202002880000001,0.18572776
+membrane,Umbrella sampling,17.625,7.9021116000000005,0.19221296000000002
+membrane,Umbrella sampling,17.875,8.54176152,0.12941112
+membrane,Umbrella sampling,18.125,9.10116232,0.18903312
+membrane,Umbrella sampling,18.375,9.51843264,0.1826316
+membrane,Umbrella sampling,18.625,10.23611416,0.23919928000000001
+membrane,Umbrella sampling,18.875,10.97392072,0.25618632
+membrane,Umbrella sampling,19.125,11.582609040000001,0.23526632000000003
+membrane,Umbrella sampling,19.375,12.04523392,0.2958088
+membrane,Umbrella sampling,19.625,12.85140704,0.29836104
+membrane,Umbrella sampling,19.875,13.6390032,0.27924015999999996
+membrane,Umbrella sampling,20.125,14.2640928,0.24066368000000002
+membrane,Umbrella sampling,20.375,14.82650608,0.19723376
+membrane,Umbrella sampling,20.625,15.471302320000001,0.18530936
+membrane,Umbrella sampling,20.875,16.15593024,0.13300936
+membrane,Umbrella sampling,21.125,16.63081424,0.1556448
+membrane,Umbrella sampling,21.375,16.7502256,0.07870104
+membrane,Umbrella sampling,21.625,17.137203760000002,0.0550196
+membrane,Umbrella sampling,21.875,17.527487280000003,0.04920384
+membrane,Umbrella sampling,22.125,17.68635376,0.07543752000000001
+membrane,Umbrella sampling,22.375,17.631124959999998,0.07163008
+membrane,Umbrella sampling,22.625,17.70363368,0.14459904
+membrane,Umbrella sampling,22.875,17.89806416,0.13535239999999998
+membrane,Umbrella sampling,23.125,17.90325232,0.14380408
+membrane,Umbrella sampling,23.375,17.71396816,0.18995360000000003
+membrane,Umbrella sampling,23.625,17.75099656,0.12330248
+membrane,Umbrella sampling,23.875,17.80371496,0.18099984
+membrane,Umbrella sampling,24.125,17.73162464,0.10857480000000001
+membrane,Umbrella sampling,24.375,17.52752912,0.16179528
+membrane,Umbrella sampling,24.625,17.497320639999998,0.22250512
+membrane,Umbrella sampling,24.875,17.58309264,0.22024576
+membrane,Umbrella sampling,25.125,17.510960479999998,0.22911584000000002
+membrane,Umbrella sampling,25.375,17.24494176,0.22217040000000002
+membrane,Umbrella sampling,25.625,17.24586224,0.25288096
+membrane,Umbrella sampling,25.875,17.4234312,0.24434560000000002
+membrane,Umbrella sampling,26.125,17.34355864,0.20568544000000002
+membrane,Umbrella sampling,26.375,17.159671839999998,0.20028808
+membrane,Umbrella sampling,26.625,17.33175976,0.13966192
+membrane,Umbrella sampling,26.875,17.6202884,0.19656432000000001
+membrane,Umbrella sampling,27.125,17.659492479999997,0.17058168
+membrane,Umbrella sampling,27.375,17.4644344,0.16367808
+membrane,Umbrella sampling,27.625,17.34673848,0.1225912
+membrane,Umbrella sampling,27.875,17.57476648,0.10238248
+membrane,Umbrella sampling,28.125,17.578532080000002,0.13045712
+membrane,Umbrella sampling,28.375,17.50907768,0.14614712000000002
+membrane,Umbrella sampling,28.625,17.498534000000003,0.17267368000000002
+membrane,Umbrella sampling,28.875,17.75944824,0.16376176
+membrane,Umbrella sampling,29.125,17.81522096,0.19514176000000003
+membrane,Umbrella sampling,29.375,17.72396792,0.16802944
+membrane,Umbrella sampling,29.625,17.72484656,0.17371968000000002
+membrane,Umbrella sampling,29.875,17.98877328,0.15233944
+membrane,Umbrella sampling,30.125,18.00969328,0.16242288000000002
+membrane,Umbrella sampling,30.375,17.94103384,0.1441388
+membrane,Umbrella sampling,30.625,18.041240639999998,0.14020584
+membrane,Umbrella sampling,30.875,18.33981088,0.10723592
+membrane,Umbrella sampling,31.125,18.2993516,0.14899224000000003
+membrane,Umbrella sampling,31.375,18.20935376,0.10506024
+membrane,Umbrella sampling,31.625,18.5118988,0.17652296
+membrane,Umbrella sampling,31.875,18.674907440000002,0.18543488
+membrane,Umbrella sampling,32.125,18.71955072,0.18991176
+membrane,Umbrella sampling,32.375,18.38265504,0.16459856
+membrane,Umbrella sampling,32.625,18.25382968,0.11535288
+membrane,Umbrella sampling,32.875,18.44131472,0.11150360000000001
+membrane,Umbrella sampling,33.125,18.45256968,0.10932792000000001
+membrane,Umbrella sampling,33.375,18.31311696,0.1138048
+membrane,Umbrella sampling,33.625,18.28968656,0.09794744000000001
+membrane,Umbrella sampling,33.875,18.48143928,0.12514344
+membrane,Umbrella sampling,34.125,18.48420072,0.07234136000000001
+membrane,Umbrella sampling,34.375,18.35617032,0.12501792
+membrane,Umbrella sampling,34.625,18.52871848,0.19258952000000001
+membrane,Umbrella sampling,34.875,18.865028400000003,0.24049632
+membrane,Umbrella sampling,35.125,18.90096896,0.2334672
+membrane,Umbrella sampling,35.375,18.54106128,0.23505712
+membrane,Umbrella sampling,35.625,18.348304400000004,0.2058528
+membrane,Umbrella sampling,35.875,18.517714559999998,0.23170992
+membrane,Umbrella sampling,36.125,18.494326,0.21116648000000002
+membrane,Umbrella sampling,36.375,18.35328336,0.21790272000000002
+membrane,Umbrella sampling,36.625,18.33265624,0.28559984
+membrane,Umbrella sampling,36.875,18.50746376,0.24409456000000002
+membrane,Umbrella sampling,37.125,18.52336296,0.25560056
+membrane,Umbrella sampling,37.375,18.44938984,0.2725876
+membrane,Umbrella sampling,37.625,18.09814304,0.24668864000000001
+membrane,Umbrella sampling,37.875,18.71436256,0.06832472
+water,Pseudocount ($\varepsilon=10^{-5}$),0.5,-4.857298,1.224643
+water,Pseudocount ($\varepsilon=10^{-5}$),1.5,-5.229686,1.308038
+water,Pseudocount ($\varepsilon=10^{-5}$),2.5,-6.811922,1.332436
+water,Pseudocount ($\varepsilon=10^{-5}$),3.5,-8.703118,1.3778
+water,Pseudocount ($\varepsilon=10^{-5}$),4.5,-11.449052,1.464671
+water,Pseudocount ($\varepsilon=10^{-5}$),5.5,-13.904785,1.49051
+water,Pseudocount ($\varepsilon=10^{-5}$),6.5,-16.154885,1.477433
+water,Pseudocount ($\varepsilon=10^{-5}$),7.5,-18.030309,1.481858
+water,Pseudocount ($\varepsilon=10^{-5}$),8.5,-19.537475,1.476754
+water,Pseudocount ($\varepsilon=10^{-5}$),9.5,-20.656265,1.480429
+water,Pseudocount ($\varepsilon=10^{-5}$),10.5,-21.390068,1.471886
+water,Pseudocount ($\varepsilon=10^{-5}$),11.5,-21.686707,1.468425
+water,Pseudocount ($\varepsilon=10^{-5}$),12.5,-21.542313,1.469724
+water,Pseudocount ($\varepsilon=10^{-5}$),13.5,-21.013788,1.478144
+water,Pseudocount ($\varepsilon=10^{-5}$),14.5,-20.116612,1.483272
+water,Pseudocount ($\varepsilon=10^{-5}$),15.5,-18.805004,1.478989
+water,Pseudocount ($\varepsilon=10^{-5}$),16.5,-17.181689,1.467395
+water,Pseudocount ($\varepsilon=10^{-5}$),17.5,-15.27619,1.485228
+water,Pseudocount ($\varepsilon=10^{-5}$),18.5,-13.075214,1.498754
+water,Pseudocount ($\varepsilon=10^{-5}$),19.5,-10.793257,1.484179
+water,Pseudocount ($\varepsilon=10^{-5}$),20.5,-8.462313,1.393841
+water,Pseudocount ($\varepsilon=10^{-5}$),21.5,-6.349169,1.248262
+water,Pseudocount ($\varepsilon=10^{-5}$),22.5,-4.653527,1.03888
+water,Pseudocount ($\varepsilon=10^{-5}$),23.5,-2.702195,1.056006
+water,Pseudocount ($\varepsilon=10^{-5}$),24.5,-1.796264,0.99711
+water,Pseudocount ($\varepsilon=10^{-5}$),25.5,-1.468909,0.848317
+water,Pseudocount ($\varepsilon=10^{-5}$),26.5,-1.502747,0.869039
+water,Pseudocount ($\varepsilon=10^{-5}$),27.5,-1.177435,0.6544
+water,Pseudocount ($\varepsilon=10^{-5}$),28.5,-0.958754,0.587834
+water,Pseudocount ($\varepsilon=10^{-5}$),29.5,-0.866061,0.628846
+water,Pseudocount ($\varepsilon=10^{-5}$),30.5,-0.864018,0.652251
+water,Pseudocount ($\varepsilon=10^{-5}$),31.5,-0.761581,0.605823
+water,Pseudocount ($\varepsilon=10^{-5}$),32.5,-0.651336,0.506127
+water,Pseudocount ($\varepsilon=10^{-5}$),33.5,-0.682473,0.509199
+water,Pseudocount ($\varepsilon=10^{-5}$),34.5,-0.670682,0.524016
+water,Pseudocount ($\varepsilon=10^{-5}$),35.5,-0.485725,0.462008
+water,Pseudocount ($\varepsilon=10^{-5}$),36.5,-0.557641,0.439146
+water,Pseudocount ($\varepsilon=10^{-5}$),37.5,-0.38548,0.437768
+water,Pseudocount ($\varepsilon=10^{-5}$),38.5,-0.376228,0.392806
+water,Pseudocount ($\varepsilon=10^{-5}$),39.5,-0.164123,0.39298
+water,Pseudocount ($\varepsilon=10^{-5}$),40.5,-0.258725,0.316697
+water,Pseudocount ($\varepsilon=10^{-5}$),41.5,-0.08741,0.208655
+water,Pseudocount ($\varepsilon=10^{-5}$),42.5,-0.100813,0.207929
+water,Pseudocount ($\varepsilon=10^{-5}$),43.5,-0.124707,0.189057
+water,Pseudocount ($\varepsilon=10^{-5}$),44.5,0.030088,0.064941
+water,Pseudocount ($\varepsilon=10^{-5}$),45.5,-0.018982,0.089335
+water,Pseudocount ($\varepsilon=10^{-5}$),46.5,0.133168,0.126342
+water,Pseudocount ($\varepsilon=10^{-5}$),47.5,0.028057,0.073971
+water,Pseudocount ($\varepsilon=10^{-5}$),48.5,0.242725,0.279459
+water,Pseudocount ($\varepsilon=10^{-5}$),49.5,0.128842,0.218645
+water,Poisson-Gamma,0.5,-10.751325,3.564156
+water,Poisson-Gamma,1.5,-11.157536,3.63874
+water,Poisson-Gamma,2.5,-12.80774,3.761223
+water,Poisson-Gamma,3.5,-14.718859,3.807367
+water,Poisson-Gamma,4.5,-17.477502,3.934814
+water,Poisson-Gamma,5.5,-19.936646,3.973915
+water,Poisson-Gamma,6.5,-22.188137,3.962258
+water,Poisson-Gamma,7.5,-24.064024,3.971218
+water,Poisson-Gamma,8.5,-25.571384,3.96811
+water,Poisson-Gamma,9.5,-26.690259,3.972509
+water,Poisson-Gamma,10.5,-27.424102,3.964483
+water,Poisson-Gamma,11.5,-27.720747,3.960067
+water,Poisson-Gamma,12.5,-27.576349,3.960467
+water,Poisson-Gamma,13.5,-27.047797,3.969109
+water,Poisson-Gamma,14.5,-26.150566,3.976069
+water,Poisson-Gamma,15.5,-24.83883,3.972873
+water,Poisson-Gamma,16.5,-23.215244,3.958111
+water,Poisson-Gamma,17.5,-21.309099,3.972001
+water,Poisson-Gamma,18.5,-19.106445,3.979146
+water,Poisson-Gamma,19.5,-16.819494,3.945953
+water,Poisson-Gamma,20.5,-14.476484,3.833823
+water,Poisson-Gamma,21.5,-12.330743,3.68534
+water,Poisson-Gamma,22.5,-10.545185,3.386204
+water,Poisson-Gamma,23.5,-7.695853,3.000713
+water,Poisson-Gamma,24.5,-5.426062,2.752147
+water,Poisson-Gamma,25.5,-3.960266,2.363216
+water,Poisson-Gamma,26.5,-3.080877,2.369063
+water,Poisson-Gamma,27.5,-2.668729,1.998573
+water,Poisson-Gamma,28.5,-2.307522,1.687411
+water,Poisson-Gamma,29.5,-2.351147,1.86554
+water,Poisson-Gamma,30.5,-2.409322,1.973547
+water,Poisson-Gamma,31.5,-2.325016,1.933079
+water,Poisson-Gamma,32.5,-2.097134,1.726084
+water,Poisson-Gamma,33.5,-2.120101,1.720212
+water,Poisson-Gamma,34.5,-2.119532,1.723989
+water,Poisson-Gamma,35.5,-1.719888,1.410466
+water,Poisson-Gamma,36.5,-2.030473,1.731557
+water,Poisson-Gamma,37.5,-0.445281,0.473249
+water,Poisson-Gamma,38.5,-1.638106,1.42098
+water,Poisson-Gamma,39.5,-1.498284,1.472714
+water,Poisson-Gamma,40.5,-0.325577,0.356511
+water,Poisson-Gamma,41.5,-0.178697,0.222818
+water,Poisson-Gamma,42.5,-0.174993,0.223277
+water,Poisson-Gamma,43.5,-0.181331,0.21177
+water,Poisson-Gamma,44.5,0.011735,0.018451
+water,Poisson-Gamma,45.5,-0.062621,0.077803
+water,Poisson-Gamma,46.5,0.143254,0.154265
+water,Poisson-Gamma,47.5,0.017147,0.042516
+water,Poisson-Gamma,48.5,0.391023,0.450413
+water,Poisson-Gamma,49.5,0.233174,0.305591
+water,Bayesian (Dirichlet),0.5,-7.468865,1.806886
+water,Bayesian (Dirichlet),1.5,-7.900367,1.882872
+water,Bayesian (Dirichlet),2.5,-9.581326,1.948116
+water,Bayesian (Dirichlet),3.5,-11.503102,1.996755
+water,Bayesian (Dirichlet),4.5,-14.266183,2.103892
+water,Bayesian (Dirichlet),5.5,-16.726521,2.135572
+water,Bayesian (Dirichlet),6.5,-18.978354,2.122917
+water,Bayesian (Dirichlet),7.5,-20.854377,2.129203
+water,Bayesian (Dirichlet),8.5,-22.361789,2.124818
+water,Bayesian (Dirichlet),9.5,-23.480689,2.128808
+water,Bayesian (Dirichlet),10.5,-24.214544,2.120348
+water,Bayesian (Dirichlet),11.5,-24.511195,2.116456
+water,Bayesian (Dirichlet),12.5,-24.366793,2.11741
+water,Bayesian (Dirichlet),13.5,-23.838233,2.125982
+water,Bayesian (Dirichlet),14.5,-22.940987,2.131843
+water,Bayesian (Dirichlet),15.5,-21.629215,2.127934
+water,Bayesian (Dirichlet),16.5,-20.005545,2.11494
+water,Bayesian (Dirichlet),17.5,-18.099202,2.131492
+water,Bayesian (Dirichlet),18.5,-15.895962,2.142514
+water,Bayesian (Dirichlet),19.5,-13.607773,2.119864
+water,Bayesian (Dirichlet),20.5,-11.261041,2.017815
+water,Bayesian (Dirichlet),21.5,-9.107741,1.864764
+water,Bayesian (Dirichlet),22.5,-7.304289,1.601122
+water,Bayesian (Dirichlet),23.5,-4.561292,1.543213
+water,Bayesian (Dirichlet),24.5,-2.942542,1.450515
+water,Bayesian (Dirichlet),25.5,-2.167156,1.227059
+water,Bayesian (Dirichlet),26.5,-1.990058,1.249711
+water,Bayesian (Dirichlet),27.5,-1.624009,0.949382
+water,Bayesian (Dirichlet),28.5,-1.325119,0.76117
+water,Bayesian (Dirichlet),29.5,-1.279592,0.867597
+water,Bayesian (Dirichlet),30.5,-1.294298,0.930177
+water,Bayesian (Dirichlet),31.5,-1.182433,0.880001
+water,Bayesian (Dirichlet),32.5,-1.012582,0.710824
+water,Bayesian (Dirichlet),33.5,-1.044719,0.711975
+water,Bayesian (Dirichlet),34.5,-1.033699,0.723821
+water,Bayesian (Dirichlet),35.5,-0.735423,0.556684
+water,Bayesian (Dirichlet),36.5,-0.916234,0.664159
+water,Bayesian (Dirichlet),37.5,-0.421587,0.467484
+water,Bayesian (Dirichlet),38.5,-0.623006,0.499232
+water,Bayesian (Dirichlet),39.5,-0.405623,0.508197
+water,Bayesian (Dirichlet),40.5,-0.290446,0.341039
+water,Bayesian (Dirichlet),41.5,-0.109845,0.221439
+water,Bayesian (Dirichlet),42.5,-0.123472,0.221097
+water,Bayesian (Dirichlet),43.5,-0.147778,0.202227
+water,Bayesian (Dirichlet),44.5,0.024813,0.045215
+water,Bayesian (Dirichlet),45.5,-0.033754,0.084744
+water,Bayesian (Dirichlet),46.5,0.141061,0.128051
+water,Bayesian (Dirichlet),47.5,0.024017,0.059003
+water,Bayesian (Dirichlet),48.5,0.300171,0.338748
+water,Bayesian (Dirichlet),49.5,0.160703,0.251178
+water,Latent logarithm,0.5,-8.722414,2.442126
+water,Latent logarithm,1.5,-9.171292,2.527989
+water,Latent logarithm,2.5,-10.875697,2.622796
+water,Latent logarithm,3.5,-12.805975,2.672524
+water,Latent logarithm,4.5,-15.574089,2.791019
+water,Latent logarithm,5.5,-18.035992,2.825798
+water,Latent logarithm,6.5,-20.288417,2.812745
+water,Latent logarithm,7.5,-22.164669,2.819848
+water,Latent logarithm,8.5,-23.672178,2.816032
+water,Latent logarithm,9.5,-24.791123,2.820432
+water,Latent logarithm,10.5,-25.524998,2.812318
+water,Latent logarithm,11.5,-25.821656,2.808481
+water,Latent logarithm,12.5,-25.67725,2.809444
+water,Latent logarithm,13.5,-25.148677,2.818143
+water,Latent logarithm,14.5,-24.251401,2.824336
+water,Latent logarithm,15.5,-22.939564,2.820628
+water,Latent logarithm,16.5,-21.315753,2.807295
+water,Latent logarithm,17.5,-19.40909,2.823457
+water,Latent logarithm,18.5,-17.205054,2.833601
+water,Latent logarithm,19.5,-14.914952,2.808015
+water,Latent logarithm,20.5,-12.563461,2.701057
+water,Latent logarithm,21.5,-10.399785,2.542358
+water,Latent logarithm,22.5,-8.567996,2.240189
+water,Latent logarithm,23.5,-5.512226,1.974243
+water,Latent logarithm,24.5,-3.525401,1.755166
+water,Latent logarithm,25.5,-2.528338,1.435167
+water,Latent logarithm,26.5,-2.212473,1.437989
+water,Latent logarithm,27.5,-1.836703,1.111886
+water,Latent logarithm,28.5,-1.516789,0.877766
+water,Latent logarithm,29.5,-1.482304,1.015346
+water,Latent logarithm,30.5,-1.502352,1.094132
+water,Latent logarithm,31.5,-1.387772,1.04489
+water,Latent logarithm,32.5,-1.202776,0.852106
+water,Latent logarithm,33.5,-1.235101,0.851206
+water,Latent logarithm,34.5,-1.224075,0.862265
+water,Latent logarithm,35.5,-0.884178,0.63775
+water,Latent logarithm,36.5,-1.105793,0.817868
+water,Latent logarithm,37.5,-0.430925,0.473194
+water,Latent logarithm,38.5,-0.77097,0.594107
+water,Latent logarithm,39.5,-0.551998,0.61636
+water,Latent logarithm,40.5,-0.298561,0.345505
+water,Latent logarithm,41.5,-0.11591,0.223313
+water,Latent logarithm,42.5,-0.12955,0.223102
+water,Latent logarithm,43.5,-0.153884,0.204205
+water,Latent logarithm,44.5,0.023078,0.038812
+water,Latent logarithm,45.5,-0.037388,0.082296
+water,Latent logarithm,46.5,0.143836,0.130437
+water,Latent logarithm,47.5,0.022783,0.055553
+water,Latent logarithm,48.5,0.316539,0.355233
+water,Latent logarithm,49.5,0.168903,0.260647
+water,Pooled counts,0.5,-2.022799,1.786358
+water,Pooled counts,1.5,-2.316246,1.968314
+water,Pooled counts,2.5,-3.653177,1.945905
+water,Pooled counts,3.5,-5.5168,2.008666
+water,Pooled counts,4.5,-8.122386,2.062784
+water,Pooled counts,5.5,-10.556417,2.074248
+water,Pooled counts,6.5,-12.802939,2.064469
+water,Pooled counts,7.5,-14.676064,2.062778
+water,Pooled counts,8.5,-16.18229,2.056775
+water,Pooled counts,9.5,-17.299804,2.059227
+water,Pooled counts,10.5,-18.032476,2.052198
+water,Pooled counts,11.5,-18.328846,2.050577
+water,Pooled counts,12.5,-18.184781,2.05221
+water,Pooled counts,13.5,-17.657047,2.058271
+water,Pooled counts,14.5,-16.760897,2.060223
+water,Pooled counts,15.5,-15.449097,2.055755
+water,Pooled counts,16.5,-13.826066,2.048699
+water,Pooled counts,17.5,-11.921935,2.066462
+water,Pooled counts,18.5,-9.732651,2.074731
+water,Pooled counts,19.5,-7.479996,2.08603
+water,Pooled counts,20.5,-5.215691,2.041534
+water,Pooled counts,21.5,-3.185378,1.902143
+water,Pooled counts,22.5,-1.97858,1.642905
+water,Pooled counts,23.5,-1.393768,1.555734
+water,Pooled counts,24.5,-1.272766,1.487025
+water,Pooled counts,25.5,-1.46039,1.258774
+water,Pooled counts,26.5,-1.774238,1.231829
+water,Pooled counts,27.5,-1.598966,1.105545
+water,Pooled counts,28.5,-1.482212,1.162926
+water,Pooled counts,29.5,-1.018341,1.3568
+water,Pooled counts,30.5,-0.835575,1.366139
+water,Pooled counts,31.5,-0.553591,1.299152
+water,Pooled counts,32.5,-0.569246,1.093569
+water,Pooled counts,33.5,-0.65365,1.093445
+water,Pooled counts,34.5,-0.584804,1.170206
+water,Pooled counts,35.5,-0.408143,1.077584
+water,Pooled counts,36.5,-0.306296,0.944888
+water,Pooled counts,37.5,-0.391452,1.026724
+water,Pooled counts,38.5,-0.117515,0.915597
+water,Pooled counts,39.5,0.527925,0.937366
+water,Pooled counts,40.5,-0.191108,0.645095
+water,Pooled counts,41.5,0.179344,0.360269
+water,Pooled counts,42.5,0.076457,0.362818
+water,Pooled counts,43.5,-0.041708,0.29435
+water,Pooled counts,44.5,0.056374,0.24665
+water,Pooled counts,45.5,0.066395,0.053034
+water,Pooled counts,46.5,0.127375,0.550403
+water,Pooled counts,47.5,0.026546,0.341766
+water,Pooled counts,48.5,-0.079897,1.198802
+water,Pooled counts,49.5,-0.191108,0.969685
+water,Umbrella sampling,0.125,-2.0661010400000004,0.21074808
+water,Umbrella sampling,0.375,-2.26505024,0.2219612
+water,Umbrella sampling,0.625,-2.34914864,0.25848752
+water,Umbrella sampling,0.875,-2.21743632,0.254178
+water,Umbrella sampling,1.125,-2.28371088,0.3286532
+water,Umbrella sampling,1.375,-2.55324416,0.38425856
+water,Umbrella sampling,1.625,-2.77302968,0.42216560000000003
+water,Umbrella sampling,1.875,-2.68918232,0.35651864
+water,Umbrella sampling,2.125,-2.7857072,0.31367448
+water,Umbrella sampling,2.375,-3.1254061600000003,0.27526536
+water,Umbrella sampling,2.625,-3.3417608,0.21748432
+water,Umbrella sampling,2.875,-3.47849392,0.23798592000000002
+water,Umbrella sampling,3.125,-3.8934212,0.24982664000000002
+water,Umbrella sampling,3.375,-4.45939088,0.26133264
+water,Umbrella sampling,3.625,-5.1967372,0.31827688
+water,Umbrella sampling,3.875,-5.697478320000001,0.35584920000000003
+water,Umbrella sampling,4.125,-6.456874320000001,0.33279536
+water,Umbrella sampling,4.375,-7.29890432,0.32325584
+water,Umbrella sampling,4.625,-8.12926096,0.33112176000000004
+water,Umbrella sampling,4.875,-8.65573368,0.2838844
+water,Umbrella sampling,5.125,-9.33504792,0.30576672000000005
+water,Umbrella sampling,5.375,-10.03080528,0.32568256000000007
+water,Umbrella sampling,5.625,-10.96283312,0.31497152
+water,Umbrella sampling,5.875,-11.452486640000002,0.24660496
+water,Umbrella sampling,6.125,-11.99255736,0.2401616
+water,Umbrella sampling,6.375,-12.56953096,0.2529228
+water,Umbrella sampling,6.625,-13.267087440000001,0.22099888
+water,Umbrella sampling,6.875,-13.60063592,0.21878136
+water,Umbrella sampling,7.125,-14.05535304,0.22158464
+water,Umbrella sampling,7.375,-14.701362640000001,0.17464016000000002
+water,Umbrella sampling,7.625,-15.21745904,0.12167072000000001
+water,Umbrella sampling,7.875,-15.48439824,0.10811456
+water,Umbrella sampling,8.125,-15.871083520000001,0.1416284
+water,Umbrella sampling,8.375,-16.364126080000002,0.10535312000000001
+water,Umbrella sampling,8.625,-16.754702480000002,0.17012144
+water,Umbrella sampling,8.875,-16.95976032,0.15003824000000002
+water,Umbrella sampling,9.125,-17.16711936,0.17263184
+water,Umbrella sampling,9.375,-17.58413864,0.134934
+water,Umbrella sampling,9.625,-17.80986544,0.22811168
+water,Umbrella sampling,9.875,-17.870910000000002,0.1953928
+water,Umbrella sampling,10.125,-18.05768376,0.22698200000000002
+water,Umbrella sampling,10.375,-18.281402240000002,0.22890664000000002
+water,Umbrella sampling,10.625,-18.390939359999997,0.2518768
+water,Umbrella sampling,10.875,-18.278933679999998,0.21125016000000002
+water,Umbrella sampling,11.125,-18.264540720000003,0.19325896
+water,Umbrella sampling,11.375,-18.41805168,0.18112536
+water,Umbrella sampling,11.625,-18.313409840000002,0.15279968
+water,Umbrella sampling,11.875,-18.138476800000003,0.16982856000000002
+water,Umbrella sampling,12.125,-18.0981012,0.15597952
+water,Umbrella sampling,12.375,-18.137598160000003,0.13020608
+water,Umbrella sampling,12.625,-17.971451520000002,0.2056436
+water,Umbrella sampling,12.875,-17.62945136,0.22585232000000002
+water,Umbrella sampling,13.125,-17.488074,0.25811096
+water,Umbrella sampling,13.375,-17.47309528,0.22581048
+water,Umbrella sampling,13.625,-17.21649056,0.27823600000000004
+water,Umbrella sampling,13.875,-16.82545392,0.27601848
+water,Umbrella sampling,14.125,-16.58190328,0.27785944
+water,Umbrella sampling,14.375,-16.5876772,0.2491572
+water,Umbrella sampling,14.625,-16.11827424,0.27208552
+water,Umbrella sampling,14.875,-15.724894560000001,0.2600356
+water,Umbrella sampling,15.125,-15.32272848,0.28723160000000003
+water,Umbrella sampling,15.375,-15.07988912,0.29430256
+water,Umbrella sampling,15.625,-14.622787120000002,0.23572656
+water,Umbrella sampling,15.875,-14.04941176,0.23811144
+water,Umbrella sampling,16.125,-13.6549024,0.26267152000000005
+water,Umbrella sampling,16.375,-13.226795520000001,0.28907256
+water,Umbrella sampling,16.625,-12.66605584,0.249994
+water,Umbrella sampling,16.875,-11.98280864,0.25681392
+water,Umbrella sampling,17.125,-11.55110352,0.25003584
+water,Umbrella sampling,17.375,-11.2160488,0.238488
+water,Umbrella sampling,17.625,-10.51589824,0.23267224
+water,Umbrella sampling,17.875,-9.87629016,0.19861448
+water,Umbrella sampling,18.125,-9.316847520000001,0.23359272
+water,Umbrella sampling,18.375,-8.899577200000001,0.25267176
+water,Umbrella sampling,18.625,-8.18189568,0.29501384
+water,Umbrella sampling,18.875,-7.44408912,0.34061944
+water,Umbrella sampling,19.125,-6.8354008,0.31392552
+water,Umbrella sampling,19.375,-6.37281776,0.3958064
+water,Umbrella sampling,19.625,-5.5666028,0.39618296
+water,Umbrella sampling,19.875,-4.7790066399999995,0.37346384000000005
+water,Umbrella sampling,20.125,-4.15391704,0.36028424000000003
+water,Umbrella sampling,20.375,-3.5915456000000003,0.28894704
+water,Umbrella sampling,20.625,-2.9467075200000004,0.29898863999999997
+water,Umbrella sampling,20.875,-2.26212144,0.2460192
+water,Umbrella sampling,21.125,-1.7871956,0.26267152000000005
+water,Umbrella sampling,21.375,-1.6677842400000003,0.18769423999999998
+water,Umbrella sampling,21.625,-1.28080608,0.13447376000000003
+water,Umbrella sampling,21.875,-0.8905225600000001,0.12518528
+water,Umbrella sampling,22.125,-0.73165608,0.10443264000000001
+water,Umbrella sampling,22.375,-0.78692672,0.08899368
+water,Umbrella sampling,22.625,-0.7144180000000001,0.05497776000000001
+water,Umbrella sampling,22.875,-0.5199456800000001,0.02560608
+water,Umbrella sampling,23.125,-0.51479936,0.019371919999999997
+water,Umbrella sampling,23.375,-0.70404168,0.03824176000000001
+water,Umbrella sampling,23.625,-0.66701328,0.04158896
+water,Umbrella sampling,23.875,-0.6142948800000001,0.06050064000000001
+water,Umbrella sampling,24.125,-0.6863852,0.0569024
+water,Umbrella sampling,24.375,-0.8905225600000001,0.06183952
+water,Umbrella sampling,24.625,-0.9206892,0.07581408
+water,Umbrella sampling,24.875,-0.83495904,0.0625508
+water,Umbrella sampling,25.125,-0.90704936,0.07242504
+water,Umbrella sampling,25.375,-1.1730680800000002,0.07250872000000001
+water,Umbrella sampling,25.625,-1.1721476000000002,0.09723616
+water,Umbrella sampling,25.875,-0.99462048,0.0840984
+water,Umbrella sampling,26.125,-1.07449304,0.04819968
+water,Umbrella sampling,26.375,-1.2583380000000002,0.04485248
+water,Umbrella sampling,26.625,-1.0862500800000001,0.04104504
+water,Umbrella sampling,26.875,-0.79772144,0.13970376
+water,Umbrella sampling,27.125,-0.75851736,0.12606392
+water,Umbrella sampling,27.375,-0.95357544,0.05296944
+water,Umbrella sampling,27.625,-1.07127136,0.08769664
+water,Umbrella sampling,27.875,-0.84324336,0.0665256
+water,Umbrella sampling,28.125,-0.8395196,0.06895232000000001
+water,Umbrella sampling,28.375,-0.90893216,0.07480992
+water,Umbrella sampling,28.625,-0.91947584,0.08238296
+water,Umbrella sampling,28.875,-0.6585616000000001,0.054475680000000005
+water,Umbrella sampling,29.125,-0.6027888800000001,0.06970544000000001
+water,Umbrella sampling,29.375,-0.69404192,0.00807512
+water,Umbrella sampling,29.625,-0.69316328,0.05715344000000001
+water,Umbrella sampling,29.875,-0.4292784,0.08142064000000002
+water,Umbrella sampling,30.125,-0.40831656,0.05874336
+water,Umbrella sampling,30.375,-0.476976,0.04221656
+water,Umbrella sampling,30.625,-0.3767692,0.06849208
+water,Umbrella sampling,30.875,-0.07819896,0.053387840000000006
+water,Umbrella sampling,31.125,-0.11870008,0.0274052
+water,Umbrella sampling,31.375,-0.20865608,0.05786472
+water,Umbrella sampling,31.625,0.09388896000000001,0.11664992
+water,Umbrella sampling,31.875,0.2568976,0.12941112
+water,Umbrella sampling,32.125,0.30154088,0.14547768000000003
+water,Umbrella sampling,32.375,-0.0353548,0.06267632000000001
+water,Umbrella sampling,32.625,-0.16418016,0.05326232
+water,Umbrella sampling,32.875,0.023304880000000004,0.08514440000000001
+water,Umbrella sampling,33.125,0.034518,0.057530000000000005
+water,Umbrella sampling,33.375,-0.10489288,0.08543728
+water,Umbrella sampling,33.625,-0.12836512,0.06535408000000001
+water,Umbrella sampling,33.875,0.0633876,0.03522928
+water,Umbrella sampling,34.125,0.06619088000000001,0.09075096
+water,Umbrella sampling,34.375,-0.06183952,0.054475680000000005
+water,Umbrella sampling,34.625,0.11070864000000001,0.051630560000000006
+water,Umbrella sampling,34.875,0.44701856,0.10719408000000001
+water,Umbrella sampling,35.125,0.48291728,0.08121144000000001
+water,Umbrella sampling,35.375,0.1230096,0.07522832
+water,Umbrella sampling,35.625,-0.06970544000000001,0.05874336
+water,Umbrella sampling,35.875,0.09970472000000001,0.07137903999999999
+water,Umbrella sampling,36.125,0.07631616,0.0529276
+water,Umbrella sampling,36.375,-0.06472648,0.05786472
+water,Umbrella sampling,36.625,-0.08535360000000002,0.12526896
+water,Umbrella sampling,36.875,0.08941208,0.09029071999999999
+water,Umbrella sampling,37.125,0.10535312000000001,0.0966504
+water,Umbrella sampling,37.375,0.03138,0.11330272000000001
+water,Umbrella sampling,37.625,-0.3198668,0.0876548
+water,Umbrella sampling,37.875,0.29635272,0.21999472

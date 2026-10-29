@@ -1,0 +1,10 @@
+trajectory,block,time_ns,molecule_frames,rounding_residual,depth_source,water_counts
+1,1,400-600,260000,0.12000000000011823,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_1.dat,298
+1,2,600-800,260000,0.12000000000034561,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_1.dat,0
+1,3,800-1000,260000,0.12000000000034561,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_1.dat,0
+2,1,400-600,260000,0.12000000000011823,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_2.dat,0
+2,2,600-800,260000,0.12000000000080036,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_2.dat,0
+2,3,800-1000,260000,0.12000000000261934,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_2.dat,0
+3,1,400-600,260000,0.1200000000000001,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_3.dat,0
+3,2,600-800,260000,0.120000000000001,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_3.dat,0
+3,3,800-1000,260000,0.12000000000000455,C:\Users\soeur\OneDrive\Documents\GitHub\Bories_and_Lague_2025\figures\data\distribution_data\raw_data\scl-1\scl-1_contacts_3.dat,0

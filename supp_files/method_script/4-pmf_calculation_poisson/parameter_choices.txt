@@ -1,0 +1,92 @@
+Parameter choices in pmf-from-distribution.py (Poisson-Gamma PMF)
+==================================================================
+
+Sampling and blocks. Each analog was simulated in 3 independent trajectories
+(n_trajectories = 3). The 400-1000 ns production window is split into 3
+non-overlapping 200 ns blocks (n_batches = 3), giving n = 9 blocks treated as
+independent samples. This assumes 200 ns is longer than the correlation time
+of the solute depth (assumed, not measured here). mode = "total" uses every
+solute molecule. The sampling depth M_b of a block (number of
+molecule-frames: 520 000, or 260 000 for the "-1" analogs) is taken from the
+raw data (raw_data_summary.dat, otherwise the raw line count). With it, the
+stored 6-decimal densities convert back to exact integer counts. If the
+rounding residual exceeds 0.45 count, or the total differs from M_b by more
+than 1 %, a warning flags the mismatch.
+
+Physical constants and grid. k_B = 0.008314 kJ mol-1 K-1 and T = 303.15 K are
+the simulation temperature, so PMFs are in kJ/mol. z_bin = 1.0 A is the
+histogram bin width of the distribution files. The +z and -z bins are summed
+onto a |z| grid. The grid is extended to 50 A when the data stop earlier, and
+these extra bins count as genuine zero-count observations.
+
+Poisson-Gamma model (Jiang, Zhan & Wang 2023). The ZIPG model is mapped as:
+taxon -> |z| bin k, subject -> trajectory, repeated measurement -> 200 ns
+block, sequencing depth -> M_b. The count is W_bk ~ Poisson(pi_k M_b U_bk),
+with U_bk ~ Gamma(1/theta_k, theta_k) (mean 1, variance theta_k). No
+covariates are used, so pi_k (long-term probability of bin k) and theta_k
+(its dispersion) are the only parameters, and theta_k is the same for the
+three trajectories.
+- Zero-inflation probability = 0. In an equilibrium Boltzmann distribution
+  every bin has a non-zero probability, so empty bins can only come from
+  finite sampling, not from a separate zero-generating process. ZIPG then
+  reduces to its Poisson-Gamma part ("PG" in Jiang's Table 1). A
+  zero-inflation term would let empty bins take a probability of exactly 0,
+  i.e. an infinite PMF.
+- theta_k is bin-specific, as Jiang's dispersion is taxon-specific. The data
+  are strongly over-dispersed relative to Poisson (block-count variance 3-140x
+  the mean, from time-correlated frames), and theta varies with z by more than
+  4 orders of magnitude (~1e-4 in well-sampled water bins of polar analogs,
+  up to 46 in sparse bins). A single shared theta would be badly
+  misspecified.
+- pi_k = sum_b W_bk / sum_b M_b. This is the maximum-likelihood estimate of
+  the PG mean when all blocks have the same depth, which is the case here.
+- theta_k is the maximum-likelihood estimate of the marginal negative-binomial
+  likelihood, found by a vectorised golden-section search on ln(theta)
+  (validated against scipy: log-likelihood gap < 1e-7).
+  theta_min = 1e-8 is the Poisson limit: under-dispersed bins (32 of 2599)
+  converge there, and their blocks are fully pooled. theta_max = 1e4 is far
+  above the largest fitted value (46). theta_log_tol = 1e-4 is the search
+  tolerance on ln(theta), i.e. 0.01 % precision on theta.
+- The block probability is the posterior mean of the block's latent
+  abundance, p_bk = pi_k (W_bk + 1/theta_k) / (pi_k M_b + 1/theta_k)
+  (Gamma-Poisson conjugacy). It is renormalised to 1 per block before
+  PMF = -kT ln p. The posterior mean is used rather than the posterior mean of
+  the log, because it stays finite and stable when 1/theta is small. An empty
+  block is shrunk toward the bin's abundance in the other blocks; it gets
+  about 0.06-0.11 count-equivalents in the analogs tested.
+- pi_zero_pseudocount = 0.5. A bin that is empty in every block carries no
+  information on pi_k (its ML estimate is 0, an infinite PMF). It receives the
+  Jeffreys-prior estimate of a Poisson rate, 0.5 count spread over all 9
+  blocks: 0.5 / sum_b M_b, i.e. about 1e-7 for M_b = 520 000. Such points are
+  model extrapolations; they are flagged by n_empty = 9 in pmf_<aa>.dat, and
+  their small bootstrap SE is not a measured uncertainty. This applies, for
+  example, to the membrane centre of scd and to the whole water window of
+  sci-1.
+
+Step-2 SE and water reference. The PG fit pools the blocks and shrinks each
+toward the bin's pooled abundance, so the block PMFs are not independent:
+std/sqrt(n) across them underestimates the SE (scs water bins: 0.004 vs
+0.011 kJ/mol). The SE of the untranslated average is therefore its bootstrap
+SE. This SE reproduces the raw std/sqrt(n) wherever no bin is empty (sca,
+scs). recal_lo = 40 A and recal_hi = 50 A define the bulk-water window, well
+outside the bilayer. The reference a is the inverse-variance weighted mean
+over this window, with weights 1/SE^2 from the bootstrap. These weights are
+computed once and kept fixed in all replicates, because re-estimating them per
+replicate would need a nested bootstrap. Fixed weights do not bias a; they
+only affect its efficiency. Window bins whose SE is <= 1e-9 kJ/mol
+(se_floor, identical values in every replicate) trigger an unweighted mean.
+
+Bootstrap. n_bootstrap = 10 000 replicates keep the Monte Carlo noise of the
+bootstrap SE below 1 % (0.7 % spread across 20 seeds, measured on the same
+protocol), well above the 50-200 replicates usual for a standard error
+(Efron & Tibshirani 1993). Each replicate resamples the 9 count histograms
+with replacement and repeats the PG fit (pi_k, theta_k), the block average,
+the reference and the shift. This is the nonparametric bootstrap over
+measurements that Jiang et al. recommend for PG/ZIPG uncertainties.
+bootstrap_seed = 2025 is arbitrary and only makes the output reproducible.
+small_sample_correction = True multiplies the bootstrap SEs by
+sqrt(n/(n-1)) = 1.061 (n = 9). This removes the known downward bias of the
+bootstrap variance of a mean, so the SE matches the conventional s/sqrt(n).
+bootstrap_chunk = 1000 only sets how many replicates are processed at once
+(memory/speed trade-off) and does not affect the results; a full run takes
+~8 s per analog.

@@ -1,0 +1,54 @@
+Parameter choices in pmf-from-distribution.py (pooled-count PMF)
+=================================================================
+
+Principle. All recorded events are counted once: the 9 block histograms are
+summed before the logarithm, PMF(z) = -kT ln[n(z) / mean_window n], with
+n(z) = sum_b n_b(z). No pseudocount is used and no block is discarded. A zero in
+a block is a measurement ("not visited during these 200 ns"), not a missing
+value. In the water region of hydrophobic analogs, visits are rare and bursty
+(a block has either 0 or hundreds of frames there), so averaging per-block
+logarithms is dominated by the zero-count floor (epsilon, Dirichlet or latent
+model), while keeping only complete blocks selects the blocks in which the
+solute escaped and biases the PMF towards weaker binding. Pooling avoids both.
+
+Sampling and blocks. Same as the other estimators: 3 trajectories x 3
+non-overlapping 200 ns blocks (400-1000 ns), n = 9. mode = "total" (or
+"total_cyl" with pmf-from-distribution_cyl.py). The block depth N (molecule-
+frames per block: 520 000, or 260 000 for the "-1" analogs) is read from
+raw_data_summary.dat, otherwise from the raw line count, and the 6-decimal
+densities are converted back to exact integer counts (a warning is printed if
+the rounding residual exceeds 0.45 count or the total differs from N by >1 %).
+Only modes in which every frame contains all solute molecules are supported,
+because the depth comes from the raw line count (monomer/multimer modes would
+need per-block monomer counts from the raw contact files).
+
+Physical constants and grid. k_B = 0.008314 kJ mol-1 K-1, T = 303.15 K,
+z_bin = 1.0 A. The +z and -z bins are summed onto a |z| grid extended to 50 A
+with genuine zero-count bins. Bins with no count in any block are written as
+nan (undefined), not given a finite value.
+
+Water reference. recal_lo = 40 A, recal_hi = 50 A. Because the bulk PMF is
+flat, the window bins are pooled into one reference probability:
+a = -kT ln(mean of P(z) over the window). This is defined as soon as at least
+one block visited the window, and it does not require every window bin to be
+non-empty. If no block visited the window (sci-1), a and the translated PMF are
+nan; only the untranslated PMF is meaningful.
+
+Bootstrap. n_bootstrap = 10 000, bootstrap_seed = 2025, small-sample
+correction sqrt(n/(n-1)), as in the other estimators. Each replicate resamples
+the 9 count histograms with replacement and recomputes the pooled PMF and a.
+A replicate that draws only blocks without water counts has an undefined
+reference; such replicates are excluded and the fraction of defined replicates
+is written (boot_defined in pmf_<aa>.dat, a_defined in water_reference.dat).
+A low fraction (e.g. 0.65 for scl-1 and scm-1, whose reference rests on one
+block, i.e. essentially one escape event) means the SE underestimates the true
+uncertainty. As a rule of thumb, with k independent escape events the
+reference uncertainty is about kT/sqrt(k) (2.5 kJ/mol for k = 1, 0.8 for k = 10).
+
+Outputs per analog. pmf_<aa>.dat: z, translated pooled PMF, bootstrap SE,
+n_empty (blocks with zero count in the bin), boot_defined. pmf_<aa>_untranslated.dat:
+z, -kT ln P(z) of the pooled histogram, bootstrap SE. trajectory<n>.dat: the
+three block PMFs -kT ln p_b(z) without pseudocount (nan where empty), shifted by
+the common a; these are diagnostics, the estimator is the pooled PMF.
+water_reference.dat: a, sigma_a, number of blocks with water counts, total
+water counts, fraction of bootstrap replicates with a defined reference.
