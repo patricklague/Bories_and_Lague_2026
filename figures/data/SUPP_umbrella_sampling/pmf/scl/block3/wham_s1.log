@@ -1,0 +1,24 @@
+# python WHAM  T=303.15  bins=76  range=[-38.0,38.0]  tol=1e-05
+# 38 windows, total counts = 190000
+# adjacent overlap: min=0.3652 median=0.4868
+  iter    200  max|dF| = 4.646e-03
+  iter    400  max|dF| = 3.283e-03
+  iter    600  max|dF| = 2.361e-03
+  iter    800  max|dF| = 1.686e-03
+  iter   1000  max|dF| = 1.205e-03
+  iter   1200  max|dF| = 8.606e-04
+  iter   1400  max|dF| = 6.150e-04
+  iter   1600  max|dF| = 4.395e-04
+  iter   1800  max|dF| = 3.141e-04
+  iter   2000  max|dF| = 2.246e-04
+  iter   2200  max|dF| = 1.605e-04
+  iter   2400  max|dF| = 1.148e-04
+  iter   2600  max|dF| = 8.205e-05
+  iter   2800  max|dF| = 5.866e-05
+  iter   3000  max|dF| = 4.194e-05
+  iter   3200  max|dF| = 2.999e-05
+  iter   3400  max|dF| = 2.144e-05
+  iter   3600  max|dF| = 1.533e-05
+  iter   3800  max|dF| = 1.096e-05
+  iter   3855  max|dF| = 9.994e-06
+# converged in 3855 iterations

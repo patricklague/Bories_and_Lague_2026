@@ -1,17 +1,24 @@
-# binless WHAM (MBAR, single state)  T=303.15  output bins=76  range=[-38.0,38.0]  tol=1e-07 (reduced units)
-# 38 windows, total samples = 190000
-# adjacent overlap (0.02 A histogram): min=0.0698 median=0.0856
-# warm start: binned WHAM with 3800 bins
-  iter    500  max|df| = 2.053e-06
-  iter   1000  max|df| = 1.093e-06
-  iter   1500  max|df| = 6.608e-07
-  iter   2000  max|df| = 4.838e-07
-  iter   2500  max|df| = 3.896e-07
-  iter   3000  max|df| = 3.141e-07
-  iter   3500  max|df| = 2.533e-07
-  iter   4000  max|df| = 2.043e-07
-  iter   4500  max|df| = 1.648e-07
-  iter   5000  max|df| = 1.330e-07
-  iter   5500  max|df| = 1.073e-07
-  iter   5665  max|df| = 9.996e-08
-# converged in 5665 iterations
+# python WHAM  T=303.15  bins=76  range=[-38.0,38.0]  tol=1e-05
+# 38 windows, total counts = 190000
+# adjacent overlap: min=0.3738 median=0.4790
+  iter    200  max|dF| = 5.133e-03
+  iter    400  max|dF| = 3.409e-03
+  iter    600  max|dF| = 2.452e-03
+  iter    800  max|dF| = 1.752e-03
+  iter   1000  max|dF| = 1.251e-03
+  iter   1200  max|dF| = 8.943e-04
+  iter   1400  max|dF| = 6.393e-04
+  iter   1600  max|dF| = 4.570e-04
+  iter   1800  max|dF| = 3.268e-04
+  iter   2000  max|dF| = 2.337e-04
+  iter   2200  max|dF| = 1.671e-04
+  iter   2400  max|dF| = 1.195e-04
+  iter   2600  max|dF| = 8.548e-05
+  iter   2800  max|dF| = 6.114e-05
+  iter   3000  max|dF| = 4.373e-05
+  iter   3200  max|dF| = 3.127e-05
+  iter   3400  max|dF| = 2.237e-05
+  iter   3600  max|dF| = 1.600e-05
+  iter   3800  max|dF| = 1.144e-05
+  iter   3881  max|dF| = 9.991e-06
+# converged in 3881 iterations
